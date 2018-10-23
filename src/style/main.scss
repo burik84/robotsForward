@@ -1,0 +1,7 @@
+// Определения списка файлов, которые необходимо включить -bootstrap, fontawesome и т.д.
+@import "variables";/*Переопределение дефолтных значений переменных Bootstrap 4 и определение своих*/
+//Подключение стилей bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Подключение своих SCSS файлов
+@import "mystyle";

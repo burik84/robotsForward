@@ -1,106 +1,213 @@
 // Подключение шрифтов
 @import "fonts";
-
+@import "header"; /* Подключение стиля для блока header*/
+@import "myvariables"; /* Подключение переменных, используемые в проекте*/
 // Стили для страниц
 /* --------------- reset.css --------------- */
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+article,
+aside,
+audio,
+b,
+body,
+canvas,
+dd,
+details,
+div,
+dl,
+dt,
+em,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+img,
+label,
+li,
+mark,
+menu,
+nav,
+ol,
+p,
+section,
+span,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+u,
+ul,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	outline: 0;                               /* обнуляем отступы и убираем бордюры */
-	vertical-align: baseline;          /* приводим все к одной базовой линии */
-	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
-	font-size: 100%;                     /* размер шрифта всем одинаковый */
+	outline: 0;
+	/* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;
+	/* приводим все к одной базовой линии */
+	background: transparent;
+	/* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;
+	/* размер шрифта всем одинаковый */
 }
-a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
-	margin:0;
-	padding:0;
-	font-size:100%;
-	vertical-align:baseline;
-	background:transparent;
-	outline:none;
+
+a {
+	/* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	outline: none;
 }
-table {						/* устраняем отступы между ячейками таблицы */
+
+table {
+	/* устраняем отступы между ячейками таблицы */
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-td, td img {
-	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+
+td,
+td img {
+	vertical-align: top;
+	/* возвращаем привычное вертикальное выравнивание */
 }
-input, select, button, textarea {
-	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
-	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+
+button,
+input,
+select,
+textarea {
+	margin: 0;
+	/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%;
+	/* делаем размер шрифтов везде одинаковым */
 	outline: none;
 }
-input[type="text"], input[type="password"], textarea {
-	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+
+input[type="text"],
+input[type="password"],
+textarea {
+	padding: 0;
+	/* убираем внутренние отступы для текстовых полей */
 }
-input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+
+input[type="checkbox"] {
+	/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
 	vertical-align: bottom;
 }
+
 input[type="radio"] {
 	vertical-align: text-bottom;
 }
+
 sub {
 	vertical-align: sub;
 	font-size: smaller;
 }
+
 sup {
 	vertical-align: super;
 	font-size: smaller;
 }
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display:block;
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
 }
+
 nav ul {
-	 list-style:none;
+	list-style: none;
 }
 /* --------------- /reset.css --------------- */
-
 /* --------------- базовые настройки ---------*/
 html {
 	height: 100%;
 }
+
 body {
-	color: #828282; /*Указан базовый цвет для текста!!!*/
-	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	color: #828282;
+	/*Указан базовый цвет для текста!!!*/
+	font-size: 1em;
+	/* используем безопасные шрифтовые CSS стеки */
 	height: 100%;
-    background: #fff;
-    font-weight: 400;
-    min-width: 320px;
-    font-family: Ubuntu, sans-serif;
+	background: #fff;
+	font-weight: 400;
+	min-width: 320px;
+	font-family: $family-ubuntu;
 }
-a, a:visited {
+
+a,
+a:visited {
 	text-decoration: underline;
-    font-weight: 700;
-    font-style: 1em;
-    color: #2cc7c1;
-    font-family: Montserrat,sans-serif;
+	font-weight: 700;
+	font-style: $font-size-16px;
+	color: #2cc7c1;
+	font-family: Montserrat, sans-serif;
 }
+
 a:hover {
 	color: #2cc7c1;
-	text-decoration:none;
+	text-decoration: none;
 }
-a:focus, a:active {
+
+a:active,
+a:focus {
 	color: #2cc7c1;
 	text-decoration: underline;
 }
-h1, h2, h3, h4, h5, h6{
-	font-weight:normal;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
 }
-img{
-    height: auto;
-	max-width:100%;
+
+img {
+	height: auto;
+	max-width: 100%;
 }
-section{
-    position: relative;
+
+section {
+	position: relative;
 }
-.clr{
-	clear:both;
+
+.clr {
+	clear: both;
 }
+
 .clearfix:after {
-    clear: both;
-    content: "";
-    display: table;
+	clear: both;
+	content: "";
+	display: table;
 }
 /* --------------- /базовые настройки ---------*/

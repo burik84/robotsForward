@@ -3,11 +3,17 @@
 
 <head>
     //= template/head.html
-
 </head>
 
 <body>
     <section id="header">
+        <nav class="navbar" role="navigation">
+            <span class="navbar-brand"><img src="img/cit_logoYuotube.png" width="50" height="50" alt="Логотип Сланцевский ЦИТ Робототехника"></span>
+            <ul class="nav justify-content-end">
+                <a class="nav-link" href="#">О мероприятии</a>
+                <a class="nav-link" href="#">О команде</a>
+            </ul>
+        </nav>
         <div class="section-table">
             <div class="section-row">
                 <div class="section-cell">
@@ -32,7 +38,7 @@
     </section>
     <!--/.header-->
 
-    <section id="speakers">
+    <section id="games">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 wow fadeInDown">
@@ -40,7 +46,7 @@
                     <p class="large">Соревнования проводятся по трем номинациям: механическое сумо, тягачи и царь-горы</p>
                     <p>Представленные номинации позволяют охватить разные уровни подготовки обучающихся, занимающиеся робототехникой. Участие в соревнованиях помогает развивать способности учащихся как в области решения актуальных задач современной
                         образовательной робототехнике, так и умение работать в команде.</p>
-                    <p>Важно: количество участников по номинациям ограничено!</p>
+                    <p class="text-danger pt-3">Важно: количество участников по номинациям ограничено!</p>
                 </div>
                 <div class="col-md-6 row-item-col wow fadeInDown">
                     <div class="section-tabs">
@@ -72,6 +78,7 @@
                                     <li><i class="fa fa-check-circle" aria-hidden="true"></i>Размеры робота 20х20х20(см).</li>
                                     <li><i class="fa fa-check-circle" aria-hidden="true"></i>Общая масса робота должна быть не более 1 кг.</li>
                                 </ul>
+                                <img class="pull-right" src="img/tab_img.png" alt="">
                             </div>
                             <!--/.tractor-->
                             <div role="tabpanel" class="tab-pane fade" id="king-hill">
@@ -91,9 +98,15 @@
                 </div>
             </div>
             <!--/.row-->
-            <div class="row text-center speakers-head wow fadeIn">
+        </div>
+        <!--container-->
+    </section>
+    <!--/.games-->
+    <section id="speakers">
+        <div class="container">
+            <div class="text-center speakers-head wow fadeIn clearfix">
                 <h2>Наша команда</h2>
-                <p class="large">Организаторы и помощники в проведения соревнований. Хотите попасть сюда?</p>
+                <p class="large">Организаторы соревнований и наши помощники.</p>
             </div>
             <!--/.row text-center speekers-head-->
             <div class="row text-center speakers">
@@ -112,8 +125,8 @@
                                             <h4 class="modal-title" id="oksanaLabel">Оксана</h4>
                                         </div>
                                         <div class="modal-body">
-                                            <p>Педогог дополнительного образования. Преподает в центре информационных технологий направление "Робототехника" и другие курсы с 2016г. Принимает участие с обучающимися во многих областных и региональных
-                                                соревнованиях.</p>
+                                            <p>Педогог дополнительного образования. Преподает в центре информационных технологий направление "Робототехника" и другие курсы с 2016г. Принимает участие со своими обучающимися во многих областных и
+                                                региональных соревнованиях.</p>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
@@ -123,7 +136,7 @@
                             </div>
                             <!--/.modal fade-->
                         </div>
-                        <p>Главный организатор, главный судья, идейный входновитель проекта.</p>
+                        <p>Идейный входновитель проекта, главный организатор и главный судья.</p>
                     </div>
                 </div>
                 <div class="col-sm-6  col-md-3">
@@ -141,7 +154,7 @@
                                             <h4 class="modal-title" id="alexandrLabel">Александр</h4>
                                         </div>
                                         <div class="modal-body">
-                                            <p>Помощник, оказывающий поддержку в проведении соревнований и занимающиейся разработкой страницы "РоботыВперед" </p>
+                                            <p>Оказывает поддержку в проведении соревнований и занимается разработкой и поддержкой этой странички "РоботыВперед". Неоценимый помощник.</p>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
@@ -151,7 +164,7 @@
                             </div>
                             <!--/.modal fade-->
                         </div>
-                        <p>Волонтер и судья.</p>
+                        <p>Волонтер, судья и поддержка.</p>
                     </div>
                 </div>
             </div>
@@ -159,7 +172,7 @@
             <div class="row speakers-footer text-center  wow fadeIn">
                 <p class="large">Регистрация участников будет доступна за два месяца до проведения соревнований.<br>Дату соревнований и открытие регистрации, пожалуйста, уточняйте у организаторов мероприятий.</p>
                 <div class="section-btn">
-                    <a href="#" class="btn btn-primary disabled">Регистрация <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                    <a href="#" class="btn btn-primary disabled">Подать заявку<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                 </div>
                 <!--/.sectiom-btn-->
             </div>

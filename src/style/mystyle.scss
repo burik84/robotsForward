@@ -1,9 +1,11 @@
 // Подключение шрифтов
 @import "fonts";
 @import "header"; /* Подключение стиля для блока header*/
+@import "section"; /* Подключение стиля для блоков*/
 @import "myvariables"; /* Подключение переменных, используемые в проекте*/
 // Стили для страниц
 /* --------------- reset.css --------------- */
+
 article,
 aside,
 audio,
@@ -147,6 +149,7 @@ nav ul {
 }
 /* --------------- /reset.css --------------- */
 /* --------------- базовые настройки ---------*/
+
 html {
 	height: 100%;
 }
@@ -180,7 +183,7 @@ a:hover {
 a:active,
 a:focus {
 	color: #2cc7c1;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 h1,

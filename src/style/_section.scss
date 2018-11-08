@@ -1,0 +1,119 @@
+// Импорт переменных
+@import "myvariables";
+
+.large {
+    color: #828282;
+    font-size: $font-size-22;
+    margin-bottom: 20px;
+}
+// Секция о соревнования
+
+#games,
+#speakers {
+    padding: 60px 0;
+    border-bottom: 2px solid #f0f0f1;
+
+    h2 {
+        font-family: Montserrat, sans-serif;
+        font-weight: 700;
+        font-size: 31px;
+        text-transform: uppercase;
+        color: #828689;
+    }
+}
+
+.section {
+    &-tabs {
+        ul {
+            li {
+                padding-left: 15px;
+            }
+        }
+
+        .tab-content {
+            padding: 25px 20px;
+
+            ul {
+                padding-left: 10px;
+
+                li {
+                    line-height: 30px;
+
+                    i {
+                        font-size: 15px;
+                        color: #2cc7c1;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+// Секция о команде
+
+.speakers {
+    &-head {
+        margin-top: 40px;
+        margin-bottom: 20px;
+
+        h2 {
+            color: #6a7079;
+        }
+    }
+
+    h3 {
+        color: #777a7d;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    &-footer {
+        margin-top: 25px;
+    }
+}
+
+.item {
+    & > div {
+        position: relative;
+
+        &:hover {
+            .front {
+                opacity: 0.1;
+            }
+
+            .back {
+                opacity: 1;
+            }
+
+            h3 {
+                color: #6bd8d3;
+            }
+        }
+    }
+}
+
+.front {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    left: 50%;
+    /*для IE*/
+    margin-left: -70px;
+    /*для IE*/
+    cursor: pointer;
+}
+
+.back {
+    width: 140px;
+    height: 140px;
+    background: #6bd8d3;
+    display: inline-block;
+    border-radius: 50%;
+    opacity: 0;
+
+    i {
+        line-height: 140px;
+        font-size: 30px;
+        color: #fff;
+    }
+}

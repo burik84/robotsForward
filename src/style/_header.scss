@@ -15,16 +15,15 @@
         text-transform: uppercase;
         margin-bottom: 20px;
     }
-
-    p {
-        color: #fff;
-        font-size: $font-size-p;
-        margin-bottom: 20px;
-    }
 }
 
 .navbar {
     margin: 0 50px;
+}
+
+.header_info {
+    margin: 0 auto;
+    width: 70%;
 }
 
 .section {
@@ -46,6 +45,12 @@
         &-center {
             max-width: 600px;
             display: inline-block;
+
+            p {
+                color: #fff;
+                font-size: $font-size-p;
+                margin-bottom: 20px;
+            }
         }
     }
 }

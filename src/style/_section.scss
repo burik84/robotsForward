@@ -4,22 +4,23 @@
 .large {
     color: #828282;
     font-size: $font-size-22px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: $font-size-20px;
+    margin-top: $font-size-20px;
 }
 // Секция о соревнования
 
 #events,
+#form,
 #gallery,
 #games,
 #speakers {
-    padding: 60px 0;
+    padding: $font-size-60px 0;
     border-bottom: 2px solid #f0f0f1;
 
     h2 {
         font-family: Montserrat, sans-serif;
         font-weight: 700;
-        font-size: 31px;
+        font-size: $font-size-32px;
         text-transform: uppercase;
         color: #828689;
     }
@@ -29,27 +30,27 @@
     &-tabs {
         ul {
             li {
-                padding-left: 50px;
+                padding-left: $font-size-52px;
 
                 &:first-child {
-                    padding-left: 15px;
+                    padding-left: $font-size-16px;
                 }
             }
         }
 
         .tab-content {
-            padding: 25px 20px;
+            padding: $font-size-26px $font-size-20px;
 
             ul {
-                padding-left: 10px;
+                padding-left: $font-size-10px;
 
                 li {
                     line-height: 30px;
 
                     i {
-                        font-size: 15px;
+                        font-size: $font-size-16px;
                         color: #2cc7c1;
-                        margin-right: 10px;
+                        margin-right: $font-size-10px;
                     }
                 }
             }
@@ -60,8 +61,8 @@
 
 .speakers {
     &-head {
-        margin-top: 40px;
-        margin-bottom: 20px;
+        margin-top: $font-size-40px;
+        margin-bottom: $font-size-20px;
 
         h2 {
             color: #6a7079;
@@ -70,12 +71,8 @@
 
     h3 {
         color: #777a7d;
-        font-size: 20px;
+        font-size: $font-size-20px;
         text-transform: uppercase;
-    }
-
-    &-footer {
-        margin-top: 25px;
     }
 }
 
@@ -120,7 +117,7 @@
 
     i {
         line-height: 140px;
-        font-size: 30px;
+        font-size: $font-size-32px;
         color: #fff;
     }
 }
@@ -128,25 +125,25 @@
 
 .link {
     text-transform: uppercase;
-    font-size: 17px;
+    font-size: $font-size-18px;
 }
 
 .time {
     background: #2cc7c1;
     color: #fff;
-    font-size: 17px;
+    font-size: $font-size-18px;
     font-weight: 500;
     padding: 5px;
     border-radius: 2px;
-    margin-right: 25px;
+    margin-right: $font-size-26px;
 }
 
 .collapse {
-    margin-bottom: 15px;
+    margin-bottom: $font-size-16px;
 
     &-link {
         color: #747a84;
-        font-size: 18px;
+        font-size: $font-size-18px;
         font-weight: 500;
 
         &:hover {
@@ -163,23 +160,23 @@
     }
 
     &-tab {
-        margin-bottom: 14px;
+        margin-bottom: $font-size-14px;
     }
 }
 // Секция галерея - видео и фото
 
 .row-item {
-    margin-top: 50px;
+    margin-top: $font-size-52px;
 
     h2 {
-        margin-top: 10px;
+        margin-top: $font-size-10px;
     }
 }
 
 .carousel-indicators {
     left: 0;
-    bottom: 10px;
-    margin: 0 0 0 20px;
+    bottom: $font-size-10px;
+    margin: 0 0 0 $font-size-20px;
     width: auto;
 
     li {
@@ -192,9 +189,57 @@
         &.active {
             background: #2cc7c1;
             opacity: 0.5;
-            height: 14px;
-            width: 14px;
+            height: $font-size-14px;
+            width: $font-size-14px;
             border-radius: 7px;
+        }
+    }
+}
+// Секция форма - прием заявок на участие
+
+#form {
+    background: #f3f3f3;
+}
+
+.form {
+    &-section {
+        background: #fff;
+        padding: $font-size-40px;
+        border-radius: 2px;
+        margin-top: $font-size-52px;
+
+        input,
+        select {
+            height: $font-size-48px;
+            background: #efefef;
+            padding-right: $font-size-26px;
+        }
+
+        input {
+            &.form-control {
+                &:focus {
+                    border: 2px solid #2cc7c1 !important;
+                    background: #fff;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    &-control {
+        &-feedback {
+            line-height: 44px;
+            right: $font-size-10px;
+        }
+    }
+}
+
+.has-success {
+    .form-control {
+        border: 2px solid 2cc7c1;
+
+        &-feedback {
+            color: #2cc7c1;
         }
     }
 }

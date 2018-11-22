@@ -16,3 +16,54 @@
 .fa-arrow-circle-right {
     margin-left: 5px;
 }
+
+.select2-container {
+    &--default {
+        .select2-selection--single {
+            height: 45px;
+            text-align: left;
+            background: #efefef;
+
+            .select2-selection {
+                &__rendered {
+                    line-height: 44px;
+                    color: #bebebe;
+                }
+
+                &__arrow {
+                    top: 10px;
+                }
+            }
+        }
+    }
+
+    &--open {
+        .select2-selection--single {
+            background: #2cc7c1;
+
+            .select2-selection__rendered {
+                color: #fff;
+            }
+        }
+    }
+}
+
+li {
+    &.select2-results {
+        &__option {
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+}
+
+.select2-results__options {
+    background: #525b64;
+    color: #2cc7c1;
+}
+
+.elect2-container-default .select2-results__option[aria-selected="true"],
+.select2-container-default .select2-results__option--highlighted[aria-selected] {
+    background: #525b64;
+}

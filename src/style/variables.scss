@@ -1,28 +1,44 @@
 // Импорт переменных
 @import "myvariables"; // будет содержать SCSS переменные, с помощью которых будем изменять стили Bootstrap 4, а также использовать его для создания своих переменных
-
-.fa {
-    padding-left: 5px;
-}
+// стили botstrap
 
 .text-danger {
-    font-size: $font-size-22px;
+    font-size: $font-size-20px;
+}
+
+.nav-justified {
+    .nav-item {
+        flex-basis: auto;
+    }
+}
+
+.position-absolute {
+    bottom: -70px;
+    right: -70px;
+}
+// Стили fontawesome
+
+.fab,
+.fas {
+    padding-left: $font-size-6px;
+    padding-right: $font-size-6px;
 }
 
 .fa-arrow-circle-down {
-    margin-right: 5px;
+    margin-right: $font-size-6px;
 }
 
 .fa-arrow-circle-right {
-    margin-left: 5px;
+    margin-left: $font-size-6px;
 }
+// Стили для формы
 
 .select2-container {
     &--default {
         .select2-selection--single {
             height: 45px;
             text-align: left;
-            background: #efefef;
+            background-color: #efefef;
 
             .select2-selection {
                 &__rendered {
@@ -42,7 +58,7 @@
             background: #2cc7c1;
 
             .select2-selection__rendered {
-                color: #fff;
+                color: #ffffff;
             }
         }
     }

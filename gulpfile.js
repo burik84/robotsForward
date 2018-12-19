@@ -118,7 +118,7 @@ gulp.task('js', function() {
 
 // перенос шрифтов
 gulp.task('fonts', function() {
-    return gulp.src([path.src.fonts, 'node_modules/@fortawesome/fontawesome-free/webfonts/**/*.*'])
+    return gulp.src([path.src.fonts])
         .pipe(gulp.dest(path.build.fonts));
 });
 

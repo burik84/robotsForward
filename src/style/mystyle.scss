@@ -2,162 +2,18 @@
 @import "fonts";
 @import "header"; /* Подключение стиля для блока header*/
 @import "section"; /* Подключение стиля для блоков*/
+@import "footer"; /* Подключение стиля для блока footer*/
 @import "myvariables"; /* Подключение переменных, используемые в проекте*/
 // Стили для страниц
-/* --------------- reset.css --------------- */
-
-article,
-aside,
-audio,
-b,
-body,
-canvas,
-dd,
-details,
-div,
-dl,
-dt,
-em,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-html,
-i,
-img,
-label,
-li,
-mark,
-menu,
-nav,
-ol,
-p,
-section,
-span,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-u,
-ul,
-video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	/* обнуляем отступы и убираем бордюры */
-	vertical-align: baseline;
-	/* приводим все к одной базовой линии */
-	background: transparent;
-	/* чтобы не проскакивали левые фоны, установленные по умолчанию */
-	font-size: 100%;
-	/* размер шрифта всем одинаковый */
-}
-
-a {
-	/* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
-	margin: 0;
-	padding: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-	outline: none;
-}
-
-table {
-	/* устраняем отступы между ячейками таблицы */
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-td,
-td img {
-	vertical-align: top;
-	/* возвращаем привычное вертикальное выравнивание */
-}
-
-button,
-input,
-select,
-textarea {
-	margin: 0;
-	/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
-	font-size: 100%;
-	/* делаем размер шрифтов везде одинаковым */
-	outline: none;
-}
-
-input[type="text"],
-input[type="password"],
-textarea {
-	padding: 0;
-	/* убираем внутренние отступы для текстовых полей */
-}
-
-input[type="checkbox"] {
-	/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
-	vertical-align: bottom;
-}
-
-input[type="radio"] {
-	vertical-align: text-bottom;
-}
-
-sub {
-	vertical-align: sub;
-	font-size: smaller;
-}
-
-sup {
-	vertical-align: super;
-	font-size: smaller;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-	display: block;
-}
-
-nav ul {
-	list-style: none;
-}
-/* --------------- /reset.css --------------- */
 /* --------------- базовые настройки ---------*/
-
 html {
 	height: 100%;
+	font-size: 18px;
 }
 
 body {
 	color: #828282;
 	/*Указан базовый цвет для текста!!!*/
-	font-size: 1em;
 	/* используем безопасные шрифтовые CSS стеки */
 	height: 100%;
 	background: #fff;
@@ -214,3 +70,13 @@ section {
 	display: table;
 }
 /* --------------- /базовые настройки ---------*/
+.visually_hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}

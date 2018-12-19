@@ -1,0 +1,28 @@
+@import 'variables';
+/*подключение переменных*/
+#contacts {
+    background-color: #525b64;
+
+    h4 {
+        color: #fff;
+        font-size: $font-size-20px;
+    }
+
+    p {
+        color: #cdd0d2;
+    }
+
+    a {
+        font-weight: 500;
+        color: #2cc7c1;
+    }
+}
+
+#copy {
+    background-color: #3f464c;
+
+    p {
+        color: #cacaca;
+        font-size: $font-size-14px;
+    }
+}

@@ -1,0 +1,26 @@
+// Импорт переменных
+@import "myvariables";
+@media only screen and (max-width: 1024px) {
+    #header {
+        min-height: 600px;
+
+        h2 {
+            font-size: $font-size-26px;
+        }
+    }
+
+    #events,
+    #form,
+    #gallery,
+    #games,
+    #organizer,
+    #speakers {
+        padding: $font-size-40px 0;
+    }
+
+    .section-cell-center {
+        p {
+            font-size: $font-size-18px;
+        }
+    }
+}

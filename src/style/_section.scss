@@ -150,8 +150,14 @@
 }
 // Секция галерея - видео и фото
 
+#gallery {
+    iframe {
+        width: 100%;
+    }
+}
+
 .row-item {
-    margin-top: $font-size-52px;
+    margin-top: $font-size-40px;
 
     h2 {
         margin-top: $font-size-10px;
@@ -220,7 +226,7 @@
 
 .has-success {
     .form-control {
-        border: 2px solid 2cc7c1;
+        border: 2px solid #2cc7c1;
 
         &-feedback {
             color: #2cc7c1;

@@ -1,12 +1,8 @@
 // Импорт переменных
 @import "myvariables";
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 992px) {
     #header {
         min-height: 600px;
-
-        h2 {
-            font-size: $font-size-26px;
-        }
     }
 
     #events,
@@ -17,10 +13,27 @@
     #speakers {
         padding: $font-size-40px 0;
     }
-
-    .section-cell-center {
-        p {
-            font-size: $font-size-18px;
-        }
+}
+@media (min-width: 576px) {
+    body {
+        font-size: $font-size-16px;
+    }
+}
+/* на sm */
+@media (min-width: 768px) {
+    body {
+        font-size: $font-size-18px;
+    }
+}
+/* на md */
+@media (min-width: 992px) {
+    body {
+        font-size: $font-size-20px;
+    }
+}
+/* на lg */
+@media (min-width: 1200px) {
+    body {
+        font-size: $font-size-22px;
     }
 }

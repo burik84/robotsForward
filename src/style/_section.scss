@@ -1,13 +1,5 @@
 // Импорт переменных
-@import "myvariables";
-
-.large {
-    color: #828282;
-    font-size: $font-size-20px;
-    margin-bottom: $font-size-20px;
-    margin-top: $font-size-20px;
-}
-// Секция о соревнования
+@import "myvariables"; // Секция о соревнования
 
 #events,
 #form,
@@ -22,7 +14,7 @@
     h2 {
         font-family: Montserrat, sans-serif;
         font-weight: 700;
-        font-size: $font-size-32px;
+        // font-size: $font-size-32px;
         text-transform: uppercase;
         color: #828689;
     }
@@ -244,7 +236,7 @@
 
     h3 {
         color: #777a7d;
-        font-size: $font-size-20px;
+        // font-size: $font-size-20px;
         text-transform: uppercase;
         margin-top: $font-size-6px;
     }

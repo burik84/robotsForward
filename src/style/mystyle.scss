@@ -9,7 +9,7 @@ html {
 
 body {
 	color: #828282;
-	font-size: $font-size-14px;
+	font-size: $font-size-12px;
 	/*Указан базовый цвет для текста!!!*/
 	/* используем безопасные шрифтовые CSS стеки */
 	height: 100%;
@@ -67,6 +67,132 @@ section {
 	display: table;
 }
 /* --------------- /базовые настройки ---------*/
+// стили botstrap
+
+button {
+	text-transform: uppercase;
+	font-weight: 700;
+	text-decoration: underline;
+	// font-size: $font-size-16px;
+	color: #2cc7c1;
+	font-family: Montserrat, sans-serif;
+
+	&:visited {
+		text-transform: uppercase;
+		text-decoration: underline;
+		font-weight: 700;
+		// font-size: $font-size-16px;
+		color: #2cc7c1;
+		font-family: Montserrat, sans-serif;
+	}
+
+	&.btn {
+		border: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	&.btn-link {
+		color: #2cc7c1;
+
+		&:active,
+		&:focus,
+		&:hover {
+			color: #2cc7c1;
+			text-decoration: none;
+		}
+	}
+}
+
+.nav-justified {
+	.nav-item {
+		flex-basis: auto;
+	}
+}
+
+a {
+	&.active {
+		&.show {
+			text-decoration: none;
+		}
+	}
+}
+
+.position-absolute {
+	// bottom: -70px;
+	// right: -70px;
+	top: 75%;
+	right: -3%;
+	z-index: -1;
+}
+// Стили fontawesome
+
+.fab,
+.fas {
+	padding-left: $font-size-6px;
+	padding-right: $font-size-6px;
+}
+
+.fa-arrow-circle-down {
+	margin-right: $font-size-6px;
+}
+
+.fa-arrow-circle-right {
+	margin-left: $font-size-6px;
+}
+// Стили для формы
+
+.select2-container {
+	&--default {
+		.select2-selection--single {
+			height: 45px;
+			text-align: left;
+			background-color: #efefef;
+
+			.select2-selection {
+				&__rendered {
+					line-height: 44px;
+					color: #bebebe;
+				}
+
+				&__arrow {
+					top: 10px;
+				}
+			}
+		}
+	}
+
+	&--open {
+		.select2-selection--single {
+			background: #2cc7c1;
+
+			.select2-selection__rendered {
+				color: #ffffff;
+			}
+		}
+	}
+}
+
+li {
+	&.select2-results {
+		&__option {
+			&:first-child {
+				display: none;
+			}
+		}
+	}
+}
+
+.select2-results__options {
+	background: #525b64;
+	color: #2cc7c1;
+}
+
+.elect2-container-default .select2-results__option[aria-selected="true"],
+.select2-container-default .select2-results__option--highlighted[aria-selected] {
+	background: #525b64;
+}
+
 .visually_hidden {
 	position: absolute;
 	width: 1px;

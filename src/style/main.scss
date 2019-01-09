@@ -6,8 +6,7 @@
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss"; // Подключение шрифтов fonta ver.5
 @import "../../node_modules/select2/dist/css/select2.css"; //Подключение стилей select2
 @import "../../node_modules/animate.css/animate.css"; //Подключение стилей animate
-@import "variables"; // Переопределение дефолтных значений переменных Bootstrap 4 и определение свои
-@import "mystyle"; // Подключение своих SCSS файлов
+@import "mystyle"; //  Базовые настройке, взяты из reset.css и переопределение дефолтных значений переменных Bootstrap 4, fontawesome и определение своих
 @import "header"; /* Подключение стиля для блока header*/
 @import "section"; /* Подключение стиля для блоков*/
 @import "footer"; /* Подключение стиля для блока footer*/

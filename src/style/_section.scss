@@ -7,7 +7,7 @@
 #games,
 #organizer,
 #speakers {
-    padding: $font-size-60px 0;
+    // padding: $font-size-40px 0;
     border: 1px solid transparent;
     border-bottom: 2px solid #f0f0f1;
 
@@ -20,6 +20,16 @@
     }
 }
 
+.nav {
+    li {
+        a {
+            &.nav-link {
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
 .section {
     &-tabs {
         ul {
@@ -27,13 +37,13 @@
                 padding-left: $font-size-32px;
 
                 &:first-child {
-                    padding-left: $font-size-12px;
+                    padding-left: $font-size-10px;
                 }
             }
         }
 
         .tab-content {
-            padding: $font-size-20px $font-size-16px;
+            padding: $font-size-10px;
 
             ul {
                 padding-left: $font-size-10px;
@@ -42,7 +52,7 @@
                     line-height: 30px;
 
                     i {
-                        font-size: $font-size-16px;
+                        font-size: 0.8em;
                         color: #2cc7c1;
                         margin-right: $font-size-10px;
                     }
@@ -102,25 +112,25 @@
 
 .link {
     text-transform: uppercase;
-    font-size: $font-size-18px;
+    // font-size: $font-size-18px;
 }
 
 .time {
     background-color: #2cc7c1;
     color: #ffffff;
-    font-size: $font-size-18px;
+    // font-size: $font-size-18px;
     font-weight: 500;
-    padding: $font-size-6px;
+    padding: $font-size-2px;
     border-radius: $font-size-2px;
-    margin-right: $font-size-16px;
+    margin-right: $font-size-6px;
 }
 
 .collapse {
-    margin-bottom: $font-size-16px;
+    margin-bottom: $font-size-10px;
 
     &-link {
         color: #747a84;
-        font-size: $font-size-18px;
+        // font-size: $font-size-18px;
         font-weight: 500;
 
         &:hover {
@@ -137,7 +147,7 @@
     }
 
     &-tab {
-        margin-bottom: $font-size-14px;
+        margin-bottom: $font-size-10px;
     }
 }
 // Секция галерея - видео и фото
@@ -149,7 +159,7 @@
 }
 
 .row-item {
-    margin-top: $font-size-40px;
+    margin-top: $font-size-32px;
 
     h2 {
         margin-top: $font-size-10px;
@@ -186,7 +196,7 @@
 .form {
     &-section {
         background-color: #ffffff;
-        padding: $font-size-40px $font-size-32px;
+        padding: $font-size-32px;
         border-radius: $font-size-2px;
         margin-top: $font-size-52px;
 
@@ -194,7 +204,7 @@
         select {
             height: $font-size-48px;
             background-color: #efefef;
-            padding-right: $font-size-26px;
+            padding-right: $font-size-32px;
         }
 
         input {

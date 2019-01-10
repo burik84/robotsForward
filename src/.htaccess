@@ -1,24 +1,18 @@
-Options All -ExecCGI -Indexes -Includes +FollowSymLinks
+Options -Indexes
 
-# по умолчанию
+# кодировка сайта
 AddDefaultCharset UTF-8
 
 # запрос на скачивание документов
 AddType application/octet-stream .pdf .xls
 
 # Отсутсвует страница
-ErrorDocument 404 /404.html
+ErrorDocument 404 http://robotsforwards.ru/errors/404.html
 
 # перенаправление http и www
-RewriteCond %{HTTP_HOST} ^robotsforwars.ru [NC]
-RewriteRule ^(.*)$ http://www.robotsforwars.ru/$1 [L,R=301]
-
-## Secure htaccess file ##
-
-<Files .htaccess>
-
-Order Allow,Deny
-
-Deny from all
-
-</Files>
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.robotsforwards.ru [NC]
+RewriteRule ^(.*)$ http://robotsforwards.ru/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^xn-...\.xn--p1ai$ [NC]
+RewriteRule ^(.*)$ http://robotsforwards.ru/$1 [R=301,L]

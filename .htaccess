@@ -1,18 +1,22 @@
+# для папки errors
 Options -Indexes
 
 # кодировка сайта
 AddDefaultCharset UTF-8
 
 # запрос на скачивание документов
-AddType application/octet-stream .pdf .xls
+AddType application/octet-stream .pdf
 
 # Отсутсвует страница
-ErrorDocument 404 http://robotsforwards.ru/errors/404.html
+ErrorDocument 404 http://robotsforwards.ru/404.html
 
 # перенаправление http и www
 Options +FollowSymLinks
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www.robotsforwards.ru [NC]
 RewriteRule ^(.*)$ http://robotsforwards.ru/$1 [R=301,L]
+
+# перенаправление с киррилицы на нормальный
+
 RewriteCond %{HTTP_HOST} ^xn-...\.xn--p1ai$ [NC]
 RewriteRule ^(.*)$ http://robotsforwards.ru/$1 [R=301,L]

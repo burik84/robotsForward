@@ -1,5 +1,5 @@
-@import 'myvariables';
-/*подключение переменных*/
+@import 'myvariables'; /*подключение переменных*/
+
 #contacts {
     background-color: #525b64;
 
@@ -21,6 +21,20 @@
         width: 100%;
         height: 240px;
         border-width: 0;
+    }
+
+    li {
+        &.nav-item {
+            &:first-child {
+                position: relative;
+            }
+
+            img {
+                position: absolute;
+                bottom: -1px;
+                right: -1px;
+            }
+        }
     }
 }
 

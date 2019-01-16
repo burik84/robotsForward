@@ -1,11 +1,10 @@
-@import 'myvariables'; /*подключение переменных*/
-
+@import 'myvariables';
+/*подключение переменных*/
 #contacts {
     background-color: #525b64;
 
     h4 {
         color: #ffffff;
-        // font-size: $font-size-20px;
     }
 
     p {
@@ -14,7 +13,6 @@
 
     a {
         font-weight: 500;
-        color: #2cc7c1;
     }
 
     iframe {
@@ -44,5 +42,40 @@
     p {
         color: #cacaca;
         // font-size: $font-size-14px;
+    }
+}
+
+div {
+    &.scrollup {
+        position: fixed;
+        /* фиксированная позиция */
+        color: #fff;
+        /* цвет текста */
+        background-color: $color-link;
+        /* цвет заднего фона */
+        right: 20px;
+        /* расстояние от правого края */
+        bottom: 20px;
+        /* расстояние от нижнего края */
+        padding: 4px 10px;
+        /* отступы до содержимого блока */
+        font-size: 20px;
+        /* размер шрифта (иконки) */
+        border-top-left-radius: 4px;
+        /* скругление верхнего левого угла */
+        border-top-right-radius: 4px;
+        /* скругление верхнего правого угла */
+        cursor: pointer;
+        /* форма курсора */
+        display: none;
+        /* не отображать элемент */
+        text-align: center;
+        /*выравнивание содержимого элемента по центру */
+        opacity: 0.75;
+
+        &:hover {
+            background-color: $color-link-hover;
+            /* цвет заднего фона при наведении */
+        }
     }
 }

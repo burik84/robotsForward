@@ -10,40 +10,15 @@
     h2 {
         font-family: $family-montserat;
         font-weight: 700;
-        // font-size: $font-size-32px;
-        color: #fff;
+        color: #ffffff;
         text-transform: uppercase;
+    }
+
+    p {
+        color: #ffffff;
     }
 }
 
 .header_info {
     border: 1px solid transparent;
-}
-
-.section {
-    &-table {
-        display: table;
-        height: 100%;
-        width: 100%;
-        border: 1px solid transparent;
-    }
-
-    &-row {
-        display: table-row;
-    }
-
-    &-cell {
-        display: table-cell;
-        text-align: center;
-
-        &-center {
-            max-width: 70%;
-            display: inline-block;
-
-            p {
-                color: #ffffff;
-                // font-size: $font-size-20px;
-            }
-        }
-    }
 }

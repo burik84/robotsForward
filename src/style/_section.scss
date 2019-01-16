@@ -7,7 +7,6 @@
 #games,
 #organizer,
 #speakers {
-    // padding: $font-size-40px 0;
     border: 1px solid transparent;
     border-bottom: 2px solid #f0f0f1;
 
@@ -53,7 +52,7 @@
 
                     i {
                         font-size: 0.8em;
-                        color: #2cc7c1;
+                        color: $color-link;
                         margin-right: $font-size-10px;
                     }
                 }
@@ -112,13 +111,11 @@
 
 .link {
     text-transform: uppercase;
-    // font-size: $font-size-18px;
 }
 
 .time {
-    background-color: #2cc7c1;
+    background-color: $color-link;
     color: #ffffff;
-    // font-size: $font-size-18px;
     font-weight: 500;
     padding: $font-size-2px;
     border-radius: $font-size-2px;
@@ -130,7 +127,6 @@
 
     &-link {
         color: #747a84;
-        // font-size: $font-size-18px;
         font-weight: 500;
 
         &:hover {
@@ -139,7 +135,7 @@
     }
 
     &-state {
-        color: #2cc7c1;
+        color: $color-link;
     }
 
     p {
@@ -172,14 +168,14 @@
     width: auto;
 
     li {
-        border: 1px solid #2cc7c1;
+        border: 1px solid $color-link;
         background: transparent;
         height: 12px;
         width: 12px;
         border-radius: $font-size-6px;
 
         &.active {
-            background-color: #2cc7c1;
+            background-color: $color-link;
             opacity: 0.5;
             height: 14px;
             width: 14px;
@@ -210,7 +206,7 @@
         input {
             &.form-control {
                 &:focus {
-                    border: 2px solid #2cc7c1 !important;
+                    border: 2px solid $color-link !important;
                     background-color: #ffffff;
                     box-shadow: none;
                 }
@@ -228,10 +224,10 @@
 
 .has-success {
     .form-control {
-        border: 2px solid #2cc7c1;
+        border: 2px solid $color-link;
 
         &-feedback {
-            color: #2cc7c1;
+            color: $color-link;
         }
     }
 }
@@ -246,7 +242,6 @@
 
     h3 {
         color: #777a7d;
-        // font-size: $font-size-20px;
         text-transform: uppercase;
         margin-top: $font-size-6px;
     }

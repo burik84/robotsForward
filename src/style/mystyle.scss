@@ -3,6 +3,7 @@
 @import "myvariables"; /* Подключение переменных, используемые в проекте*/
 // Стили для страниц
 /* --------------- базовые настройки ---------*/
+
 html {
 	height: 100%;
 }
@@ -24,18 +25,18 @@ a:visited {
 	text-decoration: underline;
 	font-weight: 700;
 	// font-size: $font-size-16px;
-	color: #2cc7c1;
+	color: $color-link;
 	font-family: Montserrat, sans-serif;
 }
 
 a:hover {
-	color: #2cc7c1;
+	color: $color-link-hover;
 	text-decoration: none;
 }
 
 a:active,
 a:focus {
-	color: #2cc7c1;
+	color: $color-link-hover;
 	text-decoration: none;
 }
 
@@ -74,7 +75,7 @@ button {
 	font-weight: 700;
 	text-decoration: underline;
 	// font-size: $font-size-16px;
-	color: #2cc7c1;
+	color: $color-link;
 	font-family: Montserrat, sans-serif;
 
 	&:visited {
@@ -82,7 +83,7 @@ button {
 		text-decoration: underline;
 		font-weight: 700;
 		// font-size: $font-size-16px;
-		color: #2cc7c1;
+		color: $color-link;
 		font-family: Montserrat, sans-serif;
 	}
 
@@ -93,12 +94,12 @@ button {
 	}
 
 	&.btn-link {
-		color: #2cc7c1;
+		color: $color-link;
 
 		&:active,
 		&:focus,
 		&:hover {
-			color: #2cc7c1;
+			color: $color-link-hover;
 			text-decoration: none;
 		}
 	}
@@ -116,6 +117,39 @@ a {
 			text-decoration: none;
 		}
 	}
+}
+
+.bs-tooltip-auto[x-placement^="top"] .arrow::before,
+.bs-tooltip-top .arrow::before {
+	border-top-color: $color-link-hover;
+	/* цвет стрелочки (по умолчанию #000)*/
+}
+
+.bs-tooltip-auto[x-placement^="right"] .arrow::before,
+.bs-tooltip-right .arrow::before {
+	border-right-color: $color-link-hover;
+	/* цвет стрелочки (по умолчанию #000)*/
+}
+
+.bs-tooltip-auto[x-placement^="bottom"] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+	border-bottom-color: $color-link-hover;
+	/* цвет стрелочки (по умолчанию #000) */
+}
+
+.bs-tooltip-auto[x-placement^="left"] .arrow::before,
+.bs-tooltip-left .arrow::before {
+	border-left-color: $color-link-hover;
+	/* цвет стрелочки (по умолчанию #000) */
+}
+
+.tooltip-inner {
+	color: #fff;
+	/* цвет шрифта */
+	background-color: $color-link-hover;
+	/* цвет фона (по умолчанию #000) */
+	border-radius: 0.25rem;
+	/* радиус скругдения углов */
 }
 
 .position-absolute {
@@ -164,7 +198,7 @@ a {
 
 	&--open {
 		.select2-selection--single {
-			background: #2cc7c1;
+			background: $color-link;
 
 			.select2-selection__rendered {
 				color: #ffffff;
@@ -185,7 +219,7 @@ li {
 
 .select2-results__options {
 	background: #525b64;
-	color: #2cc7c1;
+	color: $color-link;
 }
 
 .elect2-container-default .select2-results__option[aria-selected="true"],

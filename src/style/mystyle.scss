@@ -9,15 +9,23 @@ html {
 }
 
 body {
-	color: #828282;
+	color: $color-text;
 	font-size: $font-size-12px;
 	/*Указан базовый цвет для текста!!!*/
 	/* используем безопасные шрифтовые CSS стеки */
 	height: 100%;
-	background: #fff;
+	// background: #fff;
 	font-weight: 400;
 	min-width: 320px;
 	font-family: $family-ubuntu;
+	background: url("../img/header_background_web.png");
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: $color-back;
+	height: 100%;
+	min-height: 700px;
 }
 
 a,

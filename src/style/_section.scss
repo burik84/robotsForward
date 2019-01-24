@@ -1,21 +1,22 @@
 // Импорт переменных
 @import "myvariables"; // Секция о соревнования
 
-#events,
+#event,
 #form,
 #gallery,
 #games,
 #organizer,
+#schedule,
 #speakers {
     border: 1px solid transparent;
-    border-bottom: 2px solid #f0f0f1;
+    border-bottom: 1px solid $color-border;
 
     h2 {
         font-family: Montserrat, sans-serif;
         font-weight: 700;
         // font-size: $font-size-32px;
         text-transform: uppercase;
-        color: #828689;
+        color: $color-text-h2;
     }
 }
 
@@ -76,7 +77,7 @@
             }
 
             h3 {
-                color: #6bd8d3;
+                color: $color-link;
             }
         }
     }
@@ -96,7 +97,7 @@
 .back {
     width: 140px;
     height: 140px;
-    background-color: #6bd8d3;
+    background-color: $color-link;
     display: inline-block;
     border-radius: 50%;
     opacity: 0;
@@ -126,11 +127,11 @@
     margin-bottom: $font-size-10px;
 
     &-link {
-        color: #747a84;
+        color: $color-text;
         font-weight: 500;
 
         &:hover {
-            color: #747a84;
+            color: $color-text;
         }
     }
 
@@ -139,7 +140,7 @@
     }
 
     p {
-        color: #999999;
+        color: $color-footer-text;
     }
 
     &-tab {
@@ -236,12 +237,12 @@
 .speakers {
     &-head {
         h2 {
-            color: #6a7079;
+            color: $color-footer-text;
         }
     }
 
     h3 {
-        color: #777a7d;
+        color: $color-footer-text;
         text-transform: uppercase;
         margin-top: $font-size-6px;
     }
@@ -251,4 +252,41 @@
 #organizer {
     background-color: #ffffff;
     text-align: center;
+}
+// Секция контакты
+
+#contacts {
+    background-color: #525b64;
+
+    h4 {
+        color: $color-text-h2;
+    }
+
+    p {
+        color: #cdd0d2;
+    }
+
+    a {
+        font-weight: 500;
+    }
+
+    iframe {
+        width: 100%;
+        height: 240px;
+        border-width: 0;
+    }
+
+    li {
+        &.nav-item {
+            &:first-child {
+                position: relative;
+            }
+
+            img {
+                position: absolute;
+                bottom: -1px;
+                right: -1px;
+            }
+        }
+    }
 }

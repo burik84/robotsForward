@@ -2,20 +2,23 @@
 @import "myvariables";
 
 #header {
-    background: url("../img/header_background_web.png") center no-repeat;
-    background-size: cover;
-    height: 100%;
-    min-height: 700px;
-
+    // background: url("../img/header_background_web.png");
+    // background-position: left center;
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-size: cover;
+    // background-color: #94ef9c;
+    // height: 100%;
+    // min-height: 700px;
     h2 {
         font-family: $family-montserat;
         font-weight: 700;
-        color: #ffffff;
-        text-transform: uppercase;
+        color: $color-text;
+        // text-transform: uppercase;
     }
 
     p {
-        color: #ffffff;
+        color: $color-text;
     }
 }
 

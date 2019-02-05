@@ -1,10 +1,27 @@
 // Импорт переменных
-@import "myvariables"; // Секция о соревнования
+@import "myvariables"; //
+// шапка
+
+#header {
+    // background: url("../img/header_background_web.png");
+    // background-position: left center;
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-size: cover;
+    // background-color: #94ef9c;
+    // height: 100%;
+    // min-height: 700px;
+    h2 {
+        font-family: $family-montserat;
+        font-weight: 700;
+    }
+}
 
 #event,
 #form,
 #gallery,
 #games,
+#main,
 #organizer,
 #schedule,
 #speakers {
@@ -14,9 +31,6 @@
     h2 {
         font-family: Montserrat, sans-serif;
         font-weight: 700;
-        // font-size: $font-size-32px;
-        text-transform: uppercase;
-        color: $color-text-h2;
     }
 }
 
@@ -32,29 +46,14 @@
 
 .section {
     &-tabs {
-        ul {
-            .nav-item {
-                padding-left: $font-size-32px;
-
-                &:first-child {
-                    padding-left: $font-size-10px;
-                }
-            }
-        }
-
         .tab-content {
-            padding: $font-size-10px;
-
             ul {
-                padding-left: $font-size-10px;
-
                 li {
                     line-height: 30px;
 
                     i {
                         font-size: 0.8em;
                         color: $color-link;
-                        margin-right: $font-size-10px;
                     }
                 }
             }
@@ -104,8 +103,7 @@
 
     i {
         line-height: 140px;
-        font-size: $font-size-32px;
-        color: #ffffff;
+        color: $color-text-add;
     }
 }
 // Секция календарь событий
@@ -116,16 +114,12 @@
 
 .time {
     background-color: $color-link;
-    color: #ffffff;
+    color: $color-text-add;
     font-weight: 500;
-    padding: $font-size-2px;
-    border-radius: $font-size-2px;
-    margin-right: $font-size-6px;
+    border-radius: 2px;
 }
 
 .collapse {
-    margin-bottom: $font-size-10px;
-
     &-link {
         color: $color-text;
         font-weight: 500;
@@ -137,14 +131,6 @@
 
     &-state {
         color: $color-link;
-    }
-
-    p {
-        color: $color-footer-text;
-    }
-
-    &-tab {
-        margin-bottom: $font-size-10px;
     }
 }
 // Секция галерея - видео и фото
@@ -208,7 +194,7 @@
             &.form-control {
                 &:focus {
                     border: 2px solid $color-link !important;
-                    background-color: #ffffff;
+                    background-color: $color-text-add;
                     box-shadow: none;
                 }
             }
@@ -237,12 +223,12 @@
 .speakers {
     &-head {
         h2 {
-            color: $color-footer-text;
+            color: $color-text-light;
         }
     }
 
     h3 {
-        color: $color-footer-text;
+        color: $color-text-light;
         text-transform: uppercase;
         margin-top: $font-size-6px;
     }
@@ -256,16 +242,6 @@
 // Секция контакты
 
 #contacts {
-    background-color: #525b64;
-
-    h4 {
-        color: $color-text-h2;
-    }
-
-    p {
-        color: #cdd0d2;
-    }
-
     a {
         font-weight: 500;
     }
@@ -284,8 +260,8 @@
 
             img {
                 position: absolute;
-                bottom: -1px;
-                right: -1px;
+                bottom: 4px;
+                right: 8px;
             }
         }
     }

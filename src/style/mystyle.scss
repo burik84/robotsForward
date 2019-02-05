@@ -3,7 +3,6 @@
 @import "myvariables"; /* Подключение переменных, используемые в проекте*/
 // Стили для страниц
 /* --------------- базовые настройки ---------*/
-
 html {
 	height: 100%;
 }
@@ -13,7 +12,9 @@ body {
 	font-size: $font-size-12px;
 	/*Указан базовый цвет для текста!!!*/
 	/* используем безопасные шрифтовые CSS стеки */
-	height: 100%;
+	// height: 100%;
+	min-height: 100vh;
+	box-sizing: border-box;
 	// background: #fff;
 	font-weight: 400;
 	min-width: 320px;
@@ -122,6 +123,7 @@ button {
 a {
 	&.active {
 		&.show {
+			color: $color-link-hover;
 			text-decoration: none;
 		}
 	}
@@ -152,7 +154,7 @@ a {
 }
 
 .tooltip-inner {
-	color: #fff;
+	color: $color-text-add;
 	/* цвет шрифта */
 	background-color: $color-link-hover;
 	/* цвет фона (по умолчанию #000) */
@@ -167,21 +169,6 @@ a {
 	right: -3%;
 	z-index: -1;
 }
-// Стили fontawesome
-
-.fab,
-.fas {
-	padding-left: $font-size-6px;
-	padding-right: $font-size-6px;
-}
-
-.fa-arrow-circle-down {
-	margin-right: $font-size-6px;
-}
-
-.fa-arrow-circle-right {
-	margin-left: $font-size-6px;
-}
 // Стили для формы
 
 .select2-container {
@@ -189,12 +176,12 @@ a {
 		.select2-selection--single {
 			height: 45px;
 			text-align: left;
-			background-color: #efefef;
+			background-color: $color-text-light;
 
 			.select2-selection {
 				&__rendered {
 					line-height: 44px;
-					color: #bebebe;
+					color: $color-text;
 				}
 
 				&__arrow {
@@ -209,7 +196,7 @@ a {
 			background: $color-link;
 
 			.select2-selection__rendered {
-				color: #ffffff;
+				color: $color-text-add;
 			}
 		}
 	}
@@ -226,13 +213,13 @@ li {
 }
 
 .select2-results__options {
-	background: #525b64;
+	background: $color-text;
 	color: $color-link;
 }
 
 .elect2-container-default .select2-results__option[aria-selected="true"],
 .select2-container-default .select2-results__option--highlighted[aria-selected] {
-	background: #525b64;
+	background: $color-text;
 }
 
 .visually_hidden {
@@ -244,4 +231,32 @@ li {
 	padding: 0;
 	clip: rect(0 0 0 0);
 	overflow: hidden;
+}
+
+.overlay {
+	position: relative;
+	margin: 0 auto;
+	padding: 0.5em;
+	// max-width: 23em;
+	background: hsla(0,0%,100%,.75) border-box;
+	overflow: hidden;
+	border-radius: 0.3em;
+	box-shadow: 0 0 0 1px hsla(0,0%,100%,.3) inset, 0 0.5em 1em rgba(0, 0, 0, 0.6);
+	// text-shadow: 0 1px 1px hsla(0,0%,100%,.3);
+	border: 4px solid hsla(0,0%,100%,.25);
+	// background: white;
+	background-clip: padding-box;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: -30px;
+		z-index: -10;
+		-webkit-filter: blur(20px);
+		filter: blur(20px);
+	}
 }

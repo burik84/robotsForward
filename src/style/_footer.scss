@@ -1,14 +1,15 @@
 @import 'myvariables';
 /*подключение переменных*/
 #copy {
-    background-color: $color-footer-back;
+    background-color: $color-back-footer;
+    color: $color-text-light;
 }
 
 div {
     &.scrollup {
         position: fixed;
         /* фиксированная позиция */
-        color: #fff;
+        color: $color-text-add;
         /* цвет текста */
         background-color: $color-link;
         /* цвет заднего фона */
@@ -24,6 +25,10 @@ div {
         /* скругление верхнего левого угла */
         border-top-right-radius: 4px;
         /* скругление верхнего правого угла */
+        border-bottom-left-radius: 4px;
+        /* скругление нижнего левого угла */
+        border-bottom-right-radius: 4px;
+        /* скругление нижнего правого угла */
         cursor: pointer;
         /* форма курсора */
         display: none;

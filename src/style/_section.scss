@@ -17,17 +17,16 @@
     }
 }
 
+#common,
 #event,
 #form,
 #gallery,
 #games,
-#main,
 #organizer,
 #schedule,
 #speakers {
     border: 1px solid transparent;
-    border-bottom: 1px solid $color-border;
-
+    // border-bottom: 1px solid $color-border;
     h2 {
         font-family: Montserrat, sans-serif;
         font-weight: 700;
@@ -135,12 +134,6 @@
 }
 // Секция галерея - видео и фото
 
-#gallery {
-    iframe {
-        width: 100%;
-    }
-}
-
 .row-item {
     margin-top: $font-size-32px;
 
@@ -236,7 +229,7 @@
 // Секция логотипы спонсоров и организаторов
 
 #organizer {
-    background-color: #ffffff;
+    // background-color: #ffffff;
     text-align: center;
 }
 // Секция контакты
@@ -263,6 +256,50 @@
                 bottom: 4px;
                 right: 8px;
             }
+        }
+    }
+}
+
+#copy {
+    background-color: $color-back-footer;
+    color: $color-text-light;
+}
+
+div {
+    &.scrollup {
+        position: fixed;
+        /* фиксированная позиция */
+        color: $color-text-add;
+        /* цвет текста */
+        background-color: $color-link;
+        /* цвет заднего фона */
+        right: 20px;
+        /* расстояние от правого края */
+        bottom: 20px;
+        /* расстояние от нижнего края */
+        padding: 4px 10px;
+        /* отступы до содержимого блока */
+        font-size: 20px;
+        /* размер шрифта (иконки) */
+        border-top-left-radius: 4px;
+        /* скругление верхнего левого угла */
+        border-top-right-radius: 4px;
+        /* скругление верхнего правого угла */
+        border-bottom-left-radius: 4px;
+        /* скругление нижнего левого угла */
+        border-bottom-right-radius: 4px;
+        /* скругление нижнего правого угла */
+        cursor: pointer;
+        /* форма курсора */
+        display: none;
+        /* не отображать элемент */
+        text-align: center;
+        /*выравнивание содержимого элемента по центру */
+        opacity: 0.75;
+
+        &:hover {
+            background-color: $color-link-hover;
+            /* цвет заднего фона при наведении */
         }
     }
 }

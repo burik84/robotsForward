@@ -9,6 +9,13 @@
     body {
         font-size: $font-size-14px;
     }
+
+    div {
+        &.scrollup {
+            right: 30px;
+            bottom: 30px;
+        }
+    }
 }
 /* на sm */
 @media (min-width: 768px) {

@@ -16,7 +16,6 @@ body {
 	// height: 100%;
 	min-height: 100vh;
 	box-sizing: border-box;
-	// background: #fff;
 	font-weight: 400;
 	min-width: 320px;
 	font-family: $family-ubuntu;
@@ -28,14 +27,13 @@ body {
 	background-color: $color-back;
 	height: 100%;
 	min-height: 700px;
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 a,
 a:visited {
 	text-decoration: underline;
 	font-weight: 700;
-	// font-size: $font-size-16px;
 	color: $color-link;
 	font-family: Montserrat, sans-serif;
 }
@@ -85,7 +83,6 @@ button {
 	text-transform: uppercase;
 	font-weight: 700;
 	text-decoration: underline;
-	// font-size: $font-size-16px;
 	color: $color-link;
 	font-family: Montserrat, sans-serif;
 
@@ -93,7 +90,6 @@ button {
 		text-transform: uppercase;
 		text-decoration: underline;
 		font-weight: 700;
-		// font-size: $font-size-16px;
 		color: $color-link;
 		font-family: Montserrat, sans-serif;
 	}
@@ -165,8 +161,6 @@ a {
 }
 
 .position-absolute {
-	// bottom: -70px;
-	// right: -70px;
 	top: 85%;
 	right: -3%;
 	z-index: -1;
@@ -249,7 +243,7 @@ li {
 	border: 3px solid hsla(0,0%,100%,.25);
 	// background: white;
 	background-clip: padding-box;
-	// z-index: -9;
+
 	&::before {
 		content: '';
 		position: absolute;

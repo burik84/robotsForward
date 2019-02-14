@@ -96,6 +96,7 @@ gulp.task('css', function() {
             browsers: autoprefixerList
         }))
         .pipe(cleanCSS()) // минимизируем CSS
+        // .pipe(cssnano()) // минимизируем CSS
         .pipe(sourcemaps.write('./')) // записываем sourcemap
         .pipe(gulp.dest(path.build.css)) // выгружаем в build
         .pipe(webserver.reload({

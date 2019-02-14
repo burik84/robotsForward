@@ -3,14 +3,6 @@
 // шапка
 
 #header {
-    // background: url("../img/header_background_web.png");
-    // background-position: left center;
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
-    // background-size: cover;
-    // background-color: #94ef9c;
-    // height: 100%;
-    // min-height: 700px;
     h2 {
         font-family: $family-montserat;
         font-weight: 700;
@@ -26,7 +18,7 @@
 #schedule,
 #speakers {
     border: 1px solid transparent;
-    // border-bottom: 1px solid $color-border;
+
     h2 {
         font-family: Montserrat, sans-serif;
         font-weight: 700;
@@ -273,9 +265,9 @@ div {
         /* цвет текста */
         background-color: $color-link;
         /* цвет заднего фона */
-        right: 20px;
+        right: 10px;
         /* расстояние от правого края */
-        bottom: 20px;
+        bottom: 10px;
         /* расстояние от нижнего края */
         padding: 4px 10px;
         /* отступы до содержимого блока */

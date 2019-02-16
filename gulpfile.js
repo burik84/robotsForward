@@ -52,8 +52,8 @@ var gulp = require('gulp'), // подключаем Gulp
     cache = require('gulp-cache'), // модуль для кэширования
     cleanCSS = require('gulp-clean-css'), // плагин для минимизации CSS
     concat = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
-    cssnano = require('gulp-cssnano'), // Подключаем пакет для минификации CSS
     imagemin = require('gulp-imagemin'), // плагин для сжатия PNG, JPEG, GIF и SVG изображений
+    htmlmin = require('gulp-htmlmin'), // плагин для минификации html
     plumber = require('gulp-plumber'), // модуль для отслеживания ошибок
     rigger = require('gulp-rigger'), // модуль для импорта содержимого одного файла в другой
     sass = require('gulp-sass'), // модуль для компиляции SASS (SCSS) в CSS
@@ -80,6 +80,9 @@ gulp.task('html', function() {
     return gulp.src(path.src.html) // выбор всех html файлов по указанному пути
         .pipe(plumber()) // отслеживание ошибок
         .pipe(rigger()) // импорт вложений
+        .pipe(htmlmin({
+            collapseWhitespace: true
+        }))
         .pipe(gulp.dest(path.build.html)) // выкладывание готовых файлов
         .pipe(webserver.reload({
             stream: true
@@ -96,7 +99,6 @@ gulp.task('css', function() {
             browsers: autoprefixerList
         }))
         .pipe(cleanCSS()) // минимизируем CSS
-        // .pipe(cssnano()) // минимизируем CSS
         .pipe(sourcemaps.write('./')) // записываем sourcemap
         .pipe(gulp.dest(path.build.css)) // выгружаем в build
         .pipe(webserver.reload({
@@ -120,12 +122,12 @@ gulp.task('js', function() {
 
 // перенос шрифтов
 gulp.task('fonts', function() {
-    return gulp.src([path.src.fonts])
+    return gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts));
 });
 // перенос служебных файлов из папки service в корень
 gulp.task('service', function() {
-    return gulp.src([path.src.service])
+    return gulp.src(path.src.service)
         .pipe(gulp.dest(path.build.html));
 });
 

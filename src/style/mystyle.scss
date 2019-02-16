@@ -35,7 +35,7 @@ a:visited {
 	text-decoration: underline;
 	font-weight: 700;
 	color: $color-link;
-	font-family: Montserrat, sans-serif;
+	font-family: $family-montserat;
 }
 
 a:hover {
@@ -84,14 +84,14 @@ button {
 	font-weight: 700;
 	text-decoration: underline;
 	color: $color-link;
-	font-family: Montserrat, sans-serif;
+	font-family: $family-montserat;
 
 	&:visited {
 		text-transform: uppercase;
 		text-decoration: underline;
 		font-weight: 700;
 		color: $color-link;
-		font-family: Montserrat, sans-serif;
+		font-family: $family-montserat;
 	}
 
 	&.btn {
@@ -258,10 +258,10 @@ li {
 	}
 
 	&-light {
-		background: hsla(0,0%,100%,.75) border-box;
+		background: hsla(0,0%,100%,.85) border-box;
 	}
 
 	&-dark {
-		background: rgba(240,233,208,0.8) border-box;
+		background: rgba(240,233,208,0.85) border-box;
 	}
 }

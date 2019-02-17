@@ -60,7 +60,7 @@ $(window).scroll(function() {
 
 // Плавная прокрутка к якорю из меню в header
 $(function() {
-    $("#header a[href^='#']").click(function() {
+    $("header a[href^='#']").click(function() {
         var _href = $(this).attr("href");
         $("html, body").animate({
             scrollTop: $(_href).offset().top + "px"

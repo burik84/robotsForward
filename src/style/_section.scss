@@ -1,19 +1,21 @@
 // Импорт переменных
 @import "myvariables"; //
-// шапка
 
-#header {
-    h2 {
-        font-family: $family-montserat;
-        font-weight: 700;
-    }
+#common {
+    background: url("../img/header_background_web.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-top: 50px;
+    min-height: 700px;
 }
 
-#common,
 #event,
 #form,
 #gallery,
 #games,
+#header,
 #organizer,
 #schedule,
 #speakers {

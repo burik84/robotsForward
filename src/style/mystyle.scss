@@ -3,17 +3,13 @@
 @import "myvariables"; /* Подключение переменных, используемые в проекте*/
 // Стили для страниц
 /* --------------- базовые настройки ---------*/
-html {
-	height: 100%;
-}
-
 body {
 	color: $color-text;
 	font-size: $font-size-12px;
 	box-sizing: border-box;
 	font-weight: 400;
 	min-width: 320px;
-	min-height: 100vh;
+	height: 100vh;
 	font-family: $family-ubuntu;
 	background-color: $color-back;
 	line-height: 1.75;
@@ -100,12 +96,6 @@ button {
 			color: $color-link-hover;
 			text-decoration: none;
 		}
-	}
-}
-
-.nav-justified {
-	.nav-item {
-		flex-basis: auto;
 	}
 }
 

@@ -13,14 +13,13 @@ ErrorDocument 404 http://xn--90acgda4cbjegs2i.xn--p1ai/404.html
 # перенаправление http и www
 Options +FollowSymLinks
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www.xn--90acgda4cbjegs2i.xn--p1ai [NC]
-RewriteCond %{HTTP_HOST} ^.xn--90acgda4cbjegs2i.xn--p1ai [NC]
 
+RewriteCond %{SERVER_PORT} !^443$
 RewriteCond %{HTTP:X-Forwarded-Proto} !=https
-RewriteRule .* https://xn--90acgda4cbjegs2i.xn--p1ai/$1 [R=301,L]
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
 
-# RewriteCond %{HTTP_HOST} ^www.robotsforwards.ru [NC]
-# RewriteRule ^(.*)$ http://robotsforwards.ru/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
 # перенаправление с киррилицы на нормальный
 

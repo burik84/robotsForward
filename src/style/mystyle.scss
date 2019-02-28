@@ -3,6 +3,7 @@
 @import "myvariables"; /* Подключение переменных, используемые в проекте*/
 // Стили для страниц
 /* --------------- базовые настройки ---------*/
+
 body {
 	color: $color-text;
 	font-size: $font-size-12px;
@@ -217,15 +218,13 @@ li {
 	// margin: 0 auto;
 	padding: 0.5em;
 	// max-width: 23em;
-	// background: hsla(0,0%,100%,.75) border-box;
+	background: hsla(0,0%,100%,.85) border-box;
 	overflow: hidden;
 	border-radius: 0.3em;
 	box-shadow: 0 0 0 1px hsla(0,0%,100%,.3) inset, 0 0.5em 1em rgba(0, 0, 0, 0.6);
 	// text-shadow: 0 1px 1px hsla(0,0%,100%,.3);
 	border: 3px solid hsla(0,0%,100%,.25);
-	// background: white;
 	background-clip: padding-box;
-	background: hsla(0,0%,100%,.85) border-box;
 
 	&::before {
 		content: '';

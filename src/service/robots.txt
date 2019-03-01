@@ -13,7 +13,7 @@ User-agent: Yandex
 #Allow: /
 
 #карту сайта
-Sitemap: http://xn--90acgda4cbjegs2i.xn--p1ai/sitemap.xml
+Sitemap: https://xn--90acgda4cbjegs2i.xn--p1ai/sitemap.xml
 
 #Host
 Host: xn--90acgda4cbjegs2i.xn--p1ai

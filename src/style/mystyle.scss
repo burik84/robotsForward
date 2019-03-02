@@ -110,39 +110,6 @@ a {
 	}
 }
 
-.bs-tooltip-auto[x-placement^="top"] .arrow::before,
-.bs-tooltip-top .arrow::before {
-	border-top-color: $color-link-hover;
-	/* цвет стрелочки (по умолчанию #000)*/
-}
-
-.bs-tooltip-auto[x-placement^="right"] .arrow::before,
-.bs-tooltip-right .arrow::before {
-	border-right-color: $color-link-hover;
-	/* цвет стрелочки (по умолчанию #000)*/
-}
-
-.bs-tooltip-auto[x-placement^="bottom"] .arrow::before,
-.bs-tooltip-bottom .arrow::before {
-	border-bottom-color: $color-link-hover;
-	/* цвет стрелочки (по умолчанию #000) */
-}
-
-.bs-tooltip-auto[x-placement^="left"] .arrow::before,
-.bs-tooltip-left .arrow::before {
-	border-left-color: $color-link-hover;
-	/* цвет стрелочки (по умолчанию #000) */
-}
-
-.tooltip-inner {
-	color: $color-text-add;
-	/* цвет шрифта */
-	background-color: $color-link-hover;
-	/* цвет фона (по умолчанию #000) */
-	border-radius: 0.25rem;
-	/* радиус скругдения углов */
-}
-
 .position-absolute {
 	top: 85%;
 	right: -3%;
@@ -196,7 +163,7 @@ li {
 	color: $color-link;
 }
 
-.elect2-container-default .select2-results__option[aria-selected="true"],
+.select2-container-default .select2-results__option[aria-selected="true"],
 .select2-container-default .select2-results__option--highlighted[aria-selected] {
 	background: $color-text;
 }
@@ -218,7 +185,7 @@ li {
 	// margin: 0 auto;
 	padding: 0.5em;
 	// max-width: 23em;
-	background: hsla(0,0%,100%,.85) border-box;
+	background: hsla(0,0%,100%,.9) border-box;
 	overflow: hidden;
 	border-radius: 0.3em;
 	box-shadow: 0 0 0 1px hsla(0,0%,100%,.3) inset, 0 0.5em 1em rgba(0, 0, 0, 0.6);

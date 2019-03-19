@@ -9,3 +9,8 @@ and adjusting some modules. In the future, the page will be used for competition
 and there is time to test new ideas.
 
 The project is running. Our domain [роботывперед.рф](https://xn--90acgda4cbjegs2i.xn--p1ai/)
+- - - -
+* Plans to add
+  * registration form
+  * survey form
+  * additional page for tables - participants of the competition

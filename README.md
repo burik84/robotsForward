@@ -1,6 +1,6 @@
-#РоботыВперед#
+# РоботыВперед #
 
-###autor: burikAV###
+### autor: burikAV ###
 
 Landing Page is created for the event - the annual robotics competition "Robots Forward", 
 held in Slantsy, Leningrad region.

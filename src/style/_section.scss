@@ -16,6 +16,7 @@
 #gallery,
 #games,
 #header,
+#map,
 #organizer,
 #schedule,
 #speakers {
@@ -218,6 +219,14 @@
         color: $color-text-light;
         text-transform: uppercase;
         margin-top: $font-size-6px;
+    }
+}
+
+#map {
+    iframe {
+        width: 100%;
+        height: 400px;
+        border-width: 0;
     }
 }
 // Секция логотипы спонсоров и организаторов

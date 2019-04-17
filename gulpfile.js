@@ -26,7 +26,8 @@ var path = {
         style: 'src/style/main.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/webfonts/**/*.*',
-        service: 'src/service/**/*.*'
+        service: 'src/service/**/*.*',
+        info: 'src/info/**/*.*'
     },
     watch: {
         html: 'src/**/*.html',
@@ -127,7 +128,7 @@ gulp.task('fonts', function() {
 });
 // перенос служебных файлов из папки service в корень
 gulp.task('service', function() {
-    return gulp.src(path.src.service)
+    return gulp.src([path.src.service, path.src.info])
         .pipe(gulp.dest(path.build.html));
 });
 

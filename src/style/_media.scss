@@ -1,5 +1,14 @@
 // Импорт переменных
 @import "myvariables";
+@media only screen and (max-width: 992px) {
+    #istable {
+        #part {
+            iframe {
+                width: 98%;
+            }
+        }
+    }
+}
 @media only screen and (max-width: 576px) {
     .h3 {
         font-size: 1.25rem;

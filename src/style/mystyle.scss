@@ -4,6 +4,7 @@
 @import "mixin"; /* Подключение mixin's*/
 // Стили для страниц
 /* --------------- базовые настройки ---------*/
+
 body {
 	color: $color-text;
 	font-size: $font-size-12px;
@@ -171,6 +172,7 @@ li {
 .select2-container-default .select2-results__option--highlighted[aria-selected] {
 	background: $color-text;
 }
+// Скрываем секцию
 
 .visually_hidden {
 	position: absolute;
@@ -183,6 +185,7 @@ li {
 	overflow: hidden;
 	z-index: -2;
 }
+// Фон для секций полупрозрачность
 
 .overlay {
 	position: relative;
@@ -210,6 +213,7 @@ li {
 		filter: blur(20px);
 	}
 }
+// Презагрузка страницы
 
 .preloader {
 	position: fixed;

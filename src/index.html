@@ -40,7 +40,10 @@
                     <div class="col-10 col-sm-10">
                         <h2 class="h4 mt-2 mt-sm-3 mt-lg-4 text-center">Региональные соревнования по робототехнике <br>
                             для школьников Ленинградской области и Санкт-Петербурга</h2>
-                        <p class="mt-2 mt-sm-3 mt-lg-4 text-center">Мероприятие проводится на базе Сланцевского Дома творчества <br><a href="#map" role="button"><span><i class="fas fa-map-marker-alt"></i></span> на ул. Кирова д.16</p></a>
+                        <!-- Адрес проведения Кирова д.16, если будет большое количество участников -->
+                        <p class="mt-2 mt-sm-3 mt-lg-4 text-center d-none">Мероприятие проводится на базе Сланцевского Дома творчества <br><a href="#map" role="button"><span><i class="fas fa-map-marker-alt"></i></span> на ул. Кирова д.16</p></a>
+                        <!-- Адрес проведения Грибоедова, д. 8, если количество участников меньше 60 человек -->
+                        <p class="mt-2 mt-sm-3 mt-lg-4 text-center">Мероприятие проводится на базе Сланцевского Дома творчества <br><a href="#contacts" role="button"><span><i class="fas fa-map-marker-alt"></i></span> на ул. Грибоедова, д. 8</p></a>
                     </div>
                 </div>
             </div>
@@ -156,7 +159,8 @@
             <!--container-->
         </section>
         <!--/.event-->
-        <section id="map">
+        <!-- Место проведения соревнования будут проводится по адресу Кирова, д. 16, если количество участников станет больше 60 человек -->
+        <section id="map" class="d-none">
             <div class="container mt-1 py-1 mt-sm-4 py-sm-4">
                 <div class="row overlay py-2 py-md-4">
                     <div class="col-sm-10 offset-sm-1">

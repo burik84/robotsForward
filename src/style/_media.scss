@@ -2,9 +2,10 @@
 @import "myvariables";
 @media only screen and (max-width: 992px) {
     #istable {
-        #part {
+        #part,
+        #protocols {
             iframe {
-                width: 98%;
+                width: 99%;
             }
         }
     }

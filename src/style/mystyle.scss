@@ -61,6 +61,12 @@ section {
 	clear: both;
 }
 
+ul {
+	li {
+		list-style-type: none;
+	}
+}
+
 .clearfix:after {
 	clear: both;
 	content: "";

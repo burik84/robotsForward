@@ -329,6 +329,14 @@ div {
         }
     }
 
+    #protocols {
+        iframe {
+            width: 70%;
+            height: 500px;
+            border-width: 0;
+        }
+    }
+
     .fas {
         &.gold {
             color: $color-gold;

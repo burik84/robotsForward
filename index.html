@@ -1,0 +1,1424 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <title>Нави</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Нави - это проект, где собрана информация по оборудованию КИП, АСУТП, схемам, инструкциям и т.д. Вы находитесь на главной странице">
+    <meta name="autor" content="bur_AV">
+    <link rel='stylesheet' href='style_scss/bootstrap-4.1.1/bootstrap.css' type='text/css'>
+    <link rel='stylesheet' href='style_scss/fontawesome-free-5.1.0-web/css/all.css' type='text/css'>
+    <link rel='stylesheet' href='style_scss/style.css' type='text/css'>
+
+    <!--[if lt IE 9]>
+		    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+    <!-- Верхняя часть с меню - шапка-->
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-dark bg-info fixed-top">
+            <a class="navbar-brand mb-0 h1" href="index.html"><i class="fab fa-bandcamp"></i>Нави</a>
+            <span class="navbar-text d-none d-sm-block">...ваш помощник по КИП и АСУТП</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navigation">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="source/scheme.html">Схемы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="source/uku.html">уку</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="source/kip.html">Кип</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="source/asutp.html">Асутп</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="source/info.html">Информация</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="main container-fluid">
+        <div class="row">
+            <nav class="col-xs col-sm-12 col-md-3 col-lg-2">
+                <ul class="nav nav-pills flex-row flex-md-column bg-light" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <li class="nav-item d-none">
+                        <a class="flex-fill nav-link" id="v-pills-intro-tab" data-toggle="pill" href="#v-pills-intro" role="tab" aria-controls="v-pills-intro" aria-selected="true" title="Общая информация">Введение</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="flex-fill nav-link" id="v-pills-sug-tab" data-toggle="pill" href="#v-pills-sug" role="tab" aria-controls="v-pills-sug" aria-selected="true" title="Участок хранения СУГ под давлением">СУГ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="flex-fill nav-link" id="v-pills-us-tab" data-toggle="pill" href="#v-pills-us" role="tab" aria-controls="v-pills-us" aria-selected="true" title="Участок слива">УС</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="flex-fill nav-link" id="v-pills-uhb-tab" data-toggle="pill" href="#v-pills-uhb" role="tab" aria-controls="v-pills-uhb" aria-selected="false" title="Участок хранения бензинов">УХБ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="flex-fill nav-link" id="v-pills-ith-tab" data-toggle="pill" href="#v-pills-ith" role="tab" aria-controls="v-pills-ith" aria-selected="false" title="Участок хранения СУГ охлажденных">ИТХ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="flex-fill nav-link" id="v-pills-ups-tab" data-toggle="pill" href="#v-pills-ups" role="tab" aria-controls="v-pills-ups" aria-selected="false" title="Участок погрузки судов">УПС</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Проекты</a>
+                        <div class="dropdown-menu">
+                            <a class="flex-fill nav-link dropdown-item" id="v-pills-ahz-tab" data-toggle="pill" href="#v-pills-ahz" role="tab" aria-controls="v-pills-ahz" aria-selected="false" title="Административно-хозяйственная зона">АХЗ</a>
+                            <a class="flex-fill nav-link dropdown-item" id="v-pills-aux-tab" data-toggle="pill" href="#v-pills-aux" role="tab" aria-controls="v-pills-aux" aria-selected="false" title="Котельное хозяйство, очистные сооружения">Вспомогательная</a>
+                            <a class="flex-fill nav-link dropdown-item" id="v-pills-ais-tab" data-toggle="pill" href="#v-pills-ais" role="tab" aria-controls="v-pills-ais" aria-selected="false" title="Схемы по части - автоматизация инженерных систем">АИС</a>
+                            <a class="flex-fill nav-link dropdown-item" id="v-pills-aov-tab" data-toggle="pill" href="#v-pills-aov" role="tab" aria-controls="v-pills-aov" aria-selected="false" title="Схемы по вентиляции">АОВ</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Петли</a>
+                        <div class="dropdown-menu">
+                            <a class="flex-fill nav-link dropdown-item" id="v-pills-rotork-tab" data-toggle="pill" href="#v-pills-rotork" role="tab" aria-controls="v-pills-rotork" aria-selected="false" title="Схемы по петлям Rotork на титулах">Петли.
+                                ROTORK</a>
+                            <a class="flex-fill nav-link dropdown-item" id="v-pills-sgoes-tab" data-toggle="pill" href="#v-pills-sgoes" role="tab" aria-controls="v-pills-sgoes" aria-selected="false" title="Схемы по петлям газоанализаторов СГОЭС на титулах">Петли.
+                                СГОЭС</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <section class="col-xs col-sm-12 col-md-9 col-lg-7">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-intro" role="tabpanel" aria-labelledby="v-pills-intro-tab">
+                        <!-- Основной контент -->
+                        <h3>О главном...</h3>
+                        <article>
+                            <h4>В общем...</h4>
+                            <p class="lead">Нави - это проект, где собраны схемы, инструкции и другую полезную информация для оборудования КИП, АСУТП и т.д. Вы находитесь на главной странице. Ниже дана инструкция по использованию нави на ПК.
+                                Пожалуйста ознакомтесь с
+                                ней, прежде чем задавать вопросы)</p>
+                        </article>
+                        <article>
+                            <h4>Важно!</h4>
+                            <p class="section-p">Внутри папки <span class="lead">navi</span>, в связи с тем что используются относительные ссылки на название файлов, запрещается</p>
+                            <ul>
+                                <li>переносить папки и файлы;</li>
+                                <li>переименовывать папки и файлы.</li>
+                            </ul>
+                        </article>
+                        <article>
+                            <h4>Как установить на ...</h4>
+                            <h5>Windows <i class="fab fa-windows"></i></h5>
+                            <ol>
+                                <li>Скопировать папку <span class="lead">navi</span> на свой ПК в любое удобное место. </li>
+                                <li>В папке <span class="lead">navi</span> открыть файл index.html.</li>
+                                <li>Пользоваться.</li>
+                            </ol>
+                        </article>
+                        <!--/ Основной контент-->
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-sug" role="tabpanel" aria-labelledby="v-pills-sug-tab">
+                        <article>
+                            <h5>Участок хранения СУГ под давлением</h5>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/201.1/108.2-I-201.1-АТХ.pdf" target="_blank">Тит. 201.1 Емкости Е-101...Е-110.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/201.2/108.2-I-201.2-АТХ.pdf" target="_blank">Тит. 201.2 Емкости Е-111...Е-120.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/201.3/108.2-I-201.3-АТХ.pdf" target="_blank">Тит. 201.3 Емкости Е-121...Е-130.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/201.4/108.2-I-201.4-АТХ.pdf" target="_blank">Тит. 201.4 Емкости Е-131...Е-140.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/201.5/108.2-I-201.5-АТХ.pdf" target="_blank">Тит. 201.5 Емкости Е-141...Е-150.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/201.6/108.2-I-201.6-АТХ.pdf" target="_blank">Тит. 201.6 Аварийные емкости резервуарного парка под давлением. Емкости Е-155, Е-156.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/201.7/108.2-I-201.7-АТХ.pdf" target="_blank">Тит. 201.7 Дренажные емкости резервуарного парка под давлением. Емкости Е-157, Е-158</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/201.8/108.2-I-201.8-АТХ.pdf" target="_blank">Тит. 201.8 Насосная резервуарного парка под давлением.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/204/108.2-I-204.1-АТХ.pdf" target="_blank">Тит. 204.1. Компрессорная слива СУГ с блоком управления.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/204/108.2-I-204.2-АТХ.pdf" target="_blank">Тит. 204.2. Насосная слива СУГ.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/208/108.2-I-208-АТХ.pdf" target="_blank">Тит. 208. Азотная станция.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/209.x/108.2-I-209.1-АТХ.pdf" target="_blank">Тит. 209.1 Факельное хозяйство высокого давления.</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Спецификации</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/201.1/-47.01.3.626.08-108.2-I-201.1-АТХ.С.pdf" target="_blank">Тит. 201.1 Емкости Е-101...Е-110</a>
+                                                    <a class="dropdown-item" href="source/scheme/201.2/-47.01.3.626.08-108.2-I-201.2-АТХ.С.pdf" target="_blank">Тит. 201.2 Емкости Е-111...Е-120</a>
+                                                    <a class="dropdown-item" href="source/scheme/201.3/-47.01.3.626.08-108.2-I-201.3-АТХ.С.pdf" target="_blank">Тит. 201.3 Емкости Е-121...Е-130</a>
+                                                    <a class="dropdown-item" href="source/scheme/201.4/-47.01.3.626.08-108.2-I-201.4-АТХ.С.pdf" target="_blank">Тит. 201.4 Емкости Е-131...Е-140</a>
+                                                    <a class="dropdown-item" href="source/scheme/201.5/-47.01.3.626.08-108.2-I-201.5-АТХ.С.pdf" target="_blank">Тит. 201.5 Емкости Е-141...Е-150</a>
+                                                    <a class="dropdown-item" href="source/scheme/201.6/-47.01.3.626.08-108.2-I-201.6-АТХ.С.pdf" target="_blank">Тит. 201.6 Аварийные емкости резервуарного парка под давлением. Емкости Е-155, Е-156.</a>
+                                                    <a class="dropdown-item" href="source/scheme/201.7/-47.01.3.626.08-108.2-I-201.7-АТХ.С.pdf" target="_blank">Тит. 201.7 Дренажные емкости резервуарного парка под давлением. Емкости Е-157, Е-158</a>
+                                                    <a class="dropdown-item" href="source/scheme/201.8/-47.01.3.626.08-108.2-I-201.8-АТХ.С.pdf" target="_blank">Тит. 201.8 Насосная резервуарного парка под давлением.</a>
+                                                    <a class="dropdown-item" href="source/scheme/204/108.2-I-204.1-АТХ.С.pdf" target="_blank">Тит. 204.1. Компрессорная слива СУГ с блоком управления.</a>
+                                                    <a class="dropdown-item" href="source/scheme/204/108.2-I-204.2-АТХ.С.pdf" target="_blank">Тит. 204.2. Насосная слива СУГ.</a>
+                                                    <a class="dropdown-item" href="source/scheme/208/108.2-I-208-АТХ.С.pdf" target="_blank">Тит. 208. Азотная станция.</a>
+                                                    <a class="dropdown-item" href="source/scheme/209.x/209.1-АТХ.С.pdf" target="_blank">Тит. 209.1 Факельное хозяйство высокого давления.</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <p>КНС производственно-дождевых стоков. </p>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Общие данные</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/kns/108.4-I-602.1-АКН.pdf" target="_blank">Титул 602.1.</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/108.4-I-602.2-АКН.pdf" target="_blank">Титул 602.2.</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/108.4-I-602.3-АКН.pdf" target="_blank">Титул 602.3.</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/108.4-I-602.4-АКН.pdf" target="_blank">Титул 602.4.</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/108.4-I-602.5-АКН.pdf" target="_blank">Титул 602.5.</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/108.4-I-602.6-АКН.pdf" target="_blank">Титул 602.6.</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/108.4-I-602.7-АКН.pdf" target="_blank">Титул 602.7.</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/108.4-I-602.8-АКН.pdf" target="_blank">Титул 602.8.</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Шкаф управления</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/kns/АЭП40-025-54К-22УС_R1.01_01.10.12_УХЛ1_исправлено.pdf" target="_blank">Титул 602.1.</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/АЭП40-020-54К-22УС_R1.01_01.10.12_УХЛ1_исправлено.pdf" target="_blank">Титул 602.2.</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/АЭП40-020-54К-22УС_R1.01_01.10.12_УХЛ1_исправлено.pdf" target="_blank">Титул 602.3.</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/АЭП40-020-54К-22УС_R1.01_01.10.12_УХЛ1_исправлено.pdf" target="_blank">Титул 602.4.</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/АЭП40-020-54К-22УС_R1.01_01.10.12_УХЛ1_исправлено.pdf" target="_blank">Титул 602.5.</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/АЭП40-020-54К-22УС_R1.01_01.10.12_УХЛ1_исправлено.pdf" target="_blank">Титул 602.6.</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/АЭП40-025-54К-22УС_R1.01_01.10.12_УХЛ1_исправлено.pdf" target="_blank">Титул 602.7.</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/АЭП40-025-54К-22УС_R1.01_01.10.12_УХЛ1_исправлено.pdf" target="_blank">Титул 602.8.</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/АЭП40-010-54К-11УС_R1.01_01.10.12_УХЛ1.pdf" target="_blank">Титул 603.1.</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/АЭП40-010-54К-22УС_R1.02_01.10.12_УХЛ1.pdf" target="_blank">Титул 603.2.</a>
+                                                </div>
+                                            </li>
+                                            <p>Новые проекты!</p>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/403/АВОдоработка.pdf" target="_blank">Проект. Автоматизация аппаратов воздушного охлаждения (тит. 204.1)</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/403/203-К_17-АТХrev01.pdf" target="_blank">Проект. Регулирование расхода жидкого бутана</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/203/СПЭ.0311_16-203-АКизм.pdf" target="_blank" data-toggle="tooltip" title="Сливная железнодорожная эстакада тит. 203">Подключение анализатора вложности бутана.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/403/ПЭ.242-17-АК_изм.0посл..pdf" target="_blank">Проект. Узел учета тепла тит.405</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/405/108.2-I-405-АТТ.pdf" target="_blank">Титул 405. Установка приготовления и нагрева теплоносителя</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Тит.82.1 Инженерные сети</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/8x.x/108.4-I-82.1-201.1-АТХ.pdf" target="_blank">тит. 201.1</a>
+                                                    <a class="dropdown-item" href="source/scheme/8x.x/108.4-I-82.1-201.2-АТХ.pdf" target="_blank">тит. 201.2</a>
+                                                    <a class="dropdown-item" href="source/scheme/8x.x/108.4-I-82.1-201.3-АТХ.pdf" target="_blank">тит. 201.3</a>
+                                                    <a class="dropdown-item" href="source/scheme/8x.x/108.4-I-82.1-201.4-АТХ.pdf" target="_blank">тит. 201.4</a>
+                                                    <a class="dropdown-item" href="source/scheme/8x.x/108.4-I-82.1-201.5-АТХ.pdf" target="_blank">тит. 201.5</a>
+                                                    <a class="dropdown-item" href="source/scheme/8x.x/108.4-I-82.1-201.(6-8)-АТХ.pdf" target="_blank">тит. 201.6, 201.7, 201.8</a>
+                                                    <a class="dropdown-item" href="source/scheme/8x.x/108.4-I-82.1-АТХ.pdf" target="_blank">тит. 202, 203, 208</a>
+                                                    <a class="dropdown-item" href="source/scheme/8x.x/108.4-I-82.1-210-АТХ.pdf" target="_blank">тит. 210</a>
+                                                </div>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <p>Установки</p>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Тит. 209.1 Испарительная установка</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/209.x/Испарительная_установка_FAS-2000_Паспорт.pdf" target="_blank">FIS-2000. Паспорт (эл.схемы подключения).</a>
+                                                    <a class="dropdown-item" href="source/scheme/209.x/ЩПУ_Схема_соединений.pdf" target="_blank">Схема соединений.</a>
+                                                    <a class="dropdown-item" href="source/scheme/209.x/ЩПУ_Схема_эл_принц.pdf" target="_blank">Схема электрическая принципиальная.</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Тит. 208 Система контроля и управления установки МВ-1,5-1.</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/208/2082_364141_0176_00_7_ТО.pdf" target="_blank">Техническое описание.</a>
+                                                    <a class="dropdown-item" href="source/scheme/208/2082_364141_0176_00_7_Э3.pdf" target="_blank">Схема электрическая принципиальная.</a>
+                                                    <a class="dropdown-item" href="source/scheme/208/2082_364141_0176_00_7_Э4.pdf" target="_blank">Схема электрических соединений.</a>
+                                                    <a class="dropdown-item" href="source/scheme/208/2082_364141_0176_00_7_Э6.pdf" target="_blank">Схема электрическая общая.</a>
+                                                    <a class="dropdown-item" href="source/scheme/208/2082_364141_0176_00_7_С3.pdf" target="_blank">Схема пневмогидравлическая принципиальная.</a>
+                                                    <a class="dropdown-item" href="source/scheme/208/2082_364141_0176_00_7_РЭ.pdf" target="_blank">Руководство по эксплуатации. Часть 1.</a>
+                                                    <a class="dropdown-item" href="source/scheme/208/2082_364141_0176_00_7_РЭ1.pdf" target="_blank">Руководство по эксплуатации. Часть 2. Руководство по эксплуатации СКУ.</a>
+                                                    <a class="dropdown-item" href="source/scheme/208/элсхема_BD100+300+.pdf" target="_blank">Atlas Copco BD100-300. Электрическая схема</a>
+                                                    <a class="dropdown-item" href="source/info/equipment/AtlasCopco_BD100-300_ИЭ.pdf" target="_blank">Atlas Copco BD100-300. Осушитель воздуха</a>
+                                                    <a class="dropdown-item" href="source/info/equipment/Ingersoll_Rand_UP5_4-11_ИЭ.pdf" target="_blank">Ingersoll Rand UP5 4-11. Компрессор</a>
+                                                    <a class="dropdown-item" href="source/info/equipment/Электросхема_компрессора_КАЙЗЕР.pdf" target="_blank">KAESER. Электросхема компрессора</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <p>Титул 303. Аппаратная парка под давлением</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/303/47.01.3.626.08-108.3-I-303-АСУ.С4_с_исп.pdf" target="_blank">Схема внешних соединений и подключений (с исправлениями).</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/303/108.2-I-303-АК.pdf" target="_blank">Автоматизация комплексная.</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Схемы электрические принципиальные</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/303/47.01.3.626.08-108.5-I-303-АСУ.СБ-К1.pdf" target="_blank">303ШК-01.</a>
+                                                    <a class="dropdown-item" href="source/scheme/303/47.01.3.626.08-108.5-I-303-АСУ.СБ_303ШУ.pdf" target="_blank">303ШУ.</a>
+                                                    <a class="dropdown-item" href="source/scheme/303/47.01.3.626.08-108.5-I-303-АСУ.СБ_ИБП.pdf" target="_blank">303 ИБП-01.</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <p>Титул 403. Аппаратная ж/д эстакады слива СУГ</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/403/47.01.3.626.08-108.5-I-403-АСУ.С4.pdf" target="_blank">Схема внешних соединений и подключений (I).</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/403/47.01.3.626.08-108.5-III-403-АСУ.С4.pdf" target="_blank">Схема внешних соединений и подключений (III).</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Реконструкция 403.3ШУ-03</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/403/00722015-03-8311-АСУ-8-0.pdf" target="_blank">Схема подключения внешних проводок.</a>
+                                                    <a class="dropdown-item" href="source/scheme/403/00722015-03-8311-АСУ-15-0.pdf" target="_blank">Схема электрическая принципиальная.</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Схемы электрические принципиальные</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/403/I-403-АСУ.СБ.pdf" target="_blank">403.1ШУ</a>
+                                                    <a class="dropdown-item" href="source/scheme/403/47.01.3.626.08-108.5-I-403-АСУ.ВО-ИБП1.pdf" target="_blank">403ИБП-01</a>
+                                                    <a class="dropdown-item" href="source/scheme/403/47.01.3.626.08-108.5-I-403-АСУ.СБ-К1.pdf" target="_blank">403ШК-01.</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <p>HAFI компрессорное оборудование</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/hafi/Карта_уставок_К101-К104.pdf" target="_blank">Карта уставок К101-К104.</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Силовой щит</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/hafi/cp/MCC1_Rev5.pdf" target="_blank">MCC1. Силовой щит. К-101, К-103.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/cp/MCC2.pdf" target="_blank">MCC2. Силовой щит. К-102, К-104.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/cp/UPS.pdf" target="_blank">Щит UPS.</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/hafi/cp/1CP1_перевод.pdf" target="_blank">1CP1. Щит управления.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/hafi/cp/1FCP1.pdf" target="_blank">1FCP1. Щит системы пожаротушения.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/hafi/cp/CP2.pdf" target="_blank">CP2. HMI (серверная) станция.</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">K101-K103</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/hafi/k101/ru1004-pid-30_Функциональная.pdf" target="_blank">Функциональная схема</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/k101/RU1004-PID-30_Описание_работы.pdf" target="_blank">Описание работы</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/k101/PLC-SIG-SIBUR_RAIL_TANVK-1_Модули.pdf" target="_blank">Модули</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/k101/INST_LIST_436_1100kW_Спец.КИП.pdf" target="_blank">Спецификация КИП</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">K104</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/hafi/k104/ru1004-pid-31_Функциональная.pdf" target="_blank">Функциональная схема</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/k104/RU1004-PID-31_Описание_работы.pdf" target="_blank">Описание работы</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/k104/PLC-SIG-SIBUR_RAIL_TANVK_630_kW-1_Модули.pdf" target="_blank">Модули</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/k104/INST_LIST_436_630kW_Спец.КИП.pdf" target="_blank">Спецификация КИП</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/. row-->
+                            </div>
+                            <!--/. container-->
+                        </article>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-us" role="tabpanel" aria-labelledby="v-pills-us-tab">
+                        <article>
+                            <h5>Участок слива</h5>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-sm-8">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <p>Схемы</p>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/203/108.2-I-203-АТХ.pdf" target="_blank">Тит. 203. Сливная ж/д эстакада СУГ.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/212/108.3-III-212-АТХ_ТХ.pdf" target="_blank">Тит. 212. Сливная ж/д эстакада бензинов.</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Спецификации</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/203/-47.01.3.626.08-108.2-I-203-АТХ.С.pdf" target="_blank">Тит. 203. Сливная ж/д эстакада СУГ.</a>
+                                                    <a class="dropdown-item" href="source/scheme/212/212-АТХ.С.pdf" target="_blank">Тит. 212. Сливная ж/д эстакада бензинов.</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/203/СПЭ.0311_16-203-АКизм.pdf" target="_blank" data-toggle="tooltip" title="Сливная железнодорожная эстакада тит. 203">Подключение анализатора вложности бутана.</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/. row-->
+                            </div>
+                            <!--/. container-->
+                        </article>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-uhb" role="tabpanel" aria-labelledby="v-pills-uhb-tab">
+                        <article>
+                            <h5>Участок хранения бензинов</h5>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <p>Схемы</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/210/108.3-III-210.(1-5)-АТХ.pdf" target="_blank">Тит. 210.1-5 Резервуарный парк бензинов</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/210/108.3-III-210.6-АТХ_ТХ.pdf" target="_blank">Тит. 210.6 Дренажные емкости бензинов</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/210/2107-AK.pdf" target="_blank">Тит. 210.7 Резервуар Р-308.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/211/108.3-III-211-АТХ.pdf" target="_blank">Тит. 211. Насосная налива бензинов в танкеры.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/213/108.3-III-213-АТХ.pdf" target="_blank">Тит. 213. Насосная слива бензинов.</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Спецификации</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/210/210.(1-5)-АТХ.С.pdf" target="_blank">Тит. 210.1-5 Резервуарный парк бензинов</a>
+                                                    <a class="dropdown-item" href="source/scheme/210/210.6-АТХ.С.pdf" target="_blank">Тит. 210.6 Дренажные емкости бензинов</a>
+                                                    <a class="dropdown-item" href="source/scheme/211/211-АТХ.С.pdf" target="_blank">Тит. 211. Насосная налива бензинов в танкеры.</a>
+                                                    <a class="dropdown-item" href="source/scheme/213/213-АТХ.С.pdf" target="_blank">Тит. 213. Насосная слива бензинов.</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <p>Аппаратная тит. 407</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/407/47.01.3.626.08-108.5-III-407-АСУ.С4.pdf" target="_blank">Схема внешних соединений и подключений.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/407/47.01.3.626.08-108.5-III-407-АСУ-К1.pdf" target="_blank">407ШК-01.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/407/III-407-АСУ.СБ.pdf" target="_blank">Шкафы управления АСУ ТП. Схема электрическая принципиальная.</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <ul class="nav flex-column">
+
+                                            <li class="nav-item">
+                                                <p>Реконструкция. 2018</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/renovation/8311_АСУ.pdf" target="_blank" data-toggle="tooltip" title="УПС. 210.6, 210.7">Проект</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/renovation/210_1_5_АК.pdf" target="_blank" data-toggle="tooltip" title="Резервуарный парк бензинов.">Тит. 210.1-5</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/renovation/8211_AK.pdf" target="_blank" data-toggle="tooltip" title="Дренажные емкости бензинов">Тит. 210.6</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/renovation/00722015-03-8311-АСУ-21-1.pdf" target="_blank" data-toggle="tooltip" title="Схема электрическая принципиальная.">407ШУ02 Доработка</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/renovation/00722015-03-8311-АСУ-4-1.pdf" target="_blank" data-toggle="tooltip" title="Схема электрическая принципиальная.">407ШУ04 Схема внешних проводок</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/renovation/00722015-03-8311-АСУ-11-1.pdf" target="_blank" data-toggle="tooltip" title="Схема электрическая принципиальная.">407ШУ04 Схема подключения</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/renovation/00722015-03-8311-АСУ-5-1.pdf" target="_blank" data-toggle="tooltip" title="Схема электрическая принципиальная.">407ШУ05 Схема внешних проводок</a>
+                                            </li>
+                                            <li class="nav-item">
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/renovation/210_1_5_АК.pdf" target="_blank" data-toggle="tooltip" title="Резервуарный парк бензинов.">Тит. 210.1-5</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/renovation/8211_AK.pdf" target="_blank" data-toggle="tooltip" title="Дренажные емкости бензинов">Тит. 210.6</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/renovation/00722015-03-8311-АСУ-21-1.pdf" target="_blank" data-toggle="tooltip" title="Схема электрическая принципиальная.">407ШУ02 Доработка</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/renovation/00722015-03-8311-АСУ-4-1.pdf" target="_blank" data-toggle="tooltip" title="Схема электрическая принципиальная.">407ШУ04 Схема внешних проводок</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/renovation/00722015-03-8311-АСУ-11-1.pdf" target="_blank" data-toggle="tooltip" title="Схема электрическая принципиальная.">407ШУ04 Схема подключения</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/renovation/00722015-03-8311-АСУ-5-1.pdf" target="_blank" data-toggle="tooltip" title="Схема электрическая принципиальная.">407ШУ05 Схема внешних проводок</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/renovation/00722015-03-8311-АСУ-12-1.pdf" target="_blank" data-toggle="tooltip" title="Схема электрическая принципиальная.">407ШУ05 Схема подключения</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/renovation/407ШК01.pdf" target="_blank" data-toggle="tooltip" title="Схема электрическая принципиальная. Схема внешних проводок">407ШК01</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/renovation/00722015-03-8311-АСУ-ТС-0.pdf" target="_blank" data-toggle="tooltip" title="Рабочая документация">Перечень входных/выходных сигналов и данных</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/. row-->
+                            </div>
+                            <!--/. container-->
+                        </article>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-ith" role="tabpanel" aria-labelledby="v-pills-ith-tab">
+                        <article>
+                            <h5>Участок хранения СУГ охлажденных</h5>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/8x.x/4701362608-1821-2-825-АТХ.pdf" target="_blank">Тит. 82.5. Сети КиА.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <p>Тит.404 Аппаратная парка изотермического хранения</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/404/47.01.3.626.08-182.1-2-404-АСУ.C4.pdf" target="_blank">Схема внешних соединений и подключений.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/404/47.01.3.626.08-182.1-2-404-АСУ.ПД.pdf" target="_blank">Общее описание системы.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/404/47.01.3.626.08-182.1-2-404-АСУ.ПБ.pdf" target="_blank">Алгоритмы обработки данных и управления.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/404/47.01.3.626.08-182.1-2-404-АСУ.ВО.СБ.pdf" target="_blank">Шкафы АСУ ТП.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/404/01-П.17.rev00.pdf" target="_blank">тит. 206.1 Регулирующий клапан 206.1PCV30</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <p>Тит.202.1 Резервуар Е-7</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/202.x/4701362608-1821-2-2021-АТХ.pdf" target="_blank">Общие данные.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/202.x/4701362608-1821-2-2021-ТХАТХ-02-0.pdf" target="_blank">Технологическая схема и схема автоматизации.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/202.x/05091-TH36-PID-0000-5011-4.pdf" target="_blank">Технологическая схема.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/202.x/182.1-2-202.1-АСЭО.pdf" target="_blank">Автоматизация системы электрообогрева</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <p>Тит.202.2 Резервуар Е-8</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/202.x/4701362608-1821-2-2022-АТХ.pdf" target="_blank">Общие данные.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/202.x/4701362608-1821-2-2022-ТХАТХ-02-0.pdf" target="_blank">Технологическая схема и схема автоматизации.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/202.x/05091-TH36-PID-0000-5021-4.pdf" target="_blank">Технологическая схема.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/202.x/182.1-2-202.2-АСЭО.pdf" target="_blank">Автоматизация системы электрообогрева</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <p>Тит.206.1 Холодильная станция с установкой термостатирования. Расширение.</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/206/0045.2014-03_140-4-0-206.1-АК_[Изм 3].pdf" target="_blank">Проект.</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Схемы.</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/206/00452014-03-8311-АСУН-0.pdf" target="_blank" data-toggle="tooltip" title="Чертеж общего вида">Общий вид шкафов.</a>
+                                                    <a class="dropdown-item" href="source/scheme/206/00452014-03-8311-АСУ-3-0.pdf" target="_blank" data-toggle="tooltip" title="Чертеж общего вида">CP4. Принципиальная</a>
+                                                    <a class="dropdown-item" href="source/scheme/206/00452014-03-8311-АСУ-4-0.pdf" target="_blank" data-toggle="tooltip" title="Чертеж общего вида">CP5. Принципиальная</a>
+                                                    <a class="dropdown-item" href="source/scheme/206/00452014-03-8311-АСУ-5-0.pdf" target="_blank" data-toggle="tooltip" title="Структурная схема комплекса технических средств">Схема внешних проводок.</a>
+                                                    <a class="dropdown-item" href="source/scheme/206/00452014-03-8311-АСУ-2-0.pdf" target="_blank" data-toggle="tooltip" title="Структурная схема комплекса технических средств">Структурная схема</a>
+                                                    <a class="dropdown-item" href="source/scheme/206/00452014-03-831-АСУ-2-0.pdf" target="_blank" data-toggle="tooltip" title="Схема электрическая приниципиальная .">404ШУ-01, 404ШК-01. </a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Инструкции.</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/206/00452014-03-8311-АСУ-ИЭ-0.pdf" target="_blank">Инструкция по эксплуатации</a>
+                                                    <a class="dropdown-item" href="source/scheme/206/00452014-03-8311-АСУ-ТС-0.pdf" target="_blank" data-toggle="tooltip" title="Перечень входных и выходных сигналов и данных">Перечень сигналов</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/206/00452014-03-2061-ТХАК-2-0(1).pdf" target="_blank">Технологическая схема и схема автоматизации.</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <p>Тит.206. Холодильная станция с установкой термостатирования.</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/206/4701362608-1821-2-206-АТХ.pdf" target="_blank">Общие данные.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/206/4701362608-1821-2-206-АТХ-10-20-0.pdf" target="_blank">План расположения оборудования и проводок.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/206/4701362608-1821-2-206.ТХ.АТХ.pdf" target="_blank">Технологическая схема и схема автоматизации.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/hafi/U120_u320_АСУ_Структур.pdf" target="_blank">HAFI. Структурная схема. АСУ</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/hafi/Карты_уставок_К-1_К-4_К-5.pdf" target="_blank">HAFI. Карты уставок К-1 К-4 К-5</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <p>U-120.</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/hafi/u120/U120_Глав.процесс.pdf" target="_blank">Технологическая схема и схема автоматизации.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/hafi/u120/U120_CONTR-SHEMA.pdf" target="_blank">Схема управления.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/hafi/u120/U120_UPS.pdf" target="_blank">Щит UPS.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/hafi/u120/U120_CP2.pdf" target="_blank">СР2. Щит управления вспомогательных систем.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/hafi/u120/U120_CP1A.pdf" target="_blank">CP1. Щит управления компрессоров К-1А/B/C/D.</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Функциональная схема.</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-K1_Компрессоры.pdf" target="_blank">K-1</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-AC-101_Конденсаторы.pdf" target="_blank" data-toggle="tooltip" title="Конденсаторы AC-101">AC-101</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-C-101AB-RU1004-PID-05.pdf" target="_blank" data-toggle="tooltip" title="Ресивер С-101">С-101АВ.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-C-101C-RU1004-PID-08.pdf" target="_blank" data-toggle="tooltip" title="Ресивер С-101">С-101С.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-C-101D_Дренаж.pdf" target="_blank" data-toggle="tooltip" title="Ресивер С-101">С-101D.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-T-101_Теплообменник.pdf" target="_blank" data-toggle="tooltip" title="Теплообменники">Т-101.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-T-201-RU1004-PID-04_RUS.pdf" target="_blank" data-toggle="tooltip" title="Теплообменники">Т-201.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-T-202-RU1004-PID-06_RUS.pdf" target="_blank" data-toggle="tooltip" title="Теплообменники">Т-202.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-T-203-RU1004-PID-07_RUS.pdf" target="_blank">Т-203.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-ECO-RU1004-PID-02_RUSя.pdf" target="_blank" data-toggle="tooltip" title="Экономайзер ECO-102">ECO-102.</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Силовой щит</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120_MCC4.pdf" target="_blank">MCC4.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120_MCC1-1_K-1A.pdf" target="_blank">MCC1/1.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120_MCC3-1_АС.pdf" target="_blank" data-toggle="tooltip" title="Конденсаторы AC-101">МСС3-1 АС-101</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120_MCC3-2_АС.pdf" target="_blank" data-toggle="tooltip" title="Конденсаторы AC-101">МСС3-2 АС-101</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Спецификации</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120_Спецификация_КИП.pdf" target="_blank">K-1.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-AC-101_Спецификация.pdf" target="_blank" data-toggle="tooltip" title="Конденсаторы AC-101">AC-101</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-C-101AB_Спецификация.pdf" target="_blank" data-toggle="tooltip" title="Ресивер С-101">С-101АВ</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-C-101C_Спецификация.pdf" target="_blank" data-toggle="tooltip" title="Ресивер С-101">С-101С</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-C-101D_Спецификация.pdf" target="_blank" data-toggle="tooltip" title="Ресивер С-101">С-101D</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-T-101_Спецификация.pdf" target="_blank" data-toggle="tooltip" title="Теплообменники">Т-101</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-T-201_Спецификация.pdf" target="_blank" data-toggle="tooltip" title="Теплообменники">Т-201</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-T-203_Спецификация.pdf" target="_blank" data-toggle="tooltip" title="Теплообменники">Т-203</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u120/U120-ECO-102_Спецификация.pdf" target="_blank" data-toggle="tooltip" title="Экономайзер ECO-102">ECO-102</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <p>U-320.</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/hafi/u320/05091-TH36-PID-0000-3201-4.pdf" target="_blank">Технологическая схема и схема автоматизации.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/hafi/u320/U320_T-301_CP3.pdf" target="_blank">CP3. Система управления вспомогательными системами.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/hafi/u320/U320-CP4A_RU1004-CCP-301.pdf" target="_blank">СР-4. Щит управления компрессоров К-4А/В</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/hafi/u320/CP5A_RU1004-CCP-302_Rev5_RUS.pdf" target="_blank">СР-5. Щит управления компрессоров К-5А/В.</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Силовой щит</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u320/U320-MCC2_1_RU-1004-CCP-201.pdf" target="_blank">MCC2/1 для К-4А/В.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u320/U320_T-301_MCC5.pdf" target="_blank">MCC5 </a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u320/U320_MCC2.2_K-5AB.pdf" target="_blank">MCC2/2 для К-5А/В.</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Функциональная схема</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u320/SIBUR_256M_NR_PID_Rev_2.pdf" target="_blank">К-4А/В.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u320/SIBUR_PID_156M_NR_Rev2.pdf" target="_blank">К-5А/В.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u320/SIBUR-P&ID-U320-T-301_Rev3_RUS.pdf" target="_blank">T-301, T-302.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u320/SIBUR-P&ID-U320-T-303_Rev3_RUS.pdf" target="_blank">T-303.</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Спецификации</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u320/RU1004-INL_K4_COMPRESSOR_VMY_256M_NR_RUS.pdf" target="_blank">К-4А/В.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u320/RU1004-INL_K5_COMPRESSOR_VMY_156M_NR_RUS.pdf" target="_blank">К-5А/В.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u320/RU1004-INL-22_T-301A-V-301A-T-302A_RUS.pdf" target="_blank">T-301, T-302.</a>
+                                                    <a class="dropdown-item" href="source/scheme/hafi/u320/RU1004-INL-23_AC-301A_V-302A_T-303A_RUS.pdf" target="_blank">T-303.</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <p>Тит.209.2 Факельное хозяйство низкого давления</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/209.x/209.2-АТХ.pdf" target="_blank">Общие данные.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/209.x/209.2-ТХАТХ.pdf" target="_blank">Технологическая схема и схема автоматизации.</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/. row-->
+                            </div>
+                            <!--/. container-->
+                        </article>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-ups" role="tabpanel" aria-labelledby="v-pills-ups-tab">
+                        <article>
+                            <h5>Участок погрузки судов</h5>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/36/Том_АТХ_Инв_22262.pdf" target="_blank" title="Аппаратная см. тит. 35">Тит. 36 Станция морского водозабора.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/43/Том_АТХ_Инв_22514.pdf" target="_blank">Тит. 43 Установка рекуперации паров бензина.</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Тит. 43 Установка рекуперации паров бензина. Проект ИНКОМСИСТЕМ</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/43/306-ПН.СУБ.2014.C6.pdf" target="_blank">Таблица соединений и подключений.</a>
+                                                    <a class="dropdown-item" href="source/scheme/43/306-ПН.СУБ.2014.И2.pdf" target="_blank">Инструкция оператора.</a>
+                                                    <a class="dropdown-item" href="source/scheme/43/306-ПН.СУБ.2014.ПБ.pdf" target="_blank">Описание алгоритмов.</a>
+                                                    <a class="dropdown-item" href="source/scheme/43/306-ПН.СУБ.2014.ПМ.pdf" target="_blank">Программа и методика испытаний.</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/44/Том_АТХ_Инв_22519.pdf" target="_blank">Тит. 44.1.2. Узел учета жидкой фазы СУГ (под давлением).</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/44/Том_АТХ_Инв_22518.pdf" target="_blank">Тит. 44.2.2. Узел учета жидкой фазы СУГ (охлажденные).</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/44/Том_АТХ_Инв_22516.pdf" target="_blank">Тит. 44.1.1 и 44.2.1. Узел учета парогазовой фазы СУГ.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/44/Том_АТХ_Инв_22512.pdf" target="_blank">Тит. 44.3. Узел учета бензинов.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/46/Том_НК.А_Инв_22423.pdf" target="_blank">Тит. 46 Очистные сооружения поверхностных сточных вод зоны ГТС.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/47/Том_АТХ_Инв_22171.pdf" target="_blank">Тит. 47 Пункт хранения и дозирования пенообразователя №2.</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/35/47.01.3.626.08-108.5-I-35-АСУ.С4.pdf" target="_blank">Тит. 35. Электрощитовая №1 и аппаратная</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/41/47.01.3.626.08-108.5-I-41-АСУ.С4.pdf" target="_blank">Тит. 41. Электрощитовая № 4 и аппаратная.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/48/Том_АТХ_Инв_22784.pdf" target="_blank" title="Аппаратная см. тит.35, 41, 49">Тит. 48. Технологические трубопроводы (на эстакаде). </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/49/47.01.3.626.08-108.5-I-49-АСУ.С4.pdf" target="_blank">Тит. 49. Электрощитовая №3 с аппаратной.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/59.1/Том_АТХ_Инв_22981.pdf" target="_blank" title="Аппаратная см. тит. 35">Тит. 59.1 Причал № 1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/60.1/Том_АТХ_Инв_22982.pdf" target="_blank" title="Аппаратная см. тит. 35">Тит. 60.1 Причал № 2</a>
+                                            </li>
+
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Схемы электрические принципиальные</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/35/I-35-АСУ.СБ.pdf" target="_blank">тит. 35. Шкафы управления АСУ ТП.</a>
+                                                    <a class="dropdown-item" href="source/scheme/35/47.01.3.626.08-108.5-I-35-АСУ.СБ-К1.pdf" target="_blank">35ШК-01 Схема электрическая принципиальная. Доработка</a>
+                                                    <a class="dropdown-item" href="source/scheme/35/47.01.3.626.08-182.1-2-35-АСУ.СБ-ИБП1.pdf" target="_blank">35ИБП-01.</a>
+                                                    <a class="dropdown-item" href="source/scheme/41/47.01.3.626.08-108.5-I-41-АСУ.СБ-К1.pdf" target="_blank">41ШК-01.</a>
+                                                    <a class="dropdown-item" href="source/scheme/49/47.01.3.626.08-108.5-I-49-АСУ.СБ-К1.pdf" target="_blank">49ШК-01.</a>
+                                                    <a class="dropdown-item" href="source/scheme/49/47.01.3.626.08-108.5-I-49-АСУ.СБ-У1.pdf" target="_blank">49ШУ-01. Шкаф управления АСУТП.</a>
+                                                    <a class="dropdown-item" href="source/scheme/49/47.01.3.626.08-108.5-I-49-АСУ.СБ-У2.pdf" target="_blank">49ШУ-02. Шкаф управления АСУТП.</a>
+                                                    <a class="dropdown-item" href="source/scheme/49/47.01.3.626.08-108.5-I-49-АСУ.СБ-П2.pdf" target="_blank">49ШУ-03. Шкаф управления ПАЗ.</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Реконструкция</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/35/00722015-03-8311-АСУ-17-0.pdf" target="_blank">План расположения.</a>
+                                                    <a class="dropdown-item" href="source/scheme/35/00722015-03-8311-АСУ-9-0.pdf" target="_blank">35ШК-01 Схема электрическая принципиальная. Доработка</a>
+                                                    <a class="dropdown-item" href="source/scheme/35/00722015-03-8311-АСУ-3-1.pdf" target="_blank">35ШУ-05 Схема электрическая принципиальная</a>
+                                                    <a class="dropdown-item" href="source/scheme/35/00722015-03-8311-АСУ-10-0.pdf" target="_blank">35ШУ-05 Схема подключения внешних проводок</a>
+                                                    <a class="dropdown-item" href="source/scheme/41/00722015-03-8311-АСУ-6-0.pdf" target="_blank">41ШУ-02 Схема электрическая принципиальная. Доработка</a>
+                                                    <a class="dropdown-item" href="source/scheme/41/00722015-03-8311-АСУ-13-0.pdf" target="_blank">41ШУ-02 Схема подключения внешних проводок. Доработка</a>
+                                                    <a class="dropdown-item" href="source/scheme/49/00722015-03-8311-АСУ-7-0.pdf" target="_blank">49ШУ-03 Схема электрическая принципиальная. Доработка</a>
+                                                    <a class="dropdown-item" href="source/scheme/49/00722015-03-8311-АСУ-14-0.pdf" target="_blank">49ШУ-03 Схема подключения внешних проводок. Доработка</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Спецификации</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/48/I-48-ATX.С_изм1.pdf" target="_blank">Тит. 48. Технологические трубопроводы (на эстакаде). </a>
+                                                    <a class="dropdown-item" href="source/scheme/59.1/108.3-I-59.1-АТХ.С.pdf" target="_blank">Тит. 59.1 Причал № 1</a>
+                                                    <a class="dropdown-item" href="source/scheme/60.1/I-60.1-ATX.С0_Экспликация.pdf" target="_blank">Тит. 60.1 Причал № 2</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Технологические схемы</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/48/Том_ТХ_Инв_22648.pdf" target="_blank">Тит. 48. Технологические трубопроводы (на эстакаде). </a>
+                                                    <a class="dropdown-item" href="source/scheme/59.1/108.3-I-59.1-АТХ.ТХ.pdf" target="_blank">Тит. 59.1 Причал № 1</a>
+                                                    <a class="dropdown-item" href="source/scheme/60.1/I-60.1-ТХ.pdf" target="_blank">Тит. 60.1 Причал № 2</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/59.1/Электроплан_причал_№1(в2).pdf" target="_blank">Стендеры. Причал №1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/60.1/Электроплан_причал_№2(в2).pdf" target="_blank">Стендеры. Причал №2</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/. row-->
+                            </div>
+                            <!--/. container-->
+                        </article>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-ahz" role="tabpanel" aria-labelledby="v-pills-ahz-tab">
+                        <article>
+                            <h5>Административно-хозяйственная зона</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <p>Титул 6. Центральный пункт управления (ЦПУ)</p>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="source/scheme/6/47.01.3.626.08-182.5-I,II,III-6-АСУ.ИЭ.pdf" target="_blank">Инструкция по эксплуатации. КТС</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="source/scheme/6/47.01.3.626.08-182.5-I,II,III-6-АСУ.ПД.pdf" target="_blank">Общее описание системы</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="source/scheme/6/47.01.3.626.08-182.5-I,III-6-АСУ.ИЗ1.pdf" target="_blank">Руководство пользователя</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="source/scheme/6/47.01.3.626.08-182.5-I,II,III-6-АСУ.СБ.pdf" target="_blank">Схемы электрические принципиальные.</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="source/scheme/6/47.01.3.626.08-108.5-I,II,III-6-АСУ.С4.pdf" target="_blank">Схемы внешних соединений и подключений.</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="source/scheme/6/47.01.3.626.08-108.2-I-6-АК.pdf" target="_blank">Автоматизация комплексная. Часть АК.</a>
+                                </li>
+                                <li class="nav-item">
+                                    <p>Титул 11. Гараж</p>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="source/scheme/11/47.01.3.626.08-108.2-I-11-АЭМ.pdf" target="_blank">Автоматизация силового оборудования. АЭМ.</a>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-aux" role="tabpanel" aria-labelledby="v-pills-aux-tab">
+                        <article>
+                            <h5>Котельное хозяйство, очистные сооружения</h5>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-sm-8">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <p>Титул 5.1 Котельная с водоподготовительной установкой.</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/5.1/47.01.3.626.08-108.5-I-5.1АИС.СБ-К1.pdf" target="_blank">Шкаф 5.1ШК-01. Схема электическая принципиальная.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/5.1/47.01.3.626.08-108.5-I-5.1-АСУ.С4.pdf" target="_blank">Схема внешних соединений и подключений.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/5.1/108.2-I-5.1-Р-АГСВ.pdf" target="_blank">Автоматизация газоснабжения внутреннего. Сигнализация загазованности.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/5.1/котельная_схемы_перевод.pdf" target="_blank">Схемы по котлам (с переводом).</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <p>Титул 5.2-5.4 Резервуарный парк ПБТ.</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/5.2/4_02_YRU_C132660_138880_С1.pdf" target="_blank">Схема структурная комплекса технических средств.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/5.2/4_08_YRU_C132660_138880_С6.pdf" target="_blank">Таблица соединений и подключений.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/5.2/5_01_YRU_C132660_138880_ПБ.pdf" target="_blank">Описание алгоритмов.</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 col-sm-4">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <p>Очистные сооружения</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/5.5/108.2-I-5.5-АКН.pdf" target="_blank" data-toggle="tooltip" title="Насосная солевых стоков.">Тит. 5.5</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/15/108.2-I-15.1-АКН.pdf" target="_blank" data-toggle="tooltip" title="Очистные сооружения хоз.бытовых сточных вод">Тит. 15.1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/15/108.2-I-15.2-АКН.pdf" target="_blank" data-toggle="tooltip" title="Очистные сооружения производственно-дождевых сточных вод.">Тит. 15.2</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Шкаф управления</a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="source/scheme/kns/АЭП40-010-54К-22УС_R1.02_01.10.12_УХЛ1.pdf" target="_blank">Тит. 5.1</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/АЭП40-010-54К-22УС_R1.02_01.10.12_УХЛ1.pdf" target="_blank">Тит. 15.1</a>
+                                                    <a class="dropdown-item" href="source/scheme/kns/АЭП40-072-54КП-22УC_R1.01_21.11.12_УХЛ1.pdf" target="_blank">Тит. 5.2</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/. row-->
+                            </div>
+                            <!--/. container-->
+                        </article>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-ais" role="tabpanel" aria-labelledby="v-pills-ais-tab">
+                        <article>
+                            <h5>Схемы по части - автоматизация инженерных систем</h5>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <p>Производственная зона</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/ais/47.01.3.626.08-108.5-I-5.1-АИС.С4.pdf" target="_blank" data-toggle="tooltip" title="Котельная с водоподготовительной установкой">Тит. 5.1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/ais/47.01.3.626.08-108.5-I,II,III-6-АИС.С4.pdf" target="_blank" data-toggle="tooltip" title="Центральный пункт управления (ЦПУ).">Тит. 6</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/ais/47.01.3.626.08-108.5-I-303-АИС.С4.pdf" target="_blank" data-toggle="tooltip" title="Аппаратная парка под давлением и электропомещение.">Тит. 303</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/ais/47.01.3.626.08-108.5-III-403-АИС.С4.pdf" target="_blank" data-toggle="tooltip" title="РТП-4 и аппаратная ж/д эстакады слива СУГ.">Тит. 403</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/ais/47.01.3.626.08-182.1-2-404-АИС.С4.pdf" target="_blank" data-toggle="tooltip" title="РТП-2 и аппаратная парка изотермического хранения">Тит. 404</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/ais/47.01.3.626.08-108.5-III-407-АИС.С4.pdf" target="_blank" data-toggle="tooltip" title="РТП-3 и аппаратная парка бензинов и налива в танкеры.">Тит. 407</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <p>Участок погрузки судов</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/ais/47.01.3.626.08-108.5-I-35-АИС.С4.pdf" target="_blank" data-toggle="tooltip" title="Электрощитовая №1 и аппаратная.">Тит. 35</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/ais/47.01.3.626.08-108.5-I-41-АИС.С4.pdf" target="_blank" data-toggle="tooltip" title="Электрощитовая № 4 и аппаратная.">Тит. 41</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/ais/47.01.3.626.08-108.5-I-49-АИС.С4.pdf" target="_blank" data-toggle="tooltip" title="Электрощитовая №3 с аппаратной.">Тит. 49</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/. row-->
+                            </div>
+                            <!--/. container-->
+                        </article>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-aov" role="tabpanel" aria-labelledby="v-pills-aov-tab">
+                        <article>
+                            <h5>Схемы по вентиляции</h5>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <p>Участок погрузки судов</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/aov/Том_АОВ_Инв_22521.pdf" target="_blank" data-toggle="tooltip" title="Электрощитовая №1 и аппаратная.">Тит. 35</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/aov/Том_АОВ_Инв_22265.pdf" target="_blank" data-toggle="tooltip" title="Станция морского водозабора.">Тит. 36</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/aov/Том_АОВ_Инв_22721_изм2.pdf" target="_blank" data-toggle="tooltip" title="КПП режимной зоны">Тит. 37</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/aov/Том_АОВ_Инв_22542.pdf" target="_blank" data-toggle="tooltip" title="ТП-1 с электрощитовой № 2">Тит. 38</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/aov/Том_АОВ_Инв_22541.pdf" target="_blank" data-toggle="tooltip" title="ТП-2">Тит. 39</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/aov/Том_АОВ_Инв_22626_без_смет.pdf" target="_blank" data-toggle="tooltip" title="Электрощитовая № 4 и аппаратная.">Тит. 41</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/aov/Том_АОВ_Инв_22540.pdf" target="_blank" data-toggle="tooltip" title="ТП-3 с электрощитовой № 5">Тит. 42</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/aov/Том_АОВ_Инв_22160_изм1.pdf" target="_blank" data-toggle="tooltip" title="Пункт хранения и дозирования пенообразователя №2">Тит. 47</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/aov/Том_АОВ_Инв_22539.pdf" target="_blank" data-toggle="tooltip" title="Электрощитовая №3 с аппаратной.">Тит. 49</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/aov/Том_АОВ_Инв_22222_изм.1.pdf" target="_blank" data-toggle="tooltip" title="Пункт хранения и дозирования пенообразователей №1">Тит. 51</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <p>Производственная зона</p>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/aov/108.2-I-5.1-Р-ОВ.pdf" target="_blank" data-toggle="tooltip" title="Котельная с водоподготовительной установкой.">Тит. 5.1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/aov/4701362608-1821-2-206-АОВ.pdf" target="_blank" data-toggle="tooltip" title="Холодильная станция с установкой термостатирования.">Тит. 206</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/aov/108.2-I-207.1-АОВ.pdf" target="_blank" data-toggle="tooltip" title="Здание весовой">Тит. 207.1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/aov/108.2-I-403-АОВ.pdf" target="_blank" data-toggle="tooltip" title="РТП-4 и аппаратная ж/д эстакады слива СУГ">Тит. 403</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/aov/4701362608-1821-2-404-ОВКАОВ.pdf" target="_blank" data-toggle="tooltip" title="РТП-2 и аппаратная парка изотермического хранения">Тит. 404</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/aov/108.3-III-407-АОВ.pdf" target="_blank" data-toggle="tooltip" title=" РТП-3 и аппаратная парка бензинов и налива в танкеры.">Тит. 407</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/. row-->
+                            </div>
+                            <!--/. container-->
+                        </article>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-rotork" role="tabpanel" aria-labelledby="v-pills-rotork-tab">
+                        <article>
+                            <h5>Схемы по петлям Rotork на титулах</h5>
+                            <h6>Pakscan адресация</h6>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_rotork/Pakscan-303.pdf" target="_blank" data-toggle="tooltip" title="Петля № 1, 2, 3, 4, 5, 6">Тит. 303</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_rotork/Pakscan-403.pdf" target="_blank" data-toggle="tooltip" title="Петля № 7, 8, 11, 12">Тит. 403</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_rotork/Pakscan-404.pdf" target="_blank" data-toggle="tooltip" title="Петля № 14">Тит. 404</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_rotork/Pakscan-407.pdf" target="_blank" data-toggle="tooltip" title="Петля № 9, 10">Тит. 407</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_rotork/Pakscan-УПС.pdf" target="_blank" data-toggle="tooltip" title="Петля № 15, 16, 17">УПС</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/. row-->
+                            </div>
+                            <!--/. container-->
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="source/scheme/petli_rotork/ModBus-УКУ.pdf" target="_blank">Modbus адресация на узлах коммерческого учета</a>
+                                </li>
+                                <li class="nav-item">
+                                    <p>Схемы</p>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="source/scheme/petli_rotork/108.4-I-84.1-АЭМ_4.pdf" target="_blank">Схема соединений Pakscan на производственной зоне</a>
+                                </li>
+                            </ul>
+                            <h6>Участок погрузки судов</h6>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_rotork/47.01.3.626.08-108.3-I-48-АТХзадвижки.pdf" target="_blank">тит. 41, 49</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_rotork/I-48-АТХ_5.31.pdf" target="_blank">тит. 35</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_rotork/I-59.1-АТХ_04_ROTORK.pdf" target="_blank">тит. 59.1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_rotork/I-60.1-АТХ_04_ROTORK.pdf" target="_blank">тит. 60.1</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/. row-->
+                            </div>
+                            <!--/. container-->
+                            <h6>Производственная зона</h6>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_rotork/47.01.3.626.08-108.5-I,II,III-6-АИС.С4_Z.pdf" target="_blank">Тит. 15.2, 18, 19.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_rotork/108.4-I-84.1-201.(1-5)-АЭМ_19.pdf" target="_blank">Тит. 201.1-5</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_rotork/108.2-I-204.1-АЭМ-07.pdf" target="_blank">Тит 204.1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_rotork/4701362608-1821-2-206-АТХ-07-0.pdf" target="_blank">Тит. 206</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_rotork/4701362608-1821-2-825-АТХ-04-0.pdf" target="_blank">тит. 80.1, 80.5</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_rotork/4701362608-1821-2-2021-АТХ-11-0.pdf" target="_blank">тит. 202.1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_rotork/4701362608-1821-2-2022-АТХ-11-0.pdf" target="_blank">тит. 202.2</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_rotork/209.2-АТХ-07-0.pdf" target="_blank">тит. 209.2</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/. row-->
+                            </div>
+                            <!--/. container-->
+                        </article>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-sgoes" role="tabpanel" aria-labelledby="v-pills-sgoes-tab">
+                        <article>
+                            <h5>Схемы по петлям газоанализаторов СГОЭС на титулах</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="source/scheme/petli_sgoes/Адреса_RS485_QT.pdf" target="_blank">Сводная таблица по адресации. Газоанализаторы.</a>
+                                </li>
+                                <li class="nav-item">
+                                    <p>Схемы для участка СУГ охлажденных</p>
+                                </li>
+                            </ul>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/4701362608-1821-2-2021-АТХ-02-0.pdf" target="_blank">Тит 202.1.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/4701362608-1821-2-2022-АТХ-02-0.pdf" target="_blank">Тит 202.2.</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/4701362608-1821-2-206-АТХ-02-0.pdf" target="_blank">Тит 206.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/209.2-АТХ-03-0.pdf" target="_blank">Тит 209.2.</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/. row-->
+                            </div>
+                            <!--/. container-->
+                            <h6>Схемы для участка погрузки судов</h6>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/СГОЭС_59.1.pdf" target="_blank">Тит 59.1.</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/СГОЭС_60.1.pdf" target="_blank">Тит 60.1, 51.</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/. row-->
+                            </div>
+                            <!--/. container-->
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="source/scheme/petli_sgoes/108.3-I-48-АТХ_3.pdf" target="_blank">Тит 36, 43, 44.1.1, 44.3, 47, 48, 51.</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="source/scheme/petli_sgoes/СГОЭС_СИК.pdf" target="_blank">Узлы коммерческого учета тит 44.1, 44.2, 44.3.</a>
+                                </li>
+                            </ul>
+                            <h6>Схемы для участка СУГ под давлением</h6>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/108.2-i-201.1-атхл04_20.pdf" target="_blank">Тит 201.1, 201.2.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/108.2-i-201.3-атхл04_20.pdf" target="_blank">Тит 201.3, 201.4.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/108.2-i-201.5-атхл04_20.pdf" target="_blank">Тит 201.5, 201.6.</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/108.2-i-201.7-атхл04_09.pdf" target="_blank">Тит 201.7</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/108.2-i-201.8-атхл06_36.pdf" target="_blank">Тит 201.8</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/108.2-i-204.1-атхл03_52.pdf" target="_blank">Тит 204.1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/108.2-i-204.2-Атхл04_41_Изм1.pdf" target="_blank">Тит 204.2</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/108.4-i-82.1-201.(1-5)-Атхл03_34.pdf" target="_blank">Тит 209.1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/108.4-i-82.1-201.(6-8)-Атхл03_27.pdf" target="_blank">Тит. 82.1-201.(1-5)</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/. row-->
+                            </div>
+                            <!--/. container-->
+                            <h6>Схемы для участка хранения бензинов. До реконструкции!!!</h6>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/108.3-iii-210.(1-5)-атхл04_29_Изм1.pdf" target="_blank">Тит. 210(1-5), 82.1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/108.3-iii-210.6-атхл04_13.pdf" target="_blank">Тит. 210.6</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/108.3-iii-211-атхл05_21.pdf" target="_blank">Тит. 211</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/108.3-iii-213-атхл06_18.pdf" target="_blank">Тит. 213</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/108.4-i-82.1-210-Атхл03_53.pdf" target="_blank">Тит. 82.1-210</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="source/scheme/petli_sgoes/210_7.pdf" target="_blank">Тит. 210.7</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/. row-->
+                            </div>
+                            <!--/. container-->
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <p>Схемы для участка слива</p>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="source/scheme/petli_sgoes/108.2-i-203-атхл20_276.pdf" target="_blank">Тит. 203</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <p>Схемы по очистным сооружениям</p>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="source/scheme/petli_sgoes/СГОЭС_15.pdf" target="_blank">Тит. 15</a>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <div class="clearfix visible-md-block"></div>
+            <aside class="col-xs col-sm-12 col-md-12 col-lg-3">
+                <div class="card text-white bg-info">
+                    <div class="card-header">
+                        <h4 class="card-title">Ключевые правила безопасности:</h4>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Сокрытие информации</h5>
+                        <p class="card-text">Сокрытие информации об авариях, пожарах, инцидентах, фактах производственного травматизма, потенциально опасных происшествиях</p>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Наряд-допуск</h5>
+                        <p class="card-text">Проведение работ повышенной опасности без наряда-допуска, а также нарушение его требований</p>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Блокировки без разрешения</h5>
+                        <p class="card-text">Отключение или нарушение целостности блокировок, противоаварийной автоматической защиты и устройств обеспечения безопасности на действующем оборудовании без соответствующего письменного разрешения</p>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Алкоголь</h5>
+                        <p class="card-text">Появление на территории предприятия в состоянии алкогольного, наркотического или иного токсического опьянения</p>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Курение и огонь</h5>
+                        <p class="card-text">Курение на территории предприятия вне специально отведенных для этой цели мест или использование открытого огня без специального разрешения</p>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+    </div>
+    <!--/.main-->
+    <footer class="footer">
+        <div class="container-fluid bg-info">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 footer_menu">
+                    <nav class="nav">
+                        <a class="flex-fill nav-item nav-link active" href="index.html"><i class="fab fa-bandcamp"></i> Главная</a>
+                        <!-- Кнопка наверх -->
+                        <div class="scrollup">
+                            <i class="fas fa-chevron-up"></i>
+                            <p>наверх</p>
+                        </div>
+                        <a class="flex-fill nav-item nav-link" href="footer_about.html">О проекте</a>
+                        <a class="flex-fill nav-item nav-link" href="footer_map.html">Карта сайта</a>
+                    </nav>
+                </div>
+                <div class="col-sm-12 col-md-8">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-8 footer_text">
+                            <p class="footer_text_p">Надеюсь вы нашли здесь необходимую информацию, если нет <a href="https://ya.ru/" class="nav-link"><i class="fas fa-search"></i> Yandex</a> в помощь). Подскажите мне о найденной информации и я
+                                добавлю в проект <i class="far fa-smile-wink"></i></p>
+                            <p class="mt-2">
+                                <img class="img_css" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Правильный CSS!">
+                                <img class="img_css" src="images/bootstrap-32px.png" alt="Bootstrap">
+                                <img class="img_css bg-light" src="images/font-awesome-24px.png" alt="Font-awesome">
+                                <a href="https://github.com/burik84/navi"><img class="img_css" src="images/GitHub-Mark-Light-32px.png" alt="GitHub"></a>
+                            </p>
+                        </div>
+                        <div class="col-sm-4 col-md-4 footer_text">
+                            <p class="footer_text_p">Идея проекта и реализация burikAV. <i class="far fa-copyright"></i>Оформление сайта burikAV 2014-2018.</p>
+                            <p class="footer_text_p">Версия 4.18.02 от 01 октября 2018.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/popper.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/myscript.js"></script>
+</body>
+
+</html>

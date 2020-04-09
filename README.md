@@ -16,6 +16,30 @@ The project is running. Our domain [роботывперед.рф](https://xn--9
   * additional page for tables - participants of the competition
 
 ---
-## обновления проекта
+## Проект
+- src
+  - html 
+    - template - шаблоны для вставки
+  - img - картинки и прочее изображения
+  - js - скрипты
+    - lib
+  - service - файлы для работы сайта
+    - info - документация по соревнованиям .pdf
+  - style - стили .scss
+    - base
+    - components
+    - layout
+    - pages
+    - utils
+    - vendors
+    - main.scss
+  - webfonts - шрифты
+- dist
+- .gitignore
+- gulpfile.js
+- package.json
+- README.md
+- .htaccess - для копирования в папку dist/service при публикации
 
-Готовится обновление проекта под соревнования в 2020году. Обновление плагинов и заново настройки gulp.
+
+

@@ -1,8 +1,6 @@
 /node_modules/
 /dist/
 /archives/
+/service/
 /.git/
-/**/_backstage
-/**/package-lock.json
-/**/Thumbs.db
-/**/*.DS_Store
+.htaccess

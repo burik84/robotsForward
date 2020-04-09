@@ -13,7 +13,7 @@ var paths = {
     },
     src: {
         html: 'src/html/*.html',
-        js: 'src/js/main.js',
+        js: ['src/js/lib/jquery.js','src/js/lib/*.js','src/js/*.js'],
         style: 'src/style/main.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/webfonts/**/*.*',
@@ -41,7 +41,8 @@ const gulp = require('gulp'), // подключаем Gulp
     browserSync = require('browser-sync').create(), // сервер для работы и автоматического обновления страниц
     htmlmin = require('gulp-htmlmin'), // плагин для минификации html
     plumber = require('gulp-plumber'), // модуль для отслеживания ошибок
-    rigger = require('gulp-rigger'); // модуль для импорта содержимого одного файла в другой
+    rigger = require('gulp-rigger'), // модуль для импорта содержимого одного файла в другой
+    concat = require('gulp-concat'); // модуль для импорта содержимого одного файла в другой
 
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
@@ -129,11 +130,11 @@ function stylesMin() {
 }
 
 function script() {
-    return gulp.src(paths.src.js, {
-            sourcemaps: true
-        })
+    return gulp.src(paths.src.js)
         // .pipe(plumber())
-        .pipe(rigger()) // импортируем все указанные файлы в main.js
+        .pipe(sourcemaps.init())
+        .pipe(concat('main.js'))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(paths.build.js)) // выкладывание готовых файлов
         .pipe(browserSync.stream()); // перезагрузим сервер
 }
@@ -168,12 +169,17 @@ function copyService() {
     return gulp.src(paths.src.service)
         .pipe(gulp.dest(paths.build.service));
 }
-
+// копирование шрифтов
+function copyFonts() {
+    return gulp.src(paths.src.fonts)
+        .pipe(gulp.dest(paths.build.fonts));
+}
 
 exports.clean = clean;
 exports.clear = clear;
 exports.image = image;
 exports.copyService=copyService;
+exports.copyFonts=copyFonts;
 exports.watch = watch;
 exports.html = html;
 exports.styles = styles;
@@ -183,16 +189,16 @@ exports.stylesMin = stylesMin;
 
 // сборка
 gulp.task('build',
-    gulp.series(clean, clear, image, 
+    gulp.series(clean, clear, image, copyFonts,
         gulp.parallel(
         html, styles, script
     ))
 );
 
 gulp.task('prod',
-    gulp.series(clean, clear, image, copyService,
+    gulp.series(clean, clear, image, copyService,copyFonts,
         gulp.parallel(
-            htmlMin, stylesMin
+            htmlMin, stylesMin, script
         )
     )
 );

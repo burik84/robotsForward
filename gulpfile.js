@@ -13,7 +13,7 @@ var paths = {
     },
     src: {
         html: 'src/html/*.html',
-        js: ['src/js/lib/jquery.js','src/js/lib/*.js','src/js/*.js'],
+        js: ['src/js/lib/*.js','src/js/*.js'],
         style: 'src/style/main.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/webfonts/**/*.*',
@@ -78,7 +78,7 @@ function watch() {
 // сборка html
 function html() {
     return gulp.src(paths.src.html)
-        // .pipe(plumber()) // отслеживание ошибок
+        .pipe(plumber()) // отслеживание ошибок
         .pipe(rigger()) //Прогоним через rigger
         .pipe(gulp.dest(paths.build.html)) // выкладывание готовых файлов
         .pipe(browserSync.stream()); // перезагрузка сервера
@@ -189,9 +189,9 @@ exports.stylesMin = stylesMin;
 
 // сборка
 gulp.task('build',
-    gulp.series(clean, clear, image, copyFonts,
+    gulp.series(clean, clear, image, copyFonts, script,
         gulp.parallel(
-        html, styles, script
+        html, styles
     ))
 );
 

@@ -1,12 +1,19 @@
 // Определения списка файлов, которые необходимо включить -bootstrap, fontawesome и т.д.
-@import "normalize"; //Подключение стиля для нормализации
+@import "./base/normalize.scss"; //Подключение стиля для нормализации
 // @import "../../node_modules/bootstrap/scss/bootstrap.scss"; // Подключение стилей bootstrap ver. 4
-// @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss"; // Подключение fonta ver.5
-// @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss"; // Подключение шрифтов fonta ver.5
-// @import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss"; // Подключение шрифтов fonta ver.5
-// @import "../../node_modules/select2/dist/css/select2.css"; //Подключение стилей select2
-// @import "../../node_modules/animate.css/animate.css"; //Подключение стилей animate
-@import "mystyle"; //  Базовые настройке, взяты из reset.css и переопределение дефолтных значений переменных Bootstrap 4, fontawesome и определение своих
-@import "section"; /* Подключение стиля для блоков*/
-@import "media";
-/* Подключение стилей для медиа запросов*/
+
+// Сторонние фреймворки и библиотеки
+@import "./vendors/bootstrap-4.4.1/scss/bootstrap.scss";
+@import "./vendors/animate.scss";
+@import "./vendors/select2.scss";
+@import "./vendors/fontawesome-free-5.13.0-web/scss/fontawesome.scss";
+@import "./vendors/fontawesome-free-5.13.0-web/scss/solid.scss";
+@import "./vendors/fontawesome-free-5.13.0-web/scss/regular.scss";
+@import "./vendors/fontawesome-free-5.13.0-web/scss/brands.scss";
+//
+// base
+@import "./base/fonts"; //Подключение шрифтов
+//
+// utils
+@import "./utils/variables"; //Подключение стиля переменных
+@import "./utils/mixin"; //Подключение миксина

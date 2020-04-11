@@ -34,7 +34,9 @@
     "node-sass-tilde-importer": "^1.0.2"
   },
   "dependencies": {
+    "@popperjs/core": "^2.2.3",
     "gulp-htmlmin": "^5.0.1",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "wowjs": "^1.1.3"
   }
 }

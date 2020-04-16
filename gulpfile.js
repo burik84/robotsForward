@@ -50,7 +50,6 @@ const cleanCSS = require('gulp-clean-css');
 const tildeImporter = require('node-sass-tilde-importer');
 const sourcemaps = require('gulp-sourcemaps');
 
-
 const imagemin = require('gulp-imagemin'); // плагин для сжатия PNG, JPEG, GIF и SVG изображений
 const pngquant = require('imagemin-pngquant'); // плагин для сжатия png
 

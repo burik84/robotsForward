@@ -42,9 +42,9 @@
     }
 }
 
-.event-list__text{
-    font-size: 1.0rem;
-}
+// .event-list__text{
+//     font-size: 1.0rem;
+// }
 
 // Секция о команде
 
@@ -249,7 +249,7 @@ div {
             background-color: $color-link-hover;
             /* цвет заднего фона при наведении */
         }        
-        @include media-tablet-mobile{
+        @include media-mobile{
             right: 30px;
             bottom: 30px;
         }

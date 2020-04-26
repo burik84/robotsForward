@@ -19,7 +19,6 @@
 // base
 @import "./base/fonts"; //Подключение шрифтов
 @import "./base/base"; 
-@import "./base/mybootstrap"; //Переопределение стилей bootstrap
 //
 // components
 @import "./components/overlay"; //Стили для подложки - полупрозрачный фон
@@ -31,3 +30,5 @@
 // pages
 @import "./pages/home";
 @import "./pages/table";
+
+@import "./base/mybootstrap"; //Переопределение стилей bootstrap

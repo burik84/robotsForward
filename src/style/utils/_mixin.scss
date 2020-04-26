@@ -10,7 +10,7 @@
 }
 
 @mixin media-tablet {
-    @media screen and (min-width: $tablet-width) {
+    @media screen and (max-width: $tablet-width) {
         @content;
     }
 }
@@ -21,9 +21,3 @@
     }
 }
 
-
-@mixin media-tablet-mobile {
-    @media screen and (min-width: $mobile-big-width) {
-        @content;
-    }
-}

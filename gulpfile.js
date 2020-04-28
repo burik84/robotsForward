@@ -53,6 +53,9 @@ const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin'); // плагин для сжатия PNG, JPEG, GIF и SVG изображений
 const pngquant = require('imagemin-pngquant'); // плагин для сжатия png
 
+const babel = require('gulp-babel');
+const terser = require('gulp-terser');
+
 sass.compiler = require('node-sass');
 
 // удаление папки сборки
@@ -113,7 +116,6 @@ function htmlMin() {
 // Если у нас на входе несколько файлов scss, то plumber и concat я не использую.
 function stylesMin() {
     return gulp.src(paths.src.style) // получим main.scss
-        // .pipe(plumber())
         .pipe(sass({
             importer: tildeImporter
         }).on('error', sass.logError)) // scss -> css + импорт из nodemodules c использованием ~
@@ -130,12 +132,18 @@ function stylesMin() {
 
 function script() {
     return gulp.src(paths.src.js)
-        // .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(paths.build.js)) // выкладывание готовых файлов
         .pipe(browserSync.stream()); // перезагрузим сервер
+}
+
+function scriptMin() {
+    return gulp.src(paths.src.js)
+        .pipe(concat('main.js'))
+        .pipe(terser())
+        .pipe(gulp.dest(paths.build.js)) // выкладывание готовых файлов
 }
 
 // Инкрементальная сборка - пересборка если изменился файлы
@@ -185,6 +193,7 @@ exports.styles = styles;
 exports.script = script;
 exports.htmlMin = htmlMin;
 exports.stylesMin = stylesMin;
+exports.scriptMin = scriptMin;
 
 // сборка
 gulp.task('build',
@@ -197,7 +206,7 @@ gulp.task('build',
 gulp.task('prod',
     gulp.series(clean, clear, image, copyService,copyFonts,
         gulp.parallel(
-            htmlMin, stylesMin, script
+            htmlMin, stylesMin, scriptMin
         )
     )
 );

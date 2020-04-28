@@ -1,0 +1,38 @@
+# для папки errors
+Options -Indexes
+
+# кодировка сайта
+AddDefaultCharset UTF-8
+
+# запрос на скачивание документов
+AddType application/octet-stream .pdf
+
+# Отсутсвует страница
+ErrorDocument 404 https://xn--90acgda4cbjegs2i.xn--p1ai/404.html
+
+# перенаправление http и www
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{SERVER_PORT} !^443$
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Кэширование сайта на сервере
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType application/javascript "access plus 7 days"
+ExpiresByType text/javascript "access plus 7 days"
+ExpiresByType text/css "access plus 7 days"
+ExpiresByType image/gif "access plus 21 days"
+ExpiresByType image/jpeg "access plus 21 days"
+ExpiresByType image/png "access plus 21 days"
+</IfModule>
+
+# перенаправление с киррилицы на нормальный
+
+# RewriteCond %{HTTP_HOST} ^xn-...\.xn--p1ai$ [NC]
+# RewriteRule ^(.*)$ http://robotsforwards.ru/$1 [R=301,L]

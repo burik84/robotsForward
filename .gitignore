@@ -1,6 +1,4 @@
 /node_modules/
 /dist/
 /archives/
-/src/service/
 /.git/
-.htaccess

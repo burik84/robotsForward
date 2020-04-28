@@ -13,7 +13,7 @@ var paths = {
     },
     src: {
         html: 'src/html/*.html',
-        js: ['src/js/lib/*.js','src/js/*.js'],
+        js: ['src/js/lib/jquery.js','src/js/lib/popper.js','src/js/lib/bootstrap.js','src/js/lib/select2.js','src/js/lib/wow.js','src/js/*.js'],
         style: 'src/style/main.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/webfonts/**/*.*',

@@ -9,7 +9,7 @@ var paths = {
         css: 'dist/css/',
         img: 'dist/img/',
         fonts: 'dist/webfonts/',
-        service: 'dist/service/'
+        service: 'dist/'
     },
     src: {
         html: 'src/html/*.html',

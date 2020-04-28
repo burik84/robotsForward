@@ -31,8 +31,3 @@ ExpiresByType image/gif "access plus 21 days"
 ExpiresByType image/jpeg "access plus 21 days"
 ExpiresByType image/png "access plus 21 days"
 </IfModule>
-
-# перенаправление с киррилицы на нормальный
-
-# RewriteCond %{HTTP_HOST} ^xn-...\.xn--p1ai$ [NC]
-# RewriteRule ^(.*)$ http://robotsforwards.ru/$1 [R=301,L]

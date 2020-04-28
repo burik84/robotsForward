@@ -25,6 +25,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^7.1.0",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-plumber": "^1.2.1",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^4.0.2",
@@ -35,7 +36,6 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.2.3",
-    "gulp-htmlmin": "^5.0.1",
     "jquery": "^3.4.1",
     "wowjs": "^1.1.3"
   }

@@ -6,41 +6,16 @@
     //= template/head.html
 
     <meta name="robots" content="nofollow">
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m, e, t, r, i, k, a) {
-            m[i] = m[i] || function() {
-                (m[i].a = m[i].a || []).push(arguments)
-            };
-            m[i].l = 1 * new Date();
-            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-        })
-        (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
-
-        ym(56545090, "init", {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true,
-            trackHash: true
-        });
-    </script>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/56545090" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
     <title>Роботы вперед! Таблица участников, результаты соревнований и победители.</title>
 </head>
 
 <body id="istable" data-target=".navbar" data-offset="10" data-spy="scroll">
-    <div class="preloader">
-        <div class="pulse"></div><!-- /.puls -->
-    </div><!-- /.preloader -->
+    //= template/preloader.html
     <header>
         <nav class="navbar navbar-expand-sm navbar-dark bg-info fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="img/robotsforward_logo.png" width="100" alt="Роботы вперед логотип">
+                    <img src="./img/background/robotsforward_logo.png" width="100" alt="Роботы вперед логотип">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -135,90 +110,9 @@
         </section>
         <!--/.winner-->
     </main>
-    <footer>
-        <section id="copy">
-            <div class="container mt-1 py-1 mt-sm-5 py-sm-3">
-                <div class="row">
-                    <h3 class="visually_hidden">Правообладатель и разработчик</h3>
-                    <div class="col-lg-3 col-sm-6 d-flex justify-content-center flex-column">
-                        <span class="text-center  text-uppercase"> &copy; 2018-2019 РоботыВперед</span>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 d-flex justify-content-center flex-column">
-                        <button type="button" class="btn btn-link font-weight-light text-center" data-toggle="modal" data-target="#refusing">Отказ от ответственности</button>
-                    </div>
-                    <div class="col-lg-1 col-sm-6 d-flex justify-content-center flex-column">
-                        <button type="button" class="btn btn-link font-weight-light text-center" data-toggle="modal" data-target="#aboutus">О сайте</button>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 d-flex justify-content-center flex-column">
-                        <span class="text-center">Реализация проекта <a href="mailto:burik84@list.ru" class=" font-weight-light">burikAV.</a>
-                        </span>
-                    </div>
-                    <!-- Модальное окно о сайте -->
-                    <!-- Modal -->
-                    <div class="modal fade" id="aboutus" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content py-2 py-md-4">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">О сайте</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true"><i class="fas fa-time mt-2 mr-2 px-1 py-1 px-1"></i></span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <p><span class="badge badge-secondary">РоботыВперед</span> - информационный проект, основной целью которого является знакомство с соревнованиями по робототехнике "РоботыВперед".</p>
-                                    <p>Если Вам что-то не нравится или Вы нашли ошибку и хотите помочь в решение - пишите <a href="mailto:burik84@list.ru"><i class="fas px-sm-2 pr-1 fa-envelope"></i></a></p>
-                                    <p>Есть идея или Вы знаете как улучшить нашу страничку - пишите <a href="mailto:burik84@list.ru"><i class="fas px-sm-2 pr-1 fa-envelope"></i></a></p>
-                                    <p>С уважением, администрация сайта <span class="badge badge-secondary">РоботыВперед</span></p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                                </div><!-- /.modal-footer -->
-                            </div><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
-                    </div><!-- /.modal -->
-                    <div class="modal fade" id="refusing" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content py-2 py-md-4">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Отказ от ответственности</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true"><i class="fas fa-time mt-2 mr-2 px-1 py-1 px-1"></i></span>
-                                    </button>
-                                </div><!-- /.modal-header -->
-                                <div class="modal-body">
-                                    <p>Размещаемая на страницах сайта <span class="badge badge-secondary">РоботыВперед</span> информация предназначена для свободного ознакомления пользователей с вопросами, которые могут представлять для них интерес.</p>
-                                    <p>Вся информация предоставляется в исходном виде, без гарантий полноты или своевременности, и без иных, явно выраженных или подразумеваемых гарантий. Доступ к <span class="badge badge-secondary">РоботыВперед</span>,
-                                        а также использование его содержимого
-                                        осуществляется исключительно по вашему усмотрению и на ваш риск.</p>
-                                    <p>Администрация сайта <span class="badge badge-secondary">РоботыВперед</span> прикладывает все усилия, чтобы обеспечить пользователей точной и достоверной информацией, но в то же время не исключает возможности
-                                        возникновения ошибок.</p>
-                                    <p><span class="badge badge-secondary">РоботыВперед</span> — это проект, работающий по принципу «как есть», без заключения каких-либо договорённостей или договоров между вами, пользователями данного сайта,
-                                        администрацией, владельцами серверов, на которых
-                                        он размещён, либо кем-то ещё, любым образом связанными с этим или родственными ему проектами, которые (договора) могут стать предметом прямых претензий.</p>
-                                    <p>Используя домен <span class="badge badge-secondary">РоботыВперед</span> и его поддомены, вы выражаете свое согласие с «Отказом от ответственности» и установленными Правилами и принимаете всю ответственность,
-                                        которая может быть на вас возложена.</p>
-                                    <p>Администрация сайта <span class="badge badge-secondary">РоботыВперед</span> в любое время вправе внести изменения в Правила, которые вступают в силу немедленно. Продолжение пользования сайтом после внесения
-                                        изменений означает ваше автоматическое согласие на
-                                        соблюдением новых правил.</p>
-                                    <p>С уважением, администрация сайта <span class="badge badge-secondary">РоботыВперед</span></p>
-                                </div><!-- /.modal-body -->
+    //= template/footer.html
 
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                                </div><!-- /.modal-footer -->
-                            </div><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
-                    </div><!-- /.modal -->
-                    <div class="scrollup">
-                        </i><i class="fas px-sm-2 px-1 fa-arrow-up"></i>
-                    </div><!-- /.scrollup -->
-                </div><!-- /.row -->
-            </div>
-            <!--/.container-->
-        </section>
-        <!--/.copy-->
-    </footer>
-    //= template/foot.html
+    //= template/script.html
 </body>
 
 </html>

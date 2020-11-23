@@ -41,5 +41,15 @@ The project is running. Our domain [роботывперед.рф](https://xn--9
 - README.md
 - .htaccess - для копирования в папку dist/service при публикации
 
+## фреймворки и библиотеки (vendors for scss & lib for js)
+- jQuery 3.4.1
+- fontawesome 5.13.0
+- WOW
+  - animate
+- select2
+- bootstrap 4.4.1
+  - popper
+
+
 
 

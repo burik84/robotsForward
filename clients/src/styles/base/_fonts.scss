@@ -1,0 +1,32 @@
+/* ubuntu-regular - latin_cyrillic */
+@font-face {
+  font-display: swap;
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/webfonts/Ubuntu-Regular.woff") format('woff');
+}
+/* ubuntu-bold - latin_cyrillic */
+@font-face {
+  font-display: swap;
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: bold;
+  src: url("../assets/webfonts/Ubuntu-Bold.woff") format("woff");
+}
+/* montserrat-regular - latin_cyrillic */
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/webfonts/Montserrat-Regular.ttf") format('truetype');
+}
+/* montserrat-bold - latin_cyrillic */
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  src: url("../assets/webfonts/Montserrat-Bold.ttf") format('truetype');
+}

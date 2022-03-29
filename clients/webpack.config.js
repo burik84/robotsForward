@@ -90,7 +90,7 @@ module.exports = () => {
     config.plugins.push(
       new MiniCssExtractPlugin({
         filename: '[name].[contenthash].css',
-        chunkFilename: "[id].[contenthash].css"
+        chunkFilename: '[id].[contenthash].css',
       }),
     );
   } else {

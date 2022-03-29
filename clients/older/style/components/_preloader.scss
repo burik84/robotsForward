@@ -1,0 +1,37 @@
+// Презагрузка страницы
+
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 100;
+	background-color: $color-back;
+
+	.pulse {
+		position: relative;
+		left: 50%;
+		top: 50vh;
+		margin-left: -40px;
+		margin-top: -40px;
+
+		&::after,
+		&::before {
+			content: '';
+			border: 5px solid $color-link;
+			width: 80px;
+			height: 80px;
+			border-radius: 500px;
+			position: absolute;
+		}
+
+		&::before {
+			animation: pulse-outer 0.8s ease-in infinite;
+		}
+
+		&::after {
+			animation: pulse-inner 0.8s ease-in infinite;
+		}
+	}
+}

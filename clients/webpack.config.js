@@ -11,6 +11,7 @@ const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader
 const config = {
   entry: {
     main: './src/scripts/index.ts',
+    error: './src/scripts/error.ts',
     table: './src/scripts/table.ts',
   },
   output: {
@@ -43,6 +44,18 @@ const config = {
       template: './src/pages/index.html',
       filename: 'index.html',
       chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './src/pages/error.html',
+      filename: 'error.html',
+      chunks: ['error'],
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './src/pages/table2019.html',
+      filename: 'table2019.html',
+      chunks: ['table'],
     }),
     new HtmlWebpackPlugin({
       inject: true,

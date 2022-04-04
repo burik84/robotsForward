@@ -3,6 +3,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const CopyPlugin = require('copy-webpack-plugin');
+const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -19,7 +22,7 @@ const config = {
     filename: '[name].[contenthash].bundle.js',
     chunkFilename: '[id].[chunkhash].js',
     publicPath: '/',
-    assetModuleFilename: './assets/images/[name][ext]',
+    assetModuleFilename: './assets/[name][ext]',
     clean: true,
   },
   optimization: {
@@ -44,27 +47,34 @@ const config = {
       template: './src/pages/index.html',
       filename: 'index.html',
       chunks: ['main'],
+      favicon: './src/assets/favicon.ico',
     }),
     new HtmlWebpackPlugin({
       inject: true,
       template: './src/pages/error.html',
       filename: 'error.html',
       chunks: ['error'],
+      favicon: './src/assets/favicon.ico',
     }),
     new HtmlWebpackPlugin({
       inject: true,
       template: './src/pages/table2019.html',
       filename: 'table2019.html',
       chunks: ['table'],
+      favicon: './src/assets/favicon.ico',
     }),
     new HtmlWebpackPlugin({
       inject: true,
       template: './src/pages/table2022.html',
       filename: 'table2022.html',
       chunks: ['table'],
+      favicon: './src/assets/favicon.ico',
     }),
-    // Add your plugins here
-    // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+    // new CopyPlugin({
+    //   patterns: [
+    //     { from: './public', to: 'service' },
+    //   ],
+    // }),
   ],
   module: {
     rules: [
@@ -106,6 +116,31 @@ module.exports = () => {
         chunkFilename: '[id].[contenthash].css',
       }),
     );
+    config.optimization = {
+      minimize: true,
+      minimizer: [
+        new HtmlMinimizerPlugin({
+          minimizerOptions: {
+            collapseWhitespace: false,
+          },
+        }),
+        new ImageMinimizerPlugin({
+          minimizer: {
+            implementation: ImageMinimizerPlugin.imageminMinify,
+            options: {
+              plugins: [
+                'imagemin-gifsicle',
+                'imagemin-mozjpeg',
+                'imagemin-pngquant',
+                'imagemin-svgo',
+              ],
+            },
+          },
+          // Disable `loader`
+          loader: false,
+        }),
+      ],
+    };
   } else {
     config.mode = 'development';
   }

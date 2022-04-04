@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <%= require('html-loader!./template/head.html').default %>
         <meta charset="utf-8" />
         <title>404 Page NOT found</title>
     </head>
     <body>
         <h1>Hello Error!</h1>
         <h2>Tip: Check your console</h2>
+
+        <%= require('html-loader!./template/footer.html').default %>
     </body>
 
 </html>

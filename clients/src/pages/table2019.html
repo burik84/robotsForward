@@ -2,11 +2,13 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <%= require('html-loader!./template/head.html').default %>
         <title>Table 2019</title>
     </head>
     <body>
         <h1>Hello Table! 2019</h1>
         <h2>Tip: Check your console</h2>
+        <%= require('html-loader!./template/footer.html').default %>
     </body>
 
 </html>

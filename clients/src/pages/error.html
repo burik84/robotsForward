@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <%= require('html-loader!./template/head.html').default %>
-        <meta charset="utf-8" />
-        <title>404 Page NOT found</title>
-    </head>
-    <body>
-        <h1>Hello Error!</h1>
-        <h2>Tip: Check your console</h2>
 
-        <%= require('html-loader!./template/footer.html').default %>
-    </body>
+<head>
+    <%= require('html-loader!./template/head.html').default %>
+        <meta name="robots" content="nofollow" />
+        <title>Роботы вперед! Ошибка 404.</title>
+</head>
+
+<body class="text-center">
+    <main class="container d-flex justify-content-center">
+        <div class="card text-center text-white bg-dark w-75 mt-2 mt-md-5">
+            <div class="card-header"><span class="display-3">404!)</span></div>
+            <div class="card-body">
+                <h3 class="card-title h4">Страница, которую Вы ищите, не найдена.</h3>
+                <p class="card-text">К сожалению такой странички пока не существует...</p>
+                <p class="card-text">
+                    Если вы знаете, что здесь может быть - напишите нам
+                    <a href="mailto:burik84@list.ru" target="_blank">
+                        <i class="fas px-sm-2 pr-1 fa-envelope"></i>
+                    </a>
+                </p>
+                <a href="index.html" class="btn btn-light">На главную</a>
+            </div>
+        </div>
+    </main>
+
+    <%= require('html-loader!./template/footer.html').default %>
+    <%= require('html-loader!./template/modal.html').default %>
+</body>
 
 </html>

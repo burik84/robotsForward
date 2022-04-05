@@ -1,14 +1,214 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
         <%= require('html-loader!./template/head.html').default %>
-        <title>Table 2019</title>
+        <meta name="robots" content="nofollow" />
+    <title>
+      Роботы вперед, 2019! Таблица участников, результаты соревнований и
+      победители.
+    </title>
     </head>
-    <body>
-        <h1>Hello Table! 2019</h1>
-        <h2>Tip: Check your console</h2>
+    <body  id="istable" data-target=".navbar" data-offset="10" data-spy="scroll">
+        <%= require('html-loader!./template/preloader.html').default %>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-info fixed-top">
+              <div class="container">
+                <a class="navbar-brand" href="index.html">
+                  <img
+                    src="../assets/img/background/robotsforward_logo.png"
+                    width="100"
+                    alt="Роботы вперед логотип"
+                  />
+                </a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#menu"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                  class="collapse navbar-collapse justify-content-center"
+                  id="menu"
+                >
+                  <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item">
+                      <a class="nav-link text-center" href="#part" role="button"
+                        >Таблица</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link text-center"
+                        tabindex="-1"
+                        aria-disabled="true"
+                        href="#protocols"
+                        role="button"
+                        >Результаты</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link text-center"
+                        tabindex="-1"
+                        aria-disabled="true"
+                        href="#winner"
+                        role="button"
+                        >Победители</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-center" href="index.html" role="button"
+                        >На главную</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
+          <main>
+            <section id="part" class="justify-content-center">
+              <div class="container mt-1 mt-sm-3 mt-lg-5 py-1 py-sm-4">
+                <div class="row overlay p-2 p-md-3 justify-content-center">
+                  <h2 class="h3 text-center">Участники соревнований. 2019г.</h2>
+                  <p class="lead text-danger pt-1">
+                    <span class="badge badge-pill badge-danger">Важно!</span> Если Вы
+                    регистрировались на участие в соревнованиях, но в таблице
+                    отсутствуете, свяжитесь с нами повторно!
+                  </p>
+                  <iframe
+                    class="pt-1 pt-sm-2"
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSgf73gCYRzb9K_B5HGfTXuhv15d9q2gcj2PAj1SnHW4BYPH5ZeBehuDLOiapN_0O8G5T0p4qsXGIaX/pubhtml?widget=true&amp;headers=false"
+                  ></iframe>
+                  <div class="text-center">
+                    <p class="text-info pb-0">
+                      Напишите нам
+                      <a href="mailto:ms.oksana2811@mail.ru"
+                        ><i class="fas px-sm-2 pr-1 fa-envelope"></i
+                        >ms.oksana2811@mail.ru</a
+                      >
+                      если есть вопросы по участию в соревнованиях или предложения по
+                      проведению мероприятия.
+                    </p>
+                    <p class="text-secondary py-0 text-center">
+                      Мы желаем всем участникам удачи!!!
+                    </p>
+                  </div>
+                </div>
+                <!--/.row-->
+              </div>
+              <!--/.container-->
+            </section>
+            <!--/.part-->
+            <section id="protocols">
+              <div class="container mt-1 mt-sm-3 mt-lg-5 py-1 py-sm-4">
+                <div class="row overlay p-2 p-md-3">
+                  <div class="col-12">
+                    <h2 class="h3 text-center">Результаты соревнований. 2019г.</h2>
+                  </div>
+                  <div class="col-12 text-center">
+                    <iframe
+                      class="pt-1 pt-sm-2"
+                      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQJpDz-pNNbVI0B4WgIVVq4qBRe-vZ62ry5y51ho4XSwDvKrztTxcfQuYxGevhqGpXW77nF-FOkUc3S/pubhtml?widget=true&amp;headers=false"
+                    ></iframe>
+                  </div>
+                </div>
+                <!--/.row-->
+              </div>
+              <!--/.container-->
+            </section>
+            <!--/.protocols-->
+
+            <section id="winner">
+              <div class="container mt-1 mt-sm-3 mt-lg-5 py-1 py-sm-4">
+                <div class="row overlay p-2 p-md-3 justify-content-center">
+                  <h2 class="h3 col-12 text-center">
+                    Победители соревнований. 2019 г.
+                  </h2>
+                  <div class="col-md-4 col-xs-6 py-3">
+                    <h3 class="h5 text-center">Механическое сумо</h3>
+                    <ol>
+                      <li>
+                        место. Лицов Денис<i
+                          class="fas fa-trophy px-sm-2 pr-1 gold"
+                        ></i>
+                      </li>
+                      <li>
+                        место. Андрещук Егор, Усов Андрей<i
+                          class="fas fa-trophy px-sm-2 pr-1 silver"
+                        ></i>
+                      </li>
+                      <li>
+                        место. Филиппов Давид, Журавлева Мария<i
+                          class="fas fa-trophy px-sm-2 pr-1 bronze"
+                        ></i>
+                      </li>
+                    </ol>
+                  </div>
+                  <div class="col-md-4 col-xs-6 py-3">
+                    <h3 class="h5 text-center">Тягачи</h3>
+                    <ul>
+                      <li>
+                        1. место. Васильев Данил<i
+                          class="fas fa-trophy px-sm-2 pr-1 gold"
+                        ></i>
+                      </li>
+                      <li>
+                        2. место. Антоненко Иван<i
+                          class="fas fa-trophy px-sm-2 pr-1 silver"
+                        ></i>
+                      </li>
+                      <li>
+                        2. место. Васильев Даниил<i
+                          class="fas fa-trophy px-sm-2 pr-1 silver"
+                        ></i>
+                      </li>
+                      <li>
+                        2. место. Феофанов Кирилл<i
+                          class="fas fa-trophy px-sm-2 pr-1 silver"
+                        ></i>
+                      </li>
+                      <li>
+                        3. место. Тарасов Роман<i
+                          class="fas fa-trophy px-sm-2 pr-1 bronze"
+                        ></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4 col-xs-6 py-3">
+                    <h3 class="h5 text-center">Царь-горы</h3>
+                    <ol>
+                      <li>
+                        место. Сырников Станислав, Федорова Дарья<i
+                          class="fas fa-trophy px-sm-2 pr-1 gold"
+                        ></i>
+                      </li>
+                      <li>
+                        место. Ершов Тимофей<i
+                          class="fas fa-trophy px-sm-2 pr-1 silver"
+                        ></i>
+                      </li>
+                      <li>
+                        место. Емельянова Екатерина, Алферов Даниил<i
+                          class="fas fa-trophy px-sm-2 pr-1 bronze"
+                        ></i>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <!--/.row-->
+              </div>
+              <!--/.container-->
+            </section>
+            <!--/.winner-->
+          </main>
+
         <%= require('html-loader!./template/footer.html').default %>
+        <%= require('html-loader!./template/modal.html').default %>
     </body>
 
 </html>

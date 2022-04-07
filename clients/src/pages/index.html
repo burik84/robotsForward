@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <%= require('html-loader!./template/head.html').default %>
-        <%= require('html-loader!./template/metrika.html').default %>
         <title>Роботы вперед! 2022</title>
     </head>
     <body id="ishome" data-spy="scroll" data-target=".navbar" data-offset="10">
@@ -37,11 +35,10 @@
             <section id="header">
                 <div class="container mt-2 mt-sm-4 mt-lg-5 py-2 py-sm-4">
                     <div class="row justify-content-center">
-                        <p class="lead text-primary text-center mb-5 mx-3"><span class="badge badge-pill badge-danger">Внимание!</span> <br> В связи с введением ограничительных мер, направленных на предотвращение распространения новой коронавирусной инфекции в регионе,
-                            соревнования проводится не будут!!!</p>
                         <div class="col-11 col-sm-10">
                             <h1 class="visually_hidden">Роботы вперёд. Соревнования по робототехнике для школьников</h1>
-                            <img src="./img/background/robotsforward_logo.png" width="800" height="500" alt="Роботы вперёд текст">
+                            <!-- <img src="./images/img/background/robotsforward_logo.png" width="800" height="500" alt="Роботы вперёд текст"> -->
+                            <img src="../assets/img/background/robotsforward_logo.png" width="800" height="500" alt="Роботы вперёд текст">
                         </div>
                         <div class="col-10 col-sm-6 my-3">
                             <p class="h3 text-center"> [МАЙ] 2022 | Сланцы </p>
@@ -131,7 +128,7 @@
                                             <li><i class="list-item fas px-1 px-sm-2 pr-1 fa-check-circle"></i> Высота робота не регламентирована. Общая масса робота должна быть не более 750г</li>
                                             <li><a href="info/Reglament_Mekhanicheskoe_sumo_2019.pdf" class="link" target="_blank" rel="noopener">Регламент соревнования "механическое сумо"<i class="fas fa-file-download px-1 ml-1"></i></a></li>
                                         </ul>
-                                        <img class="position-absolute" src="img/lego_sumo_mex.png" alt="Роботы вперед соревнование механическое сумо с лисами">
+                                        <img class="position-absolute" src="../assets/img/lego_sumo_mex.png" alt="Роботы вперед соревнование механическое сумо с лисами">
                                     </div>
                                     <!--/.sumo-->
                                     <div role="tabpanel" class="tab-pane fade position-relative" id="tractor">
@@ -143,7 +140,7 @@
                                             <li><i class="fas px-1 px-sm-2 pr-1 fa-check-circle"></i>Общая масса робота должна быть не более 1 кг.</li>
                                             <li><a href="Reglament_Tyagachi_2019.pdf" class="link" target="_blank" rel="noopener">Регламент соревнования "тягачи"<i class="fas fa-file-download px-1 ml-1"></i></a></li>
                                         </ul>
-                                        <img class="position-absolute" src="img/lego_tractors.png" alt="Роботы вперед соревнование тягачи с лисами">
+                                        <img class="position-absolute" src="../assets/img/lego_tractors.png" alt="Роботы вперед соревнование тягачи с лисами">
                                     </div>
                                     <!--/.tractor-->
                                     <div role="tabpanel" class="tab-pane fade position-relative" id="king-hill">
@@ -155,7 +152,7 @@
                                             <li><i class="fas px-1 px-sm-2 pr-1 fa-check-circle"></i>Вес робота не более 2кг.</li>
                                             <li><a href="info/Reglament_Tsar_Gory_2019.pdf" class="link" target="_blank" rel="noopener">Регламент соревнования "царь горы"<i class="fas fa-file-download px-1 ml-1"></i></a></li>
                                         </ul>
-                                        <img class="position-absolute" src="img/carj-gory.png" alt="Роботы вперед соревнование царь горы с лисами">
+                                        <img class="position-absolute" src="../assets/img/carj-gory.png" alt="Роботы вперед соревнование царь горы с лисами">
                                     </div>
                                     <!--/.king-hill-->
                                 </div>
@@ -266,7 +263,7 @@
                             <div class="item row-item-col">
                                 <div class="wow fadeIn">
                                     <button class="btn btn-link" type="button" name="button" data-toggle="modal" data-target="#alexandr">
-                                        <img src="img/alexandr.jpg" alt="фото Александр" class="front rounded-circle">
+                                        <img src="../assets/img/alexandr.jpg" alt="фото Александр" class="front rounded-circle">
                                         <span class="back"><i class="fas px-1 px-sm-2 pr-1 fa-address-card fa-2x"></i></span>
                                     </button>
                                     <h4>Александр</h4>
@@ -297,7 +294,7 @@
                             <div class="item row-item-col">
                                 <div class="wow fadeIn" data-wow-delay=".3s">
                                     <button class="btn btn-link" type="button" name="button" data-toggle="modal" data-target="#oksana">
-                                        <img src="img/oksana.jpg" alt="фото Оксана" class="front rounded-circle">
+                                        <img src="../assets/img/oksana.jpg" alt="фото Оксана" class="front rounded-circle">
                                         <span class="back"><i class="fas px-1 px-sm-2 pr-1 fa-address-card  fa-2x"></i></span>
                                     </button>
                                     <h4>Оксана</h4>
@@ -338,13 +335,13 @@
                     <div class="row overlay py-2 py-md-4">
                         <h3 class="visually_hidden">Организаторы, спонсоры и партнеры</h3>
                         <div class="col-md-4 col-xs-6 py-3">
-                            <img src="img/logo_sdt.png" class="wow fadeIn" alt="Картинка текст Сланцевский Дом творчества">
+                            <img src="../assets/img/logo/logo_sdt.png" class="wow fadeIn" alt="Картинка текст Сланцевский Дом творчества">
                         </div>
                         <div class="col-md-4 col-xs-6 py-3">
-                            <img src="img/logo_HeidelbergCement.png" class="wow fadeIn" data-wow-delay=".3s" alt="Логотип Сланцевский Цементный завод Цесла">
+                            <img src="../assets/img/logo/logo_HeidelbergCement.png" class="wow fadeIn" data-wow-delay=".3s" alt="Логотип Сланцевский Цементный завод Цесла">
                         </div>
                         <div class="col-md-4 col-xs-6 py-3">
-                            <img src="img/logo_domtvor1.png" class="wow fadeIn" data-wow-delay=".6s" alt="Логотип группы вконтакте Дома творчества">
+                            <img src="../assets/img/logo/logo_domtvor1.png" class="wow fadeIn" data-wow-delay=".6s" alt="Логотип группы вконтакте Дома творчества">
                         </div>
                     </div>
                     <!--/.row-->
@@ -393,8 +390,6 @@
             </section>
             <!--/.contacts-->
         </main>
-        <%= require('html-loader!./template/footer.html').default %>
-        <%= require('html-loader!./template/modal.html').default %>
     </body>
 
 </html>

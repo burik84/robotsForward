@@ -3,7 +3,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const CopyPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
@@ -22,7 +22,7 @@ const config = {
     filename: '[name].[contenthash].bundle.js',
     chunkFilename: '[id].[chunkhash].js',
     publicPath: '/',
-    assetModuleFilename: './assets/[name][ext]',
+    assetModuleFilename: 'assets/[name][ext]',
     clean: true,
   },
   optimization: {
@@ -70,11 +70,12 @@ const config = {
       chunks: ['table'],
       favicon: './src/assets/favicon.ico',
     }),
-    // new CopyPlugin({
-    //   patterns: [
-    //     { from: './public', to: 'service' },
-    //   ],
-    // }),
+    new CopyPlugin({
+      patterns: [
+        { from: './public', to: 'service' },
+        // { from: './src/assets/img', to: 'images' },
+      ],
+    }),
   ],
   module: {
     rules: [
@@ -92,10 +93,17 @@ const config = {
         use: [stylesHandler, 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+        test: /\.(eot|svg|ttf|woff|woff2)$/i,
         type: 'asset',
       },
-
+      {
+        test: /\.(png|jpg|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],

@@ -1,13 +1,8 @@
-// Определения списка файлов, которые необходимо включить -bootstrap, fontawesome и т.д.
-@import "./base/normalize.scss"; //Подключение стиля для нормализации
+@import "./base/base.scss"; //Подключение базового стиля
 
 // utils
 @import "./utils/constants"; //Подключение стиля переменных
 @import "./utils/mixin"; //Подключение миксина
-
-// base
-@import "./base/fonts"; //Подключение шрифтов
-@import "./base/reset";
 
 body{
   background-color: crimson;

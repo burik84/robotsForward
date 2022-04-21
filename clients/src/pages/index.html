@@ -4,11 +4,11 @@
         <title>Роботы вперед! 2022</title>
     </head>
     <body id="ishome" data-spy="scroll" data-target=".navbar" data-offset="10">
-        <%= require('html-loader!./template/preloader.html').default %>
+        <!-- <%= require('html-loader!./template/preloader.html').default %> -->
         <header>
             <nav class="navbar navbar-expand-sm navbar-dark bg-info fixed-top">
                 <div class="container">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-expanded="false" aria-label="Toggle navigation" aria-controls="menu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-center" id="menu">
@@ -18,14 +18,14 @@
                             <li class="nav-item pr-3"><a class="nav-link text-center" href="#gallery" role="button">Видео и фото</a></li>
                             <li class="nav-item"><a class="nav-link text-center" href="#contacts" role="button">Контакты</a></li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   Результаты
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                  <a class="dropdown-item" href="./table2019.html" rel="noopener">2019 <i class="fas fa-users px-1 ml-1"></i></a>
-                                  <div class="dropdown-divider"></div>
-                                  <a class="dropdown-item" href="./table2022.html" rel="noopener">2022 <i class="fas fa-users px-1 ml-1"></i></a>
-                                </div>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <li><a class="dropdown-item" href="./table2019.html" rel="noopener">2019 <i class="fa-solid fa-users  px-1 ml-1"></i></a></li>
+                                  <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="./table2022.html" rel="noopener">2022 <i class="fa-solid fa-users  px-1 ml-1"></i></a></li>
+                                </ul>
                         </ul>
                     </div>
                 </div>
@@ -47,9 +47,9 @@
                         <div class="col-10 col-sm-10">
                             <h2 class="h4 mt-2 mt-sm-3 mt-lg-4 text-center">Региональные соревнования по робототехнике <br>
                                 для школьников Ленинградской области и Санкт-Петербурга</h2>
-                            <p class="mt-2 mt-sm-3 mt-lg-4 text-center d-none">Мероприятие проводится на базе Сланцевского Дома творчества <br><a href="#map" role="button"><span><i class="fas fa-map-marker-alt"></i></span> на ул. Кирова д.16</p></a>
+                            <p class="mt-2 mt-sm-3 mt-lg-4 text-center d-none">Мероприятие проводится на базе Сланцевского Дома творчества <br><a href="#map" role="button"><span><i class="fa-solid fa-location-dot"></i></span> на ул. Кирова д.16</p></a>
                             <!-- Адрес проведения Грибоедова, д. 8, если количество участников меньше 60 человек -->
-                            <p class="mt-2 mt-sm-3 mt-lg-4 text-center">Мероприятие проводится на базе Сланцевского Дома творчества <br><a href="#contacts" role="button"><span><i class="fas fa-map-marker-alt"></i></span> на ул.Кирова, д. 16</p></a>
+                            <p class="mt-2 mt-sm-3 mt-lg-4 text-center">Мероприятие проводится на базе Сланцевского Дома творчества <br><a href="#contacts" role="button"><span><i class="fa-solid fa-location-dot"></i></span> на ул.Кирова, д. 16</p></a>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                             </li>
                         </ul>
                         <div class="text-center">
-                            <p class="text-info pb-0">Напишите нам <a href="mailto:ms.oksana2811@mail.ru"><i class="fas px-1 px-sm-2 pr-1 fa-envelope"></i>ms.oksana2811@mail.ru</a> если
+                            <p class="text-info pb-0">Напишите нам <a href="mailto:ms.oksana2811@mail.ru"><i class="fa-solid px-1 px-sm-2 pr-1 fa-envelope"></i>ms.oksana2811@mail.ru</a> если
                                 есть
                                 вопросы по
                                 участию в
@@ -104,7 +104,7 @@
                             <p>Представленные номинации позволяют охватить разные уровни подготовки обучающихся, занимающиеся робототехникой. Участие в соревнованиях помогает развивать способности учащихся как в области решения актуальных задач
                                 современной
                                 образовательной робототехнике, так и умение работать в команде.</p>
-                            <a href="./public/info/Polozhenie_sorevnovaniy_2019.pdf" class="link" target="_blank" rel="noopener">Положение о проведении III соревнований "Роботы вперед"<i class="fas fa-file-download px-1 ml-1"></i></a>
+                            <a href="./public/info/Polozhenie_sorevnovaniy_2019.pdf" class="link" target="_blank" rel="noopener">Положение о проведении III соревнований "Роботы вперед"<i class="fa-solid file-arrow-down px-1 ml-1"></i></a>
                             <p class="text-primary pt-1"><span class="badge badge-pill badge-warning">Внимание!</span> Указанно положение для игр проводимых в 2019 году! Новое положение появится за 2 недели до проведения игр.</p>
                             <p class="lead text-danger pt-1"><span class="badge badge-pill badge-danger">Важно!</span> Количество участников по номинациям ограничено! </p>
                         </div>
@@ -112,21 +112,21 @@
                             <div class="section-tabs">
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs nav-fill flex-column flex-sm-row" role="tablist">
-                                    <li role="presentation" class="nav-item my-0 my-sm-1"><a class="active show" href="#sumo" aria-controls="sumo" role="tab" data-toggle="tab">Механическое сумо</a></li>
-                                    <li role="presentation" class="nav-item my-0 my-sm-1  pl-0 pl-sm-1"><a href="#tractor" aria-controls="tractor" role="tab" data-toggle="tab">Тягачи</a></li>
-                                    <li role="presentation" class="nav-item my-0 my-sm-1 pl-0 pl-sm-1"><a href="#king-hill" aria-controls="king-hill" role="tab" data-toggle="tab">Царь горы</a></li>
+                                    <li role="presentation" class="nav-item my-0 my-sm-1"><a class="active show" href="#sumo" aria-controls="sumo" role="tab" data-bs-toggle="tab">Механическое сумо</a></li>
+                                    <li role="presentation" class="nav-item my-0 my-sm-1  pl-0 pl-sm-1"><a href="#tractor" aria-controls="tractor" role="tab" data-bs-toggle="tab">Тягачи</a></li>
+                                    <li role="presentation" class="nav-item my-0 my-sm-1 pl-0 pl-sm-1"><a href="#king-hill" aria-controls="king-hill" role="tab" data-bs-toggle="tab">Царь горы</a></li>
                                 </ul>
                                 <!-- Tab panes -->
                                 <div class="tab-content px-md-3 px-1 py-md-3 py-1">
                                     <div role="tabpanel" class="tab-pane fade in show active position-relative" id="sumo">
                                         <p>Задача работа – вытолкнуть робота-соперника за пределы внутренней зоны ринга. </p>
                                         <ul class="list-unstyled pl-1">
-                                            <li><i class="list-item fas px-1 px-sm-2 pr-1 fa-check-circle"></i>Ориентирован на первый год изучения робототехники</li>
-                                            <li><i class="list-item fas px-1 px-sm-2 pr-1 fa-check-circle"></i>Возраст участников не может превышать 11 лет</li>
-                                            <li><i class="list-item fas px-1 px-sm-2 pr-1 fa-check-circle"></i>В соревнованиях участвуют образовательные конструкторы Lego Mindstorms</li>
-                                            <li><i class="list-item fas px-1 px-sm-2 pr-1 fa-check-circle"></i>Размеры робота до старта не более 15х15(см), после старта не более 20х20(см)</li>
-                                            <li><i class="list-item fas px-1 px-sm-2 pr-1 fa-check-circle"></i> Высота робота не регламентирована. Общая масса робота должна быть не более 750г</li>
-                                            <li><a href="info/Reglament_Mekhanicheskoe_sumo_2019.pdf" class="link" target="_blank" rel="noopener">Регламент соревнования "механическое сумо"<i class="fas fa-file-download px-1 ml-1"></i></a></li>
+                                            <li><i class="list-item px-1 px-sm-2 pr-1 fa-solid fa-circle-check"></i>Ориентирован на первый год изучения робототехники</li>
+                                            <li><i class="list-item px-1 px-sm-2 pr-1 fa-solid fa-circle-check"></i>Возраст участников не может превышать 11 лет</li>
+                                            <li><i class="list-item px-1 px-sm-2 pr-1 fa-solid  fa-solid fa-circle-check"></i>В соревнованиях участвуют образовательные конструкторы Lego Mindstorms</li>
+                                            <li><i class="list-item px-1 px-sm-2 pr-1 fa-solid fa-circle-check"></i>Размеры робота до старта не более 15х15(см), после старта не более 20х20(см)</li>
+                                            <li><i class="list-item px-1 px-sm-2 pr-1 fa-solid fa-circle-check"></i> Высота робота не регламентирована. Общая масса робота должна быть не более 750г</li>
+                                            <li><a href="info/Reglament_Mekhanicheskoe_sumo_2019.pdf" class="link" target="_blank" rel="noopener">Регламент соревнования "механическое сумо"<i class="fa-solid fa-file-arrow-down px-1 ml-1"></i></a></li>
                                         </ul>
                                         <img class="position-absolute" src="../assets/img/lego_sumo_mex.png" alt="Роботы вперед соревнование механическое сумо с лисами">
                                     </div>
@@ -134,11 +134,11 @@
                                     <div role="tabpanel" class="tab-pane fade position-relative" id="tractor">
                                         <p>Задача робота - перетянуть канат на свою сторону</p>
                                         <ul class="list-unstyled pull-left">
-                                            <li><i class="fas px-1 px-sm-2 pr-1 fa-check-circle"></i>Ориентирован на продвинутых робототехников, занимающихся более 1 года.</li>
-                                            <li><i class="fas px-1 px-sm-2 pr-1 fa-check-circle"></i>В соревнованиях участвуют образовательные конструкторы Lego Mindstorms.</li>
-                                            <li><i class="fas px-1 px-sm-2 pr-1 fa-check-circle"></i>Размеры робота 20х20х20(см).</li>
-                                            <li><i class="fas px-1 px-sm-2 pr-1 fa-check-circle"></i>Общая масса робота должна быть не более 1 кг.</li>
-                                            <li><a href="Reglament_Tyagachi_2019.pdf" class="link" target="_blank" rel="noopener">Регламент соревнования "тягачи"<i class="fas fa-file-download px-1 ml-1"></i></a></li>
+                                            <li><i class=" px-1 px-sm-2 pr-1  fa-solid fa-circle-check"></i>Ориентирован на продвинутых робототехников, занимающихся более 1 года.</li>
+                                            <li><i class=" px-1 px-sm-2 pr-1 fa-solid fa-circle-check"></i>В соревнованиях участвуют образовательные конструкторы Lego Mindstorms.</li>
+                                            <li><i class=" px-1 px-sm-2 pr-1 fa-solid fa-circle-check"></i>Размеры робота 20х20х20(см).</li>
+                                            <li><i class=" px-1 px-sm-2 pr-1 fa-solid fa-circle-check"></i>Общая масса робота должна быть не более 1 кг.</li>
+                                            <li><a href="Reglament_Tyagachi_2019.pdf" class="link" target="_blank" rel="noopener">Регламент соревнования "тягачи"<i class="fa-solid fa-file-arrow-down px-1 ml-1"></i></a></li>
                                         </ul>
                                         <img class="position-absolute" src="../assets/img/lego_tractors.png" alt="Роботы вперед соревнование тягачи с лисами">
                                     </div>
@@ -146,11 +146,11 @@
                                     <div role="tabpanel" class="tab-pane fade position-relative" id="king-hill">
                                         <p>Задача робота – подняться на возвышенность и удержаться на ней, вытолкнув всех соперников, в течение 5 минут. </p>
                                         <ul class="list-unstyled pull-left">
-                                            <li><i class="fas px-1 px-sm-2 pr-1 fa-check-circle"></i>Ориентирован на продвинутых робототехников, занимающихся более 1 года.</li>
-                                            <li><i class="fas px-1 px-sm-2 pr-1 fa-check-circle"></i>В соревнованиях участвуют образовательные конструкторы Lego Mindstorms.</li>
-                                            <li><i class="fas px-1 px-sm-2 pr-1 fa-check-circle"></i>Размеры робота 20х20х20(см).</li>
-                                            <li><i class="fas px-1 px-sm-2 pr-1 fa-check-circle"></i>Вес робота не более 2кг.</li>
-                                            <li><a href="info/Reglament_Tsar_Gory_2019.pdf" class="link" target="_blank" rel="noopener">Регламент соревнования "царь горы"<i class="fas fa-file-download px-1 ml-1"></i></a></li>
+                                            <li><i class=" px-1 px-sm-2 pr-1  fa-solid fa-circle-check"></i>Ориентирован на продвинутых робототехников, занимающихся более 1 года.</li>
+                                            <li><i class=" px-1 px-sm-2 pr-1  fa-solid fa-circle-check"></i>В соревнованиях участвуют образовательные конструкторы Lego Mindstorms.</li>
+                                            <li><i class=" px-1 px-sm-2 pr-1  fa-solid fa-circle-check"></i>Размеры робота 20х20х20(см).</li>
+                                            <li><i class=" px-1 px-sm-2 pr-1  fa-solid fa-circle-check"></i>Вес робота не более 2кг.</li>
+                                            <li><a href="info/Reglament_Tsar_Gory_2019.pdf" class="link" target="_blank" rel="noopener">Регламент соревнования "царь горы"<i class="fa-solid fa-file-arrow-down px-1 ml-1"></i></a></li>
                                         </ul>
                                         <img class="position-absolute" src="../assets/img/carj-gory.png" alt="Роботы вперед соревнование царь горы с лисами">
                                     </div>
@@ -195,7 +195,7 @@
                             <p class="lead">19 мая 2019 года в Доме творчества на базе ул.Грибоедова д.8 прошли III Соревнования «Роботы вперёд». </p>
                             <p>В данном мероприятии приняли участие обучающиеся разных учреждений из г.Кингисепп, г.Ивангорода, Санкт-Петербурга, г.Сланцы и Волосовского района. Ребята могли попробовать свои силы в трёх категориях: Механическое сумо
                                 (для начинающих робототехников в возрасте до 11 лет), Тягачи и Царь горы.</p>
-                            <a href="https://www.youtube.com/channel/UCRwlVK2dtaUd5x9D1y0P3vQ" class="link" target="_blank" aria-label="youtube канал" rel="noopener">Youtube канал<i class="fas fa-arrow-circle-right px-1 ml-1"></i></a>
+                            <a href="https://www.youtube.com/channel/UCRwlVK2dtaUd5x9D1y0P3vQ" class="link" target="_blank" aria-label="youtube канал" rel="noopener">Youtube канал<i class=" fa-solid fa-circle-arrow-right px-1 ml-1"></i></a>
 
                         </div>
                     </div>
@@ -206,7 +206,7 @@
                             <p class="lead">На всех полях шла захватывающая борьба, все хотели победить, но победу одержали сильнейшие.</p>
                             <p>Самые юные робототехники, обучающиеся первый год, пробовали свои силы в номинации "Механическое сумо". Более опытные ребята, обучающиеся более одного года робототехники, участвовали в более сложных номинациях - "Тягачи" и
                                 "Царь-горы".</p>
-                            <a href="https://vk.com/album-75889999_263750128" class="link" target="_blank" rel="noopener">Альбом фотографий за 2019год<i class="fas  fa-arrow-circle-right px-1 ml-1"></i></a>
+                            <a href="https://vk.com/album-75889999_263750128" class="link" target="_blank" rel="noopener">Альбом фотографий за 2019год<i class=" fa-solid fa-circle-arrow-right px-1 ml-1"></i></a>
                         </div>
                         <div class="col-md-6 row-item-col wow fadeInDown">
                             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -262,9 +262,9 @@
                         <div class="col-sm-6 col-md-3 offset-md-3 order-2 order-sm-1">
                             <div class="item row-item-col">
                                 <div class="wow fadeIn">
-                                    <button class="btn btn-link" type="button" name="button" data-toggle="modal" data-target="#alexandr">
+                                    <button class="btn btn-link" type="button" name="button" data-bs-toggle="modal" data-target="#alexandr">
                                         <img src="../assets/img/alexandr.jpg" alt="фото Александр" class="front rounded-circle">
-                                        <span class="back"><i class="fas px-1 px-sm-2 pr-1 fa-address-card fa-2x"></i></span>
+                                        <span class="back"><i class="fa-solid px-1 px-sm-2 pr-1 fa-address-card fa-2x"></i></span>
                                     </button>
                                     <h4>Александр</h4>
                                     <!-- Modal -->
@@ -273,11 +273,11 @@
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h4 class="modal-title" id="alexandrLabel">Александр</h4>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas px-1 px-sm-2 pr-1 fa-time mt-2 mr-2 px-1 py-1"></i></span></button>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="px-1 px-sm-2 pr-1 fa-solid fa-xmark mt-2 mr-2 px-1 py-1"></i></span></button>
                                                 </div>
                                                 <div class="modal-body">
                                                     <p>Оказывает поддержку в проведении соревнований, занимается разработкой и поддержкой сайта "РоботыВперед".</p>
-                                                    <p class="text-info">Если Вам что-то не нравится или Вы нашли ошибку и хотите помочь в решение - напишите мне <a href="mailto:burik84@list.ru"><i class="fas px-1 px-sm-2 pr-1 fa-envelope"></i></a></p>
+                                                    <p class="text-info">Если Вам что-то не нравится или Вы нашли ошибку и хотите помочь в решение - напишите мне <a href="mailto:burik84@list.ru"><i class="fa-solid  px-1 px-sm-2 pr-1 fa-envelope"></i></a></p>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
@@ -293,9 +293,9 @@
                         <div class="col-sm-6 col-md-3 order-1 order-sm-2">
                             <div class="item row-item-col">
                                 <div class="wow fadeIn" data-wow-delay=".3s">
-                                    <button class="btn btn-link" type="button" name="button" data-toggle="modal" data-target="#oksana">
+                                    <button class="btn btn-link" type="button" name="button" data-bs-toggle="modal" data-target="#oksana">
                                         <img src="../assets/img/oksana.jpg" alt="фото Оксана" class="front rounded-circle">
-                                        <span class="back"><i class="fas px-1 px-sm-2 pr-1 fa-address-card  fa-2x"></i></span>
+                                        <span class="back"><i class="fa-solid px-1 px-sm-2 pr-1 fa-address-card  fa-2x"></i></span>
                                     </button>
                                     <h4>Оксана</h4>
                                     <!-- Modal -->
@@ -304,14 +304,14 @@
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h4 class="modal-title" id="oksanaLabel">Оксана</h4>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas px-1 px-sm-2 pr-1 fa-time mt-2 mr-2 px-1 py-1"></i></span></button>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="px-1 px-sm-2 pr-1  fa-solid fa-xmark mt-2 mr-2 px-1 py-1"></i></span></button>
                                                 </div>
                                                 <div class="modal-body">
                                                     <p>Педагог дополнительного образования. Преподает в Доме творчества направление "Робототехника" и другие курсы с 2016г. Принимает участие со своими
                                                         обучающимися во многих областных и
                                                         региональных соревнованиях.</p>
                                                     <p>Моя страничка <a href="http://okbur.ru/" target="_blank">okbur.ru</a></p>
-                                                    <p class="text-info">Если есть вопросы по участию в соревнованиях или предложения по проведению мероприятия напишите мне <a href="mailto:ms.oksana2811@mail.ru"><i class="fas px-1 px-sm-2 pr-1 fa-envelope"></i>ms.oksana2811@mail.ru</a></p>
+                                                    <p class="text-info">Если есть вопросы по участию в соревнованиях или предложения по проведению мероприятия напишите мне <a href="mailto:ms.oksana2811@mail.ru"><i class="fa-solid  px-1 px-sm-2 pr-1 fa-envelope"></i>ms.oksana2811@mail.ru</a></p>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
@@ -363,10 +363,10 @@
                                 <div class="col-md-10 px-1 d-flex justify-content-center align-items-center">
                                     <address>
                                         <ul class="list-unstyled">
-                                            <li><i class="fas px-1 px-sm-2 pr-1 fa-address-book"></i> ул. Кирова, д. 16, эт. 3<br>
+                                            <li><i class="fa-solid px-1 px-sm-2 pr-1 fa-address-book"></i> ул. Кирова, д. 16, эт. 3<br>
                                                 г. Сланцы, Ленинградская область</li>
-                                            <li><i class="fas px-1 px-sm-2 pr-1 fa-phone-square"></i> 8 (81374) 2-14-96</li>
-                                            <li class="pt-1"><a href="mailto:slantsycit@gmail.com"><i class="fas px-1 px-sm-2 pr-1 fa-envelope"></i> slantsycit@gmail.com</a></li>
+                                            <li><i class="fa-solid px-1 px-sm-2 pr-1 fa-square-phone"></i> 8 (81374) 2-14-96</li>
+                                            <li class="pt-1"><a href="mailto:slantsycit@gmail.com"><i class="fa-solid  px-1 px-sm-2 pr-1 fa-envelope"></i> slantsycit@gmail.com</a></li>
                                         </ul>
                                     </address>
                                 </div>
@@ -375,7 +375,7 @@
                                     <ul class="nav justify-content-center">
                                         <li class="nav-item"><a href="https://vk.com/domtvor1" class="nav-link px-1" target="_blank" rel="noopener"><span class="visually_hidden">Вконтакте</span><i class="fab fa-vk fa-lg px-1"></i></a></li>
                                         <li class="nav-item"><a href="https://www.youtube.com/channel/UCRwlVK2dtaUd5x9D1y0P3vQ" class="nav-link px-1" target="_blank" rel="noopener"><span class="visually_hidden">Youtube</span><i class="fab fa-youtube fa-lg px-1"></i></a></li>
-                                        <li class="nav-item"><a href="http://myslanddt.ucoz.ru" class="nav-link px-1" target="_blank" rel="noopener"><span class="visually_hidden">Веб-сайт ДТ</span><i class="fas fa-globe fa-lg  px-1"></i></a></li>
+                                        <li class="nav-item"><a href="http://myslanddt.ucoz.ru" class="nav-link px-1" target="_blank" rel="noopener"><span class="visually_hidden">Веб-сайт ДТ</span><i class="fa-solid fa-globe fa-lg  px-1"></i></a></li>
                                     </ul>
                                 </div>
                                 <!--/. col-md-10-->

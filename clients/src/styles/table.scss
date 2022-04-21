@@ -1,8 +1,5 @@
 @import "./base/base.scss"; //Подключение базового стиля
 
-// utils
-@import "./utils/constants"; //Подключение стиля переменных
-@import "./utils/mixin"; //Подключение миксина
 
 body{
   background-color: aquamarine;

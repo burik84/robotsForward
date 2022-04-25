@@ -2,12 +2,16 @@
 @import "./normalize.scss"; //Подключение стиля для нормализации
 @import "~bootstrap/scss/bootstrap";
 
-@import '../utils/variables';
 @import '../utils/mixin';
 @import '../utils/constants';
+@import '../utils/keyframes';
 
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 
 @import "./fonts"; //Подключение шрифтов
 @import "./reset";
+
+// Подключение слоев.
+@import "../layouts/header";
+@import "../layouts/footer";

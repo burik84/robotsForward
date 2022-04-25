@@ -15,15 +15,6 @@
     }
 }
 
-.nav {
-    li {
-        a {
-            &.nav-link {
-                text-transform: uppercase;
-            }
-        }
-    }
-}
 
 .section {
     &-tabs {
@@ -205,54 +196,3 @@
         }
     }
 }
-
-#copy {
-    background-color: $color-back-footer;
-    color: $color-text-light;
-}
-.copy__item{
-    font-size: 0.9rem;
-} 
-div {
-    &.scrollup {
-        position: fixed;
-        /* фиксированная позиция */
-        color: $color-text-add;
-        /* цвет текста */
-        background-color: $color-link;
-        /* цвет заднего фона */
-        right: 10px;
-        /* расстояние от правого края */
-        bottom: 10px;
-        /* расстояние от нижнего края */
-        padding: 4px 10px;
-        /* отступы до содержимого блока */
-        font-size: 20px;
-        /* размер шрифта (иконки) */
-        border-top-left-radius: 4px;
-        /* скругление верхнего левого угла */
-        border-top-right-radius: 4px;
-        /* скругление верхнего правого угла */
-        border-bottom-left-radius: 4px;
-        /* скругление нижнего левого угла */
-        border-bottom-right-radius: 4px;
-        /* скругление нижнего правого угла */
-        cursor: pointer;
-        /* форма курсора */
-        display: none;
-        /* не отображать элемент */
-        text-align: center;
-        /*выравнивание содержимого элемента по центру */
-        opacity: 0.75;
-
-        &:hover {
-            background-color: $color-link-hover;
-            /* цвет заднего фона при наведении */
-        }        
-        @include media-mobile{
-            right: 30px;
-            bottom: 30px;
-        }
-    }
-}
-

@@ -1,7 +1,7 @@
 import 'bootstrap';
 import { insertHTML, warning } from './services/insertHTML';
 import { SHOWWARNING } from './services/service';
-import '../styles/styles.scss';
+import '../styles/pages/styles.scss';
 
 insertHTML();
 

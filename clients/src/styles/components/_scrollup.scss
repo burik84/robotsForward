@@ -28,6 +28,7 @@
   text-align: center;
   /*выравнивание содержимого элемента по центру */
   opacity: 0.75;
+  z-index: 99;
 
   &:hover {
     background-color: $color-link-hover;

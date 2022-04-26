@@ -1,4 +1,4 @@
-const SHOWWARNING = false;
-const SHOWALARM = false;
+const SHOWWARNING = true;
+const SHOWALARM = true;
 
 export { SHOWWARNING, SHOWALARM };

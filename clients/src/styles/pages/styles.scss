@@ -5,6 +5,8 @@
 
 // Подключение компонентов.
 @import "../components/scrollup";
+@import "../components/overlay";
+@import "../components/preloader";
 
 body {
   @extend %body-background;

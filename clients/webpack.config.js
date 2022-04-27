@@ -21,7 +21,7 @@ const config = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].bundle.js',
     chunkFilename: '[id].[chunkhash].js',
-    publicPath: '/',
+    publicPath: './',
     assetModuleFilename: 'assets/[name][ext]',
     clean: true,
   },

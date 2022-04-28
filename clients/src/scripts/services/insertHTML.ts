@@ -10,10 +10,10 @@ const insertHTML = (page:string) => {
   const body = document.querySelector('body');
 
   head.insertAdjacentHTML('beforeend', headHTML);
-  if (page!=='error') head.insertAdjacentHTML('beforeend', metrika);
+  if (page !== 'error') head.insertAdjacentHTML('beforeend', metrika);
   main.insertAdjacentHTML('afterend', footer);
   main.insertAdjacentHTML('afterend', modal);
-  if (page!=='error') body.insertAdjacentHTML('beforeend', scrollup);
+  if (page !== 'error') body.insertAdjacentHTML('beforeend', scrollup);
 };
-const warning = '<p class="lead text-primary text-center mb-5 mx-3"><span class="badge rounded-pill bg-danger">Внимание!</span> <br> В связи с введением ограничительных мер, направленных на предотвращение распространения новой коронавирусной инфекции в регионе, соревнования проводится не будут!!!</p>';
+const warning = '<p class="lead text-primary text-center mb-5 mx-3"><span class="badge rounded-pill bg-danger">Внимание!</span> <br> В связи с введением ограничительных мер, направленных на предотвращение распространения новой короновирусной инфекции в регионе, соревнования проводится не будут!!!</p>';
 export { insertHTML, warning };

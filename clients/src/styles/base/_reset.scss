@@ -1,3 +1,5 @@
+@import '../utils/constants';
+
 * {
   margin: 0;
   padding: 0;
@@ -70,12 +72,6 @@ ul {
 	li {
 		list-style-type: none;
 	}
-}
-
-.clearfix:after {
-	clear: both;
-	content: "";
-	display: table;
 }
 /* --------------- /базовые настройки ---------*/
 .position-absolute {

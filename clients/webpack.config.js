@@ -117,6 +117,7 @@ const config = {
 module.exports = () => {
   if (isProduction) {
     config.mode = 'production';
+    config.output.publicPath = './';
 
     config.plugins.push(
       new MiniCssExtractPlugin({
@@ -137,9 +138,9 @@ module.exports = () => {
             implementation: ImageMinimizerPlugin.imageminMinify,
             options: {
               plugins: [
-                'imagemin-gifsicle',
-                'imagemin-mozjpeg',
-                'imagemin-pngquant',
+                ['gifsicle', { interlaced: true }],
+                ['jpegtran', { progressive: true }],
+                ['optipng', { optimizationLevel: 5 }],
                 'imagemin-svgo',
               ],
             },

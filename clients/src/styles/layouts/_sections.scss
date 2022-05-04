@@ -126,19 +126,18 @@
   bottom: 10px;
   width: auto;
 
-  li {
+  [data-bs-target] {
     border: 1px solid $color-link;
     background: transparent;
     height: 12px;
     width: 12px;
-    border-radius: 6px;
+    border-radius: 50%;
 
     &.active {
       background-color: $color-link;
       opacity: 0.5;
       height: 14px;
       width: 14px;
-      border-radius: 6px;
     }
   }
 }

@@ -22,3 +22,8 @@ $mobile-big-width: 576px;
 
 //variables for bootstrap, fontawesome
 $fa-font-path: "../../assets/webfonts";
+$carousel-control-color:red;
+$carousel-control-transition: opacity .15s ease;
+$carousel-indicator-transition: opacity .6s ease;
+$carousel-transition-duration: .6s;
+$carousel-transition: transform $carousel-transition-duration ease-in-out;

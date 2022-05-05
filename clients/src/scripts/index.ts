@@ -1,8 +1,6 @@
-// import 'bootstrap';
 import { insertHTML, warning } from './services/insertHTML';
 import { SHOWWARNING } from './services/service';
 import bootstrapStart from './components/bootstrap';
-// import scrollUp from './components/scrollUp';
 import '../styles/pages/styles.scss';
 
 insertHTML('main');

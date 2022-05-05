@@ -4,6 +4,7 @@ import { Carousel } from '../../../node_modules/bootstrap/dist/js/bootstrap';
 
 const bootstrapStart = () => {
   const myCarousel = document.querySelector('#myCarousel');
+
   const carousel = new Carousel(myCarousel, {
     // these options values will override the ones set via DATA API
     interval: 1000,

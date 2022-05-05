@@ -74,6 +74,15 @@ ul {
 		list-style-type: none;
 	}
 }
+
+.modal-container,
+.btn.btn-link {
+	&:focus-visible,
+	&:focus {
+		outline: none;
+		box-shadow: none;
+	}
+}
 /* --------------- /базовые настройки ---------*/
 .position-absolute {
 	top: 85%;

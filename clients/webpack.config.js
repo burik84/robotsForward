@@ -3,7 +3,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+// const CopyPlugin = require('copy-webpack-plugin');
 const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
@@ -70,12 +70,12 @@ const config = {
       chunks: ['table'],
       favicon: './src/assets/favicon.ico',
     }),
-    new CopyPlugin({
-      patterns: [
-        { from: './public', to: 'service' },
-        // { from: './src/assets/img', to: 'images' },
-      ],
-    }),
+    // new CopyPlugin({
+    //   patterns: [
+    //     { from: './public', to: 'service' },
+    //     { from: './src/assets/img', to: 'images' },
+    //   ],
+    // }),
   ],
   module: {
     rules: [

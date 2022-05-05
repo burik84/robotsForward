@@ -6,11 +6,14 @@ const bootstrapStart = () => {
   const myCarousel = document.querySelector('#myCarousel');
   const carousel = new Carousel(myCarousel, {
     // these options values will override the ones set via DATA API
-    interval: 50000,
-    pause: false,
+    interval: 1000,
+    pause: true,
+    keyboard: false,
   });
-  carousel.pause();
-  carousel.nextWhenVisible();
+  // carousel.nextWhenVisible();
+  myCarousel.addEventListener('slide.bs.carousel', () => {
+    carousel.pause();
+  });
 };
 export default bootstrapStart;
 

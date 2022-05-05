@@ -20,10 +20,14 @@ $content-width: 992px;
 $tablet-width: 768px;
 $mobile-big-width: 576px;
 
-//variables for bootstrap, fontawesome
+//variables for fontawesome
 $fa-font-path: "../../assets/webfonts";
-$carousel-control-color:red;
-$carousel-control-transition: opacity .15s ease;
-$carousel-indicator-transition: opacity .6s ease;
-$carousel-transition-duration: .6s;
+
+//variables for bootstrap
+$carousel-control-color: $color-link;
+$carousel-control-width: 10%;
+$carousel-control-icon-width: 2.5rem;
+$carousel-control-transition: opacity 0.15s ease;
+$carousel-indicator-transition: opacity 0.6s ease;
+$carousel-transition-duration: 0.6s;
 $carousel-transition: transform $carousel-transition-duration ease-in-out;

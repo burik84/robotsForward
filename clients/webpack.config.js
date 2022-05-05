@@ -108,7 +108,7 @@ const config = {
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],
   },
-  devtool: 'source-map',
+  devtool: 'eval-source-map',
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
@@ -118,6 +118,7 @@ module.exports = () => {
   if (isProduction) {
     config.mode = 'production';
     config.output.publicPath = './';
+    config.devtool = 'source-map';
 
     config.plugins.push(
       new MiniCssExtractPlugin({

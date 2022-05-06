@@ -1,11 +1,12 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
-
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 // const CopyPlugin = require('copy-webpack-plugin');
 const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -127,7 +128,7 @@ module.exports = () => {
       }),
     );
     config.optimization = {
-      minimize: true,
+      // minimize: true,
       minimizer: [
         new HtmlMinimizerPlugin({
           minimizerOptions: {
@@ -148,6 +149,25 @@ module.exports = () => {
           },
           // Disable `loader`
           loader: false,
+        }),
+        new CssMinimizerPlugin({
+          minimizerOptions: {
+            preset: [
+              'default',
+              {
+                discardComments: { removeAll: true },
+              },
+            ],
+          },
+        }),
+        new TerserPlugin({
+          terserOptions: {
+            compress: true,
+            format: {
+              comments: false,
+            },
+          },
+          extractComments: false,
         }),
       ],
     };

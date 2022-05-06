@@ -15,5 +15,5 @@ const insertHTML = (page:string) => {
   main.insertAdjacentHTML('afterend', modal);
   // if (page !== 'error') body.insertAdjacentHTML('beforeend', scrollup);
 };
-const warning = '<p class="lead text-primary text-center mb-5 mx-3"><span class="badge rounded-pill bg-danger">Внимание!</span> <br> В связи с введением ограничительных мер, направленных на предотвращение распространения новой короновирусной инфекции в регионе, соревнования проводится не будут!!!</p>';
+const warning = '<p class="lead text-primary text-center mb-5 mx-3"><span class="badge rounded-pill bg-danger">Внимание!</span> <br> В 2022 году проведение соревнований не запланировано!</p>';
 export { insertHTML, warning };

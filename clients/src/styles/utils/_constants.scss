@@ -1,0 +1,33 @@
+$family-ubuntu: Ubuntu, sans-serif; // Шрифт основной
+$family-montserat: Montserrat, sans-serif; // Шрифты дополнительный
+// Основные цвета
+// Цвета для ссылок
+$color-link: #2cc7c1;
+$color-link-hover: #26dea3;
+$color-border: #a2d0cf; //
+// Цвета для текста
+$color-text: #525b64;
+$color-text-add: #cfe6fd;
+$color-text-light: #91a1b0; //
+// Цвета фонов
+$color-back-footer: #104745; // $color-back: #A2D0CF;
+$color-back: #94ef9c; // медали
+$color-gold: #ffdf00;
+$color-silver: #c0c0c0;
+$color-bronze: #cd7f32;
+
+$content-width: 992px;
+$tablet-width: 768px;
+$mobile-big-width: 576px;
+
+//variables for fontawesome
+$fa-font-path: "../../assets/webfonts";
+
+//variables for bootstrap
+$carousel-control-color: $color-link;
+$carousel-control-width: 10%;
+$carousel-control-icon-width: 2.5rem;
+$carousel-control-transition: opacity 0.15s ease;
+$carousel-indicator-transition: opacity 0.6s ease;
+$carousel-transition-duration: 0.6s;
+$carousel-transition: transform $carousel-transition-duration ease-in-out;

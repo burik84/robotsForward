@@ -1,0 +1,25 @@
+@import "../utils/constants";
+
+.address {
+  .address-town {
+    padding-left: 34px;
+
+    @include media-laptop {
+      padding-left: 0;
+    }
+  }
+}
+
+.address__social {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  .nav-link {
+    color: $color-link;
+    &:hover {
+      color: $color-link-hover;
+    }
+  }
+}

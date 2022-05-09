@@ -1,0 +1,18 @@
+// Определения списка файлов, которые необходимо включить -bootstrap, fontawesome и т.д.
+@import "./normalize.scss"; //Подключение стиля для нормализации
+@import "../utils/constants";
+@import "~bootstrap/scss/bootstrap";
+
+@import "../utils/mixin";
+@import "../utils/keyframes";
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+@import "./fonts"; //Подключение шрифтов
+@import "./reset";
+
+// Подключение слоев.
+@import "../layouts/header";
+@import "../layouts/footer";

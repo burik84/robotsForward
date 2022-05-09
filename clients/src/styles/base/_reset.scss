@@ -1,0 +1,153 @@
+@import '../utils/constants';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+	@include media-tablet{
+		font-size: 14px;
+	}
+	@include media-mobile {
+		font-size: 12px;
+	}
+}
+body {
+	color: $color-text;
+	box-sizing: border-box;
+	font-weight: 400;
+	min-width: 320px;
+	height: 100vh;
+	font-family: $family-ubuntu;
+	background-color: $color-back;
+	line-height: 1.75;
+	overflow-x: hidden;
+	opacity: 1;
+	position: relative;
+	scroll-behavior: smooth;
+}
+
+a,
+a:visited {
+	text-decoration: underline;
+	font-weight: 700;
+	color: $color-link;
+	font-family: $family-montserat;
+}
+
+a:hover {
+	color: $color-link-hover;
+	text-decoration: none;
+}
+
+a:active,
+a:focus {
+	color: $color-link-hover;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+section {
+	position: relative;
+}
+
+.clr {
+	clear: both;
+}
+
+ul {
+	li {
+		list-style-type: none;
+	}
+}
+
+.modal-container,
+.btn.btn-link {
+	&:focus-visible,
+	&:focus {
+		outline: none;
+		box-shadow: none;
+	}
+}
+/* --------------- /базовые настройки ---------*/
+.position-absolute {
+	top: 85%;
+	right: -3%;
+	z-index: 1;
+}
+
+.visually_hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+	z-index: -2;
+}
+
+// стили botstrap
+
+button {
+	text-transform: uppercase;
+	font-weight: 700;
+	text-decoration: underline;
+	color: $color-link;
+	font-family: $family-montserat;
+
+	&:visited {
+		text-transform: uppercase;
+		text-decoration: underline;
+		font-weight: 700;
+		color: $color-link;
+		font-family: $family-montserat;
+	}
+
+	&.btn {
+		border: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	&.btn-link {
+        color: $color-link;
+        font-size: 0.95em;
+        letter-spacing: 0.8px;
+
+		&:active,
+		&:focus,
+		&:hover {
+			color: $color-link-hover;
+			text-decoration: none;
+		}
+	}
+}
+
+a {
+	&.active {
+		&.show {
+			color: $color-link-hover;
+			text-decoration: none;
+		}
+	}
+
+	&.disabled {
+		pointer-events: none;
+	}
+}

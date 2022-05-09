@@ -1,0 +1,2 @@
+folder img-meta copy to assets
+files from folder service copy to root folder

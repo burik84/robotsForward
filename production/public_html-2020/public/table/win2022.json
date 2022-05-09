@@ -1,0 +1,38 @@
+[
+  {
+    "type": "sumo",
+    "first": [
+      "first plase"
+    ],
+    "second": [
+      "second place"
+    ],
+    "third": [
+      "third place"
+    ]
+  },
+  {
+    "type": "truck",
+    "first": [
+      "first plase"
+    ],
+    "second": [
+      "second place"
+    ],
+    "third": [
+      "third place"
+    ]
+  },
+  {
+    "type": "king",
+    "first": [
+      "first plase"
+    ],
+    "second": [
+      "second place"
+    ],
+    "third": [
+      "third place"
+    ]
+  }
+]

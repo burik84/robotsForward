@@ -66,6 +66,13 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       inject: true,
+      template: './src/pages/table2022.html',
+      filename: 'table2022.html',
+      chunks: ['table'],
+      favicon: './src/assets/favicon.ico',
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
       template: './src/pages/table2023.html',
       filename: 'table2023.html',
       chunks: ['table'],

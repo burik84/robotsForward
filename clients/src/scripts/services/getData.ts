@@ -12,8 +12,8 @@ export const getSourceData = async () => {
 };
 
 export const getWinnerData = {
-  table2019: async () => {
-    const url = `${URL.ru}public/table/${DATA.table2019}`;
+  table: async (year:string) => {
+    const url = `${URL.ru}public/table/win${year}.json`;
     const data = await fetch(url).then((response) => response.json()).then((res) => {
       console.log(res);
       return res;

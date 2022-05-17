@@ -1,4 +1,4 @@
-import headHTML from '../../pages/template/head.html';
+// import headHTML from '../../pages/template/head.html';
 import metrika from '../../pages/template/metrika.html';
 import footer from '../../pages/template/footer.html';
 import modal from '../../pages/template/modal.html';
@@ -9,7 +9,7 @@ const insertHTML = (page:string) => {
   const main = document.querySelector('main');
   // const body = document.querySelector('body');
 
-  head.insertAdjacentHTML('beforeend', headHTML);
+  // head.insertAdjacentHTML('beforeend', headHTML);
   if (page !== 'error') head.insertAdjacentHTML('beforeend', metrika);
   main.insertAdjacentHTML('afterend', footer);
   main.insertAdjacentHTML('afterend', modal);

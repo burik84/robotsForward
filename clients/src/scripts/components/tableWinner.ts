@@ -1,21 +1,5 @@
 import { IWinnerTable } from '../services/interface';
 
-// <h3 class="h5 text-center">Механическое сумо</h3>
-//               <ol>
-//                 <li>
-//                   место. Лицов Денис
-//                   <i class="fa-solid fa-trophy px-sm-2 pr-1 gold"></i>
-//                 </li>
-//                 <li>
-//                   место. Андрещук Егор, Усов Андрей
-//                   <i class="fa-solid fa-trophy px-sm-2 pr-1 silver"></i>
-//                 </li>
-//                 <li>
-//                   место. Филиппов Давид, Журавлева Мария
-//                   <i class="fa-solid fa-trophy px-sm-2 pr-1 bronze"></i>
-//                 </li>
-//               </ol>
-
 const getMedal = (win: string) => {
   let text = '';
   switch (win) {
@@ -36,11 +20,11 @@ const getMedal = (win: string) => {
 };
 
 const tableWinner = (data: IWinnerTable[]) => {
-  const result:HTMLDivElement[] = [];
+  const result: HTMLDivElement[] = [];
 
   data.forEach((item: IWinnerTable) => {
-    const div:HTMLDivElement = document.createElement('div');
-    div.className = 'col-md-4 col-xs-6 py-3';
+    const div: HTMLDivElement = document.createElement('div');
+    div.className = 'col-lg-4 col-sm-6 py-3';
     const header: HTMLElement = document.createElement('h3');
     header.className = 'h5 text-center';
     if (item.type === 'sumo') {

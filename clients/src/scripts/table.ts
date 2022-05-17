@@ -1,6 +1,6 @@
 import { insertHTML } from './services/insertHTML';
 import { modalStart } from './components/bootstrap';
-// import { getWinnerData } from './services/getData';
+import { getWinnerData } from './services/getData';
 import { WINNER2019 } from './services/service';
 import addTableWinner from './components/tableWinner';
 import '../styles/pages/table.scss';
@@ -12,22 +12,18 @@ const showData = async () => {
   const table = document.querySelector('#winner .table');
 
   let text:any = '';
-  if (year === '2022') {
-    text = addTableWinner(WINNER2019);
-    console.log('aw3ait', text);
 
+  await getWinnerData.table(year).then((res) => {
+    text = addTableWinner(res);
     table.append(...text);
-
-    // await getWinnerData.table(year).then((res) => {
-    //   console.log('ghhhr');
-    // }).catch(() => {
-    //   console.log(year, table);
-    //   text = addTableWinner(WINNER2019);
-    //   console.log('aw3ait', text);
-
-    //   table.insertAdjacentHTML('afterbegin', text);
-    // });
-  }
+  }).catch(() => {
+    if (year === '2019') {
+      text = addTableWinner(WINNER2019);
+    } else if (year === '2022') {
+      text = addTableWinner(WINNER2019);
+    }
+    table.append(...text);
+  });
 };
 
 document.addEventListener('DOMContentLoaded', () => {

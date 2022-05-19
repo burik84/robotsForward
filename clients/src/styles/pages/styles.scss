@@ -1,0 +1,15 @@
+@import "../base/base.scss"; //Подключение базового стиля
+@import "../utils/extends"; //Подключение расширений
+
+@import "../layouts/sections";
+// @import "~bootstrap/scss/carousel";
+
+// Подключение компонентов.
+@import "../components/scrollup";
+@import "../components/overlay";
+@import "../components/preloader";
+@import "../components/address";
+@import "../components/embed";
+body {
+  @extend %body-background;
+}

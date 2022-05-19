@@ -1,0 +1,45 @@
+// Определения списка файлов, которые необходимо включить -bootstrap, fontawesome и т.д.
+//@import "./normalize.scss"; //Подключение стиля для нормализации
+@import "../utils/constants";
+// @import "~bootstrap/scss/bootstrap";
+
+// Bootstrap Required
+@import "~bootstrap/scss/bootstrap-utilities";
+
+// Bootstrap Optional
+// Layout & components
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/card";
+// Utilities
+@import "~bootstrap/scss/helpers/position";
+@import "~bootstrap/scss/helpers/visually-hidden";
+@import "~bootstrap/scss/helpers/colored-links";
+// @import "~bootstrap/scss/utilities/api";
+
+@import "../utils/mixin";
+@import "../utils/keyframes";
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+@import "./fonts"; //Подключение шрифтов
+@import "./reset";
+
+// Подключение слоев.
+@import "../layouts/header";
+@import "../layouts/footer";

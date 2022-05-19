@@ -1,0 +1,51 @@
+@import "../base/base.scss"; //Подключение базового стиля
+@import "../utils/extends"; //Подключение расширений
+
+// @import "~bootstrap/scss/tables";
+
+@import "../layouts/sections";
+
+// Подключение компонентов.
+@import "../components/scrollup";
+@import "../components/overlay";
+@import "../components/preloader";
+
+body {
+  @extend %body-background;
+}
+
+#part {
+  iframe {
+    width: 65%;
+    height: 400px;
+    border-width: 0;
+    @include media-laptop {
+      width: 99%;
+    }
+  }
+}
+
+#protocols {
+  iframe {
+    width: 70%;
+    height: 500px;
+    border-width: 0;
+    @include media-laptop {
+      width: 99%;
+    }
+  }
+}
+
+.fa-solid {
+  &.gold {
+    color: $color-gold;
+  }
+
+  &.silver {
+    color: $color-silver;
+  }
+
+  &.bronze {
+    color: $color-bronze;
+  }
+}

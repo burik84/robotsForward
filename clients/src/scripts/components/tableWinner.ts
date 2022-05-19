@@ -40,19 +40,19 @@ const tableWinner = (data: IWinnerTable[]) => {
     item.first.forEach((person) => {
       const place = document.createElement('li');
       const medal = getMedal('1');
-      place.innerHTML = `1 место. ${person} ${medal}`;
+      place.innerHTML = `${medal} 1 место. ${person}`;
       list.appendChild(place);
     });
     item.second.forEach((person) => {
       const place = document.createElement('li');
       const medal = getMedal('2');
-      place.innerHTML = `2 место. ${person} ${medal}`;
+      place.innerHTML = `${medal} 2 место. ${person}`;
       list.appendChild(place);
     });
     item.third.forEach((person) => {
       const place = document.createElement('li');
       const medal = getMedal('3');
-      place.innerHTML = `3 место. ${person} ${medal}`;
+      place.innerHTML = `${medal} 3 место. ${person}`;
       list.appendChild(place);
     });
     div.appendChild(header);
